@@ -414,6 +414,89 @@ service Provider {
 
     //////// Graceful Shutdown
     rpc StopProvider(StopProvider.Request) returns (StopProvider.Response);
+
+    //////// PROTOTYPE: Provider code migrations
+
+    // Return the code migrations that this version of the terraform provider knows about (could be static/TF core only, or "online")
+    rpc GetCodeMigrations(GetCodeMigrations.Request) returns (GetCodeMigrations.Response);
+}
+
+message GetCodeMigrations {
+    message Request {}
+
+    // upgrade UX question: should it be updating the required_providers?
+
+    // Examples:
+    // - nested block to nested attribute
+    // - DNS IP config rewrite (remove leading zeroes from IPs defined in config)
+    //   - This was one of the reasons that the DNS provider still uses SDKv2: https://github.com/hashicorp/terraform-provider-dns/issues/234
+    // - s3 bucket refactor (i.e. one resource to multiple?)
+    message Response {
+        repeated CodeMigration code_migrations = 1;
+    }
+
+    // non-provider code migrations
+    // idea: workspaces to stacks has existing migration tool (tfmigrate) -> this needs to be replaced at some point
+    // idea: generated config from "terraform query" -> how can we take this config and put it somewhere useful? for example, putting them into modules
+
+    message CodeMigration {
+      // Managed resource type name that this code migration is related to
+      //
+      // TODO: Do code migrations need to only be related to a managed resource? i.e. should there also be an indicator of managed resource vs. data source vs. ephemeral, etc.
+      // - provider changes: https://registry.terraform.io/providers/hashicorp/aws/latest/docs/guides/version-6-upgrade#removed-provider-arguments
+      // TODO: Do code migrations need to only be related to a managed resource owned by this provider (or any earlier versions of this provider)?
+      //
+      // The idea is that TF core should use this type name as an indicator that a code migration might be necessary
+      string type_name = 1;
+
+      // Name for the code migration, could be used to route to provider logic (in the case of an "online" migration), otherwise it's just used to distinguish it from other code migrations
+      // TODO: The combination of type_name + name should be unique?
+      string name = 2;
+
+      // TODO: should there be an "effective version" or some indicator of when a resource should have to undergo this migration? Can TF core infer this based on when the provider introduced this migration? Seems unlikely?
+      // Ideally this would be static, but is it possible the provider would need to run logic to determine this migration? Hopefully not :)
+      //
+      // I think this is related to what DS defined as a matcher
+
+      // The actual migration definition itself (instructions on what to do, should be declarative)
+      // all of the current migrations are static, in that TF core knows how to perform the logic on it's own given this information.
+      oneof migration {
+        NestedBlockToAttr nested_block_to_attr = 3;
+        TransformAttr transform_attr = 4;
+        RemoveAttr remove_attr = 5;
+        DisplayWarning display_warning = 6;
+      }
+
+      message NestedBlockToAttr {
+        // target path
+        // add equals sign, maybe combine multiple list blocks to one array
+        // -> destination path? 
+      }
+
+      message TransformAttr {
+        // https://registry.terraform.io/providers/hashicorp/aws/latest/docs/guides/version-6-upgrade#nullable-boolean-validation-update
+        // https://github.com/hashicorp/terraform-provider-aws/issues/29379
+        //
+        // target path
+        // invoke HCL function? invoke provider function? (both are available in offline configurations luckily :D )
+        // - perhaps TF core could just invoke it during the upgrade if the value is a static literal, otherwise it could wrap the attribute in said function?
+      }
+
+      message RemoveAttr {
+        // target path
+        //
+        // this would typically be in the release when a deprecated attribute was removed officially
+      }
+
+      message DisplayWarning {
+        // kind of like a manual message to be displayed to the user during migration
+        // - example: "Hey, this service is being deprecated and you need to fully refactor your configuration to use this other resource/split it into multiple pieces"
+        //      - I'm not sure how much value this would have vs. a deprecation warning?
+        
+        // target path
+        // message
+      }
+    }
 }
 
 message GetMetadata {
