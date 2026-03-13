@@ -459,42 +459,156 @@ message GetCodeMigrations {
       // I think this is related to what DS defined as a matcher
 
       // The actual migration definition itself (instructions on what to do, should be declarative)
-      // all of the current migrations are static, in that TF core knows how to perform the logic on it's own given this information.
+      // all of the current migrations are static, in that TF core knows how to perform the logic on it's own given just the definition.
       oneof migration {
-        NestedBlockToAttr nested_block_to_attr = 3;
+        NestedBlockToNestedAttr nested_block_to_nested_attr = 3;
         TransformAttr transform_attr = 4;
-        RemoveAttr remove_attr = 5;
-        DisplayWarning display_warning = 6;
+        RenameAttr rename_attr = 5;
+        RemoveAttr remove_attr = 6;
+
+        // Other potential migrations:
+        // - Change type from A to B (like from single nested block to list nested block or vice versa)
+        //   - https://registry.terraform.io/providers/hashicorp/aws/latest/docs/guides/version-6-upgrade#data-source-aws_elbv2_listener_rule
+        //   - https://registry.terraform.io/providers/hashicorp/aws/latest/docs/guides/version-6-upgrade#resource-aws_bedrock_model_invocation_logging_configuration
+        //   - Would include updating all references to add/remove a single index? :/
       }
 
-      message NestedBlockToAttr {
-        // target path
-        // add equals sign, maybe combine multiple list blocks to one array
-        // -> destination path? 
+      // This migration takes a nested block type and changes it to a nested attribute type (the cty type should match with this one, so list nested block -> list nested attribute)
+      // No references to the target path need to be updated
+      //
+      // No known examples right now, but this would be the change typically required when migrating from SDKv2 to Framework with optional+"computed" nested blocks
+      //
+      // ----- Before
+      //
+      // resource "examplecloud_thing" "example" {
+      //   disk {
+      //     attr_1 = "hello"
+      //     attr_2 = "world one!" 
+      //   }
+      //   disk {
+      //     attr_1 = "hello"
+      //     attr_2 = "world two!" 
+      //   }
+      // }
+      //
+      // ----- After
+      //
+      // resource "examplecloud_thing" "example" {
+      //   disk = [
+      //     {
+      //       attr_1 = "hello"
+      //       attr_2 = "world one!" 
+      //     },
+      //     {
+      //       attr_1 = "hello"
+      //       attr_2 = "world two!" 
+      //     }
+      //   ]
+      // }
+      //
+      message NestedBlockToNestedAttr {
+        // TODO: Just using the already established attribute path for now, but this will definitely need to change to be something akin to a path expression instead of an absolute path.
+        // Luckily, framework already supports that (used mostly in validators), so if core already supports it then we just need to agree on a protocol definition for it.
+        // https://developer.hashicorp.com/terraform/plugin/framework/handling-data/path-expressions
+        //
+        // For now, absolute paths will work fine for root paths
+        AttributePath nested_block_path = 1;
       }
 
+      // This migration takes an expression assigned to an attribute and:
+      // - If it's a static literal value, immediately invokes the built-in HCL function or provider defined function, replacing the value with the result
+      // - If it's an expression, wrap the expression with the built-in HCL function or provider defined function.
+      //
+      // NOTE: Allowing provider defined functions here would enable providers to write custom functions that can then be used on expressions (rather then limiting transforms to just literal values),
+      // luckily provider functions are already considered "offline", so Terraform can invoke them whenever it wants :D
+      //
+      // Examples:
+      // - https://registry.terraform.io/providers/hashicorp/aws/latest/docs/guides/version-6-upgrade#nullable-boolean-validation-update
+      //   - https://github.com/hashicorp/terraform-provider-aws/issues/29379
+      // - https://github.com/hashicorp/terraform-provider-dns/issues/234 (breaking change hasn't been made yet, but we need to remove leading zeroes from IPs defined in configurations)
+      //
+      // ----- Before (literal)
+      //
+      // resource "examplecloud_thing" "example" {
+      //   ip_addr = "127.000.000.001"
+      // }
+      //
+      // ----- After (literal)
+      //
+      // resource "examplecloud_thing" "example" {
+      //   ip_addr = "127.0.0.1"
+      // }
+      //
+      //
+      // ----- Before (expression)
+      //
+      // resource "examplecloud_thing" "example" {
+      //   ip_addr = var.a_super_cool_ip_addr
+      // }
+      //
+      // ----- After (expression)
+      //
+      // resource "examplecloud_thing" "example" {
+      //   ip_addr = provider::dns::strip_leading_zeroes(var.a_super_cool_ip_addr)
+      // }
+      //
+      // TODO: This highlights the (already known) idea that some form of matcher/condition needs to be evaluated prior to running this upgrade,
+      // it's possible we have no idea if "var.a_super_cool_ip_addr" has leading zeroes or not.
       message TransformAttr {
-        // https://registry.terraform.io/providers/hashicorp/aws/latest/docs/guides/version-6-upgrade#nullable-boolean-validation-update
-        // https://github.com/hashicorp/terraform-provider-aws/issues/29379
+        // TODO: Just using the already established attribute path for now, but this will definitely need to change to be something akin to a path expression instead of an absolute path.
+        // Luckily, framework already supports that (used mostly in validators), so if core already supports it then we just need to agree on a protocol definition for it.
+        // https://developer.hashicorp.com/terraform/plugin/framework/handling-data/path-expressions
         //
-        // target path
-        // invoke HCL function? invoke provider function? (both are available in offline configurations luckily :D )
-        // - perhaps TF core could just invoke it during the upgrade if the value is a static literal, otherwise it could wrap the attribute in said function?
+        // For now, absolute paths will work fine for root paths
+        AttributePath target_attr_path = 1;
+
+        // Name of the function to invoke (no provider prefix for built-in, provider prefix for provider defined functions)
+        //
+        // TODO: This feels a little simple/open, so possibly should come back and evaluate how reasonable this approach is (whether we need more fields).
+        //
+        // After receiving the static code migration, Terraform should have all of the information needed to validate whether the HCL function / provider code defined function can be invoked
+        // or whether the code migration is incorrect (The SDKs could validate this as well? Maybe internally via GetProviderSchema?).
+        string function_name = 2;
+
+        // Additional arguments to invoke function with (all known values), the first argument would always be the expression from "target_attr_path"
+        //
+        // TODO: This is almost certainly too simple, since it's very possible the expression could be the input for different argument indexes besides the first. (or it could be used multiple times :P)
+        repeated DynamicValue additional_arguments = 3;
       }
 
+      // This migration takes an expression assigned to the target path and moves it to the destination path (they should be the exact same schema/type)
+      // References to the target path should be updated to the destination path, but they should stay the same type
+      //
+      // Examples:
+      // - https://registry.terraform.io/providers/hashicorp/google/latest/docs/guides/version_7_upgrade#resource-google_bigtable_table_iam_member
+      // - https://registry.terraform.io/providers/hashicorp/google/latest/docs/guides/version_7_upgrade#resource-google_bigtable_table_iam_policy
+      // - https://registry.terraform.io/providers/hashicorp/aws/latest/docs/guides/version-6-upgrade#data-source-aws_batch_compute_environment
+      message RenameAttr {
+        // TODO: Just using the already established attribute path for now, but this will definitely need to change to be something akin to a path expression instead of an absolute path.
+        // Luckily, framework already supports that (used mostly in validators), so if core already supports it then we just need to agree on a protocol definition for it.
+        // https://developer.hashicorp.com/terraform/plugin/framework/handling-data/path-expressions
+        //
+        // For now, absolute paths will work fine for root paths
+        AttributePath target_attr_path = 1;
+        AttributePath destination_attr_path = 2;
+      }
+
+      // This migration removes the attribute at the target path from configuration, typically would be the last step after deprecating an attribute.
+      //
+      // TODO: I'm not sure what we should do if there are references to this attribute, removing them seems too aggressive, but the only other option is to just error :/
+      //
+      // Examples:
+      // - https://registry.terraform.io/providers/hashicorp/google/latest/docs/guides/version_7_upgrade#datasource-google_service_account_key
+      // - https://registry.terraform.io/providers/hashicorp/google/latest/docs/guides/version_7_upgrade#service_configservice-is-now-an-output-only-field
+      // - https://registry.terraform.io/providers/hashicorp/aws/latest/docs/guides/version-6-upgrade#removed-provider-arguments
+      // - https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/4.0-upgrade-guide#behaviour-changes-and-removed-properties-in-resources
       message RemoveAttr {
-        // target path
+        // TODO: Just using the already established attribute path for now, but this will definitely need to change to be something akin to a path expression instead of an absolute path.
+        // Luckily, framework already supports that (used mostly in validators), so if core already supports it then we just need to agree on a protocol definition for it.
+        // https://developer.hashicorp.com/terraform/plugin/framework/handling-data/path-expressions
         //
-        // this would typically be in the release when a deprecated attribute was removed officially
-      }
-
-      message DisplayWarning {
-        // kind of like a manual message to be displayed to the user during migration
-        // - example: "Hey, this service is being deprecated and you need to fully refactor your configuration to use this other resource/split it into multiple pieces"
-        //      - I'm not sure how much value this would have vs. a deprecation warning?
-        
-        // target path
-        // message
+        // For now, absolute paths will work fine for root paths
+        AttributePath target_attr_path = 1;
       }
     }
 }
