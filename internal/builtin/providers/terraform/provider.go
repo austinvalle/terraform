@@ -368,3 +368,7 @@ func (p *Provider) ValidateActionConfig(req providers.ValidateActionConfigReques
 func (p *Provider) Close() error {
 	return nil
 }
+
+func (p *Provider) GetCodeMigrations(req providers.GetCodeMigrationsRequest) providers.GetCodeMigrationsResponse {
+	return providers.GetCodeMigrationsResponse{}
+}
