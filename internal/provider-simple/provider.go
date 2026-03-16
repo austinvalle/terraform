@@ -321,6 +321,10 @@ func (s simple) ValidateActionConfig(providers.ValidateActionConfigRequest) prov
 	panic("ValidateActionConfig on provider that didn't declare any actions")
 }
 
+func (s simple) GetCodeMigrations(providers.GetCodeMigrationsRequest) providers.GetCodeMigrationsResponse {
+	panic("GetCodeMigrations not implemented on provider")
+}
+
 func (s simple) Close() error {
 	return nil
 }

@@ -400,3 +400,7 @@ func (p *erroredProvider) ValidateActionConfig(_ providers.ValidateActionConfigR
 		Diagnostics: diags,
 	}
 }
+
+func (p *erroredProvider) GetCodeMigrations(_ providers.GetCodeMigrationsRequest) providers.GetCodeMigrationsResponse {
+	return providers.GetCodeMigrationsResponse{}
+}

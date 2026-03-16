@@ -473,3 +473,7 @@ func (m *Mock) InvokeAction(request InvokeActionRequest) InvokeActionResponse {
 func (m *Mock) Close() error {
 	return m.Provider.Close()
 }
+
+func (m *Mock) GetCodeMigrations(req GetCodeMigrationsRequest) GetCodeMigrationsResponse {
+	return m.Provider.GetCodeMigrations(req)
+}

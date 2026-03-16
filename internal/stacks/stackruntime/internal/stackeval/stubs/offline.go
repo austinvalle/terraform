@@ -421,3 +421,7 @@ func (o *offlineProvider) Close() error {
 	// pass the close call to the underlying unconfigured client
 	return o.unconfiguredClient.Close()
 }
+
+func (o *offlineProvider) GetCodeMigrations(req providers.GetCodeMigrationsRequest) providers.GetCodeMigrationsResponse {
+	return o.unconfiguredClient.GetCodeMigrations(req)
+}

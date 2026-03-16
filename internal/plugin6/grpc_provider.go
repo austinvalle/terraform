@@ -2049,6 +2049,136 @@ func (p *GRPCProvider) ValidateActionConfig(r providers.ValidateActionConfigRequ
 	return resp
 }
 
+func (p *GRPCProvider) GetCodeMigrations(r providers.GetCodeMigrationsRequest) (resp providers.GetCodeMigrationsResponse) {
+	logger.Trace("GRPCProvider.v6: GetCodeMigrations")
+
+	schema := p.GetProviderSchema()
+	if schema.Diagnostics.HasErrors() {
+		resp.Diagnostics = schema.Diagnostics
+		return resp
+	}
+
+	protoReq := &proto6.GetCodeMigrations_Request{}
+	protoResp, err := p.client.GetCodeMigrations(p.ctx, protoReq)
+	if err != nil {
+		resp.Diagnostics = resp.Diagnostics.Append(grpcErr(err))
+		return resp
+	}
+	resp.Diagnostics = resp.Diagnostics.Append(convert.ProtoToDiagnostics(protoResp.Diagnostics))
+	resp.CodeMigrations = make([]providers.CodeMigration, len(protoResp.CodeMigrations))
+
+	// Extract + validate the code migrations
+	for i, protoMigration := range protoResp.CodeMigrations {
+		// TODO: Probably would need to expand this to be more flexible (look in all types, data sources, ephemeral, etc.)
+		resourceSchema, ok := schema.ResourceTypes[protoMigration.TypeName]
+		if !ok {
+			resp.Diagnostics = resp.Diagnostics.Append(fmt.Errorf("code migration defined for unknown resource type %q", protoMigration.TypeName))
+			continue
+		}
+
+		codeMigration := providers.CodeMigration{
+			TypeName: protoMigration.TypeName,
+			Name:     protoMigration.Name, // TODO: do we care if this is unique?
+		}
+
+		// TODO: this validation can probably move to a more suitable location :P
+		switch migration := protoMigration.Migration.(type) {
+		case *proto6.GetCodeMigrations_CodeMigration_NestedBlockToNestedAttr_:
+			nestedBlockPath := convert.AttributePathToPath(migration.NestedBlockToNestedAttr.NestedBlockPath)
+			nestedBlock := resourceSchema.Body.BlockByPath(nestedBlockPath)
+
+			if nestedBlock == nil {
+				resp.Diagnostics = resp.Diagnostics.Append(fmt.Errorf("invalid nested block to nested attribute code migration defined for resource type %q, no block found at path: %#v", protoMigration.TypeName, nestedBlockPath))
+				continue
+			}
+
+			codeMigration.Migration = providers.Migration_NestedBlockToNestedAttr{
+				NestedBlockPath: nestedBlockPath,
+			}
+		case *proto6.GetCodeMigrations_CodeMigration_TransformAttr_:
+			targetAttrPath := convert.AttributePathToPath(migration.TransformAttr.TargetAttrPath)
+			targetAttr := resourceSchema.Body.AttributeByPath(targetAttrPath)
+			if targetAttr == nil {
+				resp.Diagnostics = resp.Diagnostics.Append(fmt.Errorf("invalid transform code migration defined for resource type %q, no attr found at target attr path: %#v", protoMigration.TypeName, targetAttrPath))
+				continue
+			}
+
+			// TODO: We need a context to validate that this is either a provider-defined function available to the configuration or a terraform built-in function
+			// Likely indicating this code should move somewhere else
+			functionName := migration.TransformAttr.FunctionName
+
+			transformMigration := providers.Migration_TransformAttr{
+				TargetAttrPath:      targetAttrPath,
+				FunctionName:        functionName,
+				AdditionalArguments: make([]cty.Value, len(migration.TransformAttr.AdditionalArguments)),
+			}
+
+			for i2, additionalArg := range migration.TransformAttr.AdditionalArguments {
+				// Decode with a dynamic type, since it seems like overkill for the provider to have to know all of the available function schemas
+				// TODO: When we move this code someplace where we can evaluate the available functions (for functionName above), we should check that this argument:
+				// 1. Exists on the function provided
+				// 2. Can be converted to the type of that argument
+				ctyVal, err := decodeDynamicValue(additionalArg, cty.DynamicPseudoType)
+				if err != nil {
+					resp.Diagnostics.Append(err)
+					continue
+				}
+
+				// These are statically defined by the provider, so this should always be known.
+				if !ctyVal.IsKnown() {
+					resp.Diagnostics = resp.Diagnostics.Append(fmt.Errorf("invalid transform code migration defined for resource type %q, additional argument at index %d is unknown", protoMigration.TypeName, i2))
+					continue
+				}
+
+				transformMigration.AdditionalArguments[i2] = ctyVal
+			}
+
+			codeMigration.Migration = transformMigration
+		case *proto6.GetCodeMigrations_CodeMigration_RenameAttr_:
+			// TODO: right now is just supporting attributes, but should expand for nested blocks as well
+			targetAttrPath := convert.AttributePathToPath(migration.RenameAttr.TargetAttrPath)
+			targetAttr := resourceSchema.Body.AttributeByPath(targetAttrPath)
+			if targetAttr == nil {
+				resp.Diagnostics = resp.Diagnostics.Append(fmt.Errorf("invalid rename code migration defined for resource type %q, no attr found at target attr path: %#v", protoMigration.TypeName, targetAttrPath))
+				continue
+			}
+			destinationAttrPath := convert.AttributePathToPath(migration.RenameAttr.DestinationAttrPath)
+			destinationAttr := resourceSchema.Body.AttributeByPath(destinationAttrPath)
+			if destinationAttr == nil {
+				resp.Diagnostics = resp.Diagnostics.Append(fmt.Errorf("invalid rename code migration defined for resource type %q, no attr found at destination attr path: %#v", protoMigration.TypeName, destinationAttrPath))
+				continue
+			}
+
+			codeMigration.Migration = providers.Migration_RenameAttr{
+				TargetAttrPath:      targetAttrPath,
+				DestinationAttrPath: destinationAttrPath,
+			}
+		case *proto6.GetCodeMigrations_CodeMigration_RemoveAttr_:
+			// TODO: right now is just supporting attributes, but should expand for nested blocks as well
+			targetAttrPath := convert.AttributePathToPath(migration.RemoveAttr.TargetAttrPath)
+			targetAttr := resourceSchema.Body.AttributeByPath(targetAttrPath)
+			if targetAttr == nil {
+				resp.Diagnostics = resp.Diagnostics.Append(fmt.Errorf("invalid remove code migration defined for resource type %q, no attr found at target attr path: %#v", protoMigration.TypeName, targetAttrPath))
+				continue
+			}
+
+			codeMigration.Migration = providers.Migration_RemoveAttr{
+				TargetAttrPath: targetAttrPath,
+			}
+		default:
+			// TODO: We should probably have some backup plan for when the provider has a migration Core
+			// doesn't know about. (maybe just display the name of the migration and some description?)
+			//
+			// Maybe mention upgrading to a newer version of TF core
+
+		}
+
+		resp.CodeMigrations[i] = codeMigration
+	}
+
+	return resp
+}
+
 // Decode a DynamicValue from either the JSON or MsgPack encoding.
 func decodeDynamicValue(v *proto6.DynamicValue, ty cty.Type) (cty.Value, error) {
 	// always return a valid value

@@ -433,6 +433,7 @@ message GetCodeMigrations {
     // - s3 bucket refactor (i.e. one resource to multiple?)
     message Response {
         repeated CodeMigration code_migrations = 1;
+        repeated Diagnostic diagnostics = 2;
     }
 
     // non-provider code migrations

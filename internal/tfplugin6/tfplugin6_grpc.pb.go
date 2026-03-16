@@ -76,6 +76,7 @@ const (
 	Provider_InvokeAction_FullMethodName                    = "/tfplugin6.Provider/InvokeAction"
 	Provider_ValidateActionConfig_FullMethodName            = "/tfplugin6.Provider/ValidateActionConfig"
 	Provider_StopProvider_FullMethodName                    = "/tfplugin6.Provider/StopProvider"
+	Provider_GetCodeMigrations_FullMethodName               = "/tfplugin6.Provider/GetCodeMigrations"
 )
 
 // ProviderClient is the client API for Provider service.
@@ -145,6 +146,8 @@ type ProviderClient interface {
 	ValidateActionConfig(ctx context.Context, in *ValidateActionConfig_Request, opts ...grpc.CallOption) (*ValidateActionConfig_Response, error)
 	// ////// Graceful Shutdown
 	StopProvider(ctx context.Context, in *StopProvider_Request, opts ...grpc.CallOption) (*StopProvider_Response, error)
+	// Return the code migrations that this version of the terraform provider knows about (could be static/TF core only, or "online")
+	GetCodeMigrations(ctx context.Context, in *GetCodeMigrations_Request, opts ...grpc.CallOption) (*GetCodeMigrations_Response, error)
 }
 
 type providerClient struct {
@@ -545,6 +548,16 @@ func (c *providerClient) StopProvider(ctx context.Context, in *StopProvider_Requ
 	return out, nil
 }
 
+func (c *providerClient) GetCodeMigrations(ctx context.Context, in *GetCodeMigrations_Request, opts ...grpc.CallOption) (*GetCodeMigrations_Response, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(GetCodeMigrations_Response)
+	err := c.cc.Invoke(ctx, Provider_GetCodeMigrations_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // ProviderServer is the server API for Provider service.
 // All implementations must embed UnimplementedProviderServer
 // for forward compatibility.
@@ -612,6 +625,8 @@ type ProviderServer interface {
 	ValidateActionConfig(context.Context, *ValidateActionConfig_Request) (*ValidateActionConfig_Response, error)
 	// ////// Graceful Shutdown
 	StopProvider(context.Context, *StopProvider_Request) (*StopProvider_Response, error)
+	// Return the code migrations that this version of the terraform provider knows about (could be static/TF core only, or "online")
+	GetCodeMigrations(context.Context, *GetCodeMigrations_Request) (*GetCodeMigrations_Response, error)
 	mustEmbedUnimplementedProviderServer()
 }
 
@@ -729,6 +744,9 @@ func (UnimplementedProviderServer) ValidateActionConfig(context.Context, *Valida
 }
 func (UnimplementedProviderServer) StopProvider(context.Context, *StopProvider_Request) (*StopProvider_Response, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method StopProvider not implemented")
+}
+func (UnimplementedProviderServer) GetCodeMigrations(context.Context, *GetCodeMigrations_Request) (*GetCodeMigrations_Response, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetCodeMigrations not implemented")
 }
 func (UnimplementedProviderServer) mustEmbedUnimplementedProviderServer() {}
 func (UnimplementedProviderServer) testEmbeddedByValue()                  {}
@@ -1367,6 +1385,24 @@ func _Provider_StopProvider_Handler(srv interface{}, ctx context.Context, dec fu
 	return interceptor(ctx, in, info, handler)
 }
 
+func _Provider_GetCodeMigrations_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetCodeMigrations_Request)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ProviderServer).GetCodeMigrations(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Provider_GetCodeMigrations_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ProviderServer).GetCodeMigrations(ctx, req.(*GetCodeMigrations_Request))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // Provider_ServiceDesc is the grpc.ServiceDesc for Provider service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -1501,6 +1537,10 @@ var Provider_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "StopProvider",
 			Handler:    _Provider_StopProvider_Handler,
+		},
+		{
+			MethodName: "GetCodeMigrations",
+			Handler:    _Provider_GetCodeMigrations_Handler,
 		},
 	},
 	Streams: []grpc.StreamDesc{

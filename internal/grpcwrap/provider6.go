@@ -1294,6 +1294,66 @@ func (p *provider6) StopProvider(context.Context, *tfplugin6.StopProvider_Reques
 	return resp, nil
 }
 
+func (p *provider6) GetCodeMigrations(_ context.Context, req *tfplugin6.GetCodeMigrations_Request) (*tfplugin6.GetCodeMigrations_Response, error) {
+	getCodeMigrationsResp := p.provider.GetCodeMigrations(providers.GetCodeMigrationsRequest{})
+
+	resp := &tfplugin6.GetCodeMigrations_Response{
+		Diagnostics: convert.AppendProtoDiag([]*tfplugin6.Diagnostic{}, getCodeMigrationsResp.Diagnostics),
+	}
+
+	resp.CodeMigrations = make([]*tfplugin6.GetCodeMigrations_CodeMigration, len(getCodeMigrationsResp.CodeMigrations))
+	for i, codeMigration := range getCodeMigrationsResp.CodeMigrations {
+		resp.CodeMigrations[i] = &tfplugin6.GetCodeMigrations_CodeMigration{
+			TypeName: codeMigration.TypeName,
+			Name:     codeMigration.Name,
+		}
+
+		switch migrationData := codeMigration.Migration.(type) {
+		case providers.Migration_NestedBlockToNestedAttr:
+			resp.CodeMigrations[i].Migration = &tfplugin6.GetCodeMigrations_CodeMigration_NestedBlockToNestedAttr_{
+				NestedBlockToNestedAttr: &proto6.GetCodeMigrations_CodeMigration_NestedBlockToNestedAttr{
+					NestedBlockPath: convert.PathToAttributePath(migrationData.NestedBlockPath),
+				},
+			}
+		case providers.Migration_TransformAttr:
+			transformMigration := &tfplugin6.GetCodeMigrations_CodeMigration_TransformAttr_{
+				TransformAttr: &proto6.GetCodeMigrations_CodeMigration_TransformAttr{
+					TargetAttrPath:      convert.PathToAttributePath(migrationData.TargetAttrPath),
+					FunctionName:        migrationData.FunctionName,
+					AdditionalArguments: make([]*proto6.DynamicValue, len(migrationData.AdditionalArguments)),
+				},
+			}
+
+			for i2, additionalArg := range migrationData.AdditionalArguments {
+				dv, err := encodeDynamicValue6(additionalArg, cty.DynamicPseudoType)
+				if err != nil {
+					resp.Diagnostics = convert.AppendProtoDiag(resp.Diagnostics, err)
+					return resp, nil
+				}
+
+				transformMigration.TransformAttr.AdditionalArguments[i2] = dv
+			}
+
+			resp.CodeMigrations[i].Migration = transformMigration
+		case providers.Migration_RenameAttr:
+			resp.CodeMigrations[i].Migration = &tfplugin6.GetCodeMigrations_CodeMigration_RenameAttr_{
+				RenameAttr: &proto6.GetCodeMigrations_CodeMigration_RenameAttr{
+					TargetAttrPath:      convert.PathToAttributePath(migrationData.TargetAttrPath),
+					DestinationAttrPath: convert.PathToAttributePath(migrationData.DestinationAttrPath),
+				},
+			}
+		case providers.Migration_RemoveAttr:
+			resp.CodeMigrations[i].Migration = &tfplugin6.GetCodeMigrations_CodeMigration_RemoveAttr_{
+				RemoveAttr: &proto6.GetCodeMigrations_CodeMigration_RemoveAttr{
+					TargetAttrPath: convert.PathToAttributePath(migrationData.TargetAttrPath),
+				},
+			}
+		}
+	}
+
+	return resp, nil
+}
+
 // decode a DynamicValue from either the JSON or MsgPack encoding.
 func decodeDynamicValue6(v *tfplugin6.DynamicValue, ty cty.Type) (cty.Value, error) {
 	// always return a valid value

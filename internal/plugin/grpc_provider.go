@@ -1650,6 +1650,10 @@ func (p *GRPCProvider) Close() error {
 	return nil
 }
 
+func (p *GRPCProvider) GetCodeMigrations(r providers.GetCodeMigrationsRequest) providers.GetCodeMigrationsResponse {
+	panic("not implemented")
+}
+
 // Decode a DynamicValue from either the JSON or MsgPack encoding.
 func decodeDynamicValue(v *proto.DynamicValue, ty cty.Type) (cty.Value, error) {
 	// always return a valid value

@@ -469,3 +469,7 @@ func (u *unknownProvider) Close() error {
 	// the underlying unconfiguredClient is managed elsewhere.
 	return nil
 }
+
+func (u *unknownProvider) GetCodeMigrations(req providers.GetCodeMigrationsRequest) providers.GetCodeMigrationsResponse {
+	return u.unconfiguredClient.GetCodeMigrations(req)
+}

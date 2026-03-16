@@ -203,6 +203,11 @@ type MockProvider struct {
 	ValidateActionConfigResponse *providers.ValidateActionConfigResponse
 	ValidateActionConfigFn       func(providers.ValidateActionConfigRequest) providers.ValidateActionConfigResponse
 
+	GetCodeMigrationsCalled   bool
+	GetCodeMigrationsRequest  providers.GetCodeMigrationsRequest
+	GetCodeMigrationsResponse *providers.GetCodeMigrationsResponse
+	GetCodeMigrationsFn       func(providers.GetCodeMigrationsRequest) providers.GetCodeMigrationsResponse
+
 	CloseCalled bool
 	CloseError  error
 }
@@ -1228,4 +1233,21 @@ func (p *MockProvider) SetStateStoreChunkSize(storeType string, chunkSize int) {
 	}
 
 	// If there's no function to use above we do nothing
+}
+
+func (p *MockProvider) GetCodeMigrations(r providers.GetCodeMigrationsRequest) (resp providers.GetCodeMigrationsResponse) {
+	defer p.beginWrite()()
+
+	p.GetCodeMigrationsCalled = true
+	p.GetCodeMigrationsRequest = r
+
+	if p.GetCodeMigrationsFn != nil {
+		return p.GetCodeMigrationsFn(r)
+	}
+
+	if p.GetCodeMigrationsResponse != nil {
+		return *p.GetCodeMigrationsResponse
+	}
+
+	return resp
 }

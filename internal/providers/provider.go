@@ -147,6 +147,8 @@ type Interface interface {
 	// ValidateActionConfig performs configuration validation
 	ValidateActionConfig(ValidateActionConfigRequest) ValidateActionConfigResponse
 
+	GetCodeMigrations(GetCodeMigrationsRequest) GetCodeMigrationsResponse
+
 	// Close shuts down the plugin process if applicable.
 	Close() error
 }
@@ -1025,3 +1027,67 @@ type ValidateActionConfigResponse struct {
 	// Diagnostics contains any warnings or errors from the method call.
 	Diagnostics tfdiags.Diagnostics
 }
+
+type GetCodeMigrationsRequest struct{}
+
+type GetCodeMigrationsResponse struct {
+	// Code migrations available for this provider
+	CodeMigrations []CodeMigration
+
+	// Diagnostics contains any warnings or errors from the method call.
+	Diagnostics tfdiags.Diagnostics
+}
+
+type CodeMigration struct {
+	// Associated type name for this code migration
+	TypeName string
+
+	// Name of the code migration
+	Name string
+
+	// The data for the migration
+	Migration Migration
+}
+
+type Migration interface {
+	isMigration()
+}
+
+// Nested block to nested attribute migration
+var _ Migration = &Migration_NestedBlockToNestedAttr{}
+
+type Migration_NestedBlockToNestedAttr struct {
+	NestedBlockPath cty.Path
+}
+
+func (m Migration_NestedBlockToNestedAttr) isMigration() {}
+
+// Transform migration
+var _ Migration = &Migration_TransformAttr{}
+
+type Migration_TransformAttr struct {
+	TargetAttrPath      cty.Path
+	FunctionName        string
+	AdditionalArguments []cty.Value
+}
+
+func (m Migration_TransformAttr) isMigration() {}
+
+// Rename attribute migration
+var _ Migration = &Migration_RenameAttr{}
+
+type Migration_RenameAttr struct {
+	TargetAttrPath      cty.Path
+	DestinationAttrPath cty.Path
+}
+
+func (m Migration_RenameAttr) isMigration() {}
+
+// Remove attribute migration
+var _ Migration = &Migration_RemoveAttr{}
+
+type Migration_RemoveAttr struct {
+	TargetAttrPath cty.Path
+}
+
+func (m Migration_RemoveAttr) isMigration() {}

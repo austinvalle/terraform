@@ -183,6 +183,26 @@ func (mr *MockProviderClientMockRecorder) GenerateResourceConfig(ctx, in any, op
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GenerateResourceConfig", reflect.TypeOf((*MockProviderClient)(nil).GenerateResourceConfig), varargs...)
 }
 
+// GetCodeMigrations mocks base method.
+func (m *MockProviderClient) GetCodeMigrations(ctx context.Context, in *tfplugin6.GetCodeMigrations_Request, opts ...grpc.CallOption) (*tfplugin6.GetCodeMigrations_Response, error) {
+	m.ctrl.T.Helper()
+	varargs := []any{ctx, in}
+	for _, a := range opts {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "GetCodeMigrations", varargs...)
+	ret0, _ := ret[0].(*tfplugin6.GetCodeMigrations_Response)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetCodeMigrations indicates an expected call of GetCodeMigrations.
+func (mr *MockProviderClientMockRecorder) GetCodeMigrations(ctx, in any, opts ...any) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]any{ctx, in}, opts...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetCodeMigrations", reflect.TypeOf((*MockProviderClient)(nil).GetCodeMigrations), varargs...)
+}
+
 // GetFunctions mocks base method.
 func (m *MockProviderClient) GetFunctions(ctx context.Context, in *tfplugin6.GetFunctions_Request, opts ...grpc.CallOption) (*tfplugin6.GetFunctions_Response, error) {
 	m.ctrl.T.Helper()

@@ -1134,6 +1134,42 @@ func (x *Deferred) GetReason() Deferred_Reason {
 	return Deferred_UNKNOWN
 }
 
+type GetCodeMigrations struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *GetCodeMigrations) Reset() {
+	*x = GetCodeMigrations{}
+	mi := &file_tfplugin6_proto_msgTypes[14]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GetCodeMigrations) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetCodeMigrations) ProtoMessage() {}
+
+func (x *GetCodeMigrations) ProtoReflect() protoreflect.Message {
+	mi := &file_tfplugin6_proto_msgTypes[14]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetCodeMigrations.ProtoReflect.Descriptor instead.
+func (*GetCodeMigrations) Descriptor() ([]byte, []int) {
+	return file_tfplugin6_proto_rawDescGZIP(), []int{14}
+}
+
 type GetMetadata struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	unknownFields protoimpl.UnknownFields
@@ -1142,7 +1178,7 @@ type GetMetadata struct {
 
 func (x *GetMetadata) Reset() {
 	*x = GetMetadata{}
-	mi := &file_tfplugin6_proto_msgTypes[14]
+	mi := &file_tfplugin6_proto_msgTypes[15]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1154,7 +1190,7 @@ func (x *GetMetadata) String() string {
 func (*GetMetadata) ProtoMessage() {}
 
 func (x *GetMetadata) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[14]
+	mi := &file_tfplugin6_proto_msgTypes[15]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1167,7 +1203,7 @@ func (x *GetMetadata) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetMetadata.ProtoReflect.Descriptor instead.
 func (*GetMetadata) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{14}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{15}
 }
 
 type GetProviderSchema struct {
@@ -1178,7 +1214,7 @@ type GetProviderSchema struct {
 
 func (x *GetProviderSchema) Reset() {
 	*x = GetProviderSchema{}
-	mi := &file_tfplugin6_proto_msgTypes[15]
+	mi := &file_tfplugin6_proto_msgTypes[16]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1190,7 +1226,7 @@ func (x *GetProviderSchema) String() string {
 func (*GetProviderSchema) ProtoMessage() {}
 
 func (x *GetProviderSchema) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[15]
+	mi := &file_tfplugin6_proto_msgTypes[16]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1203,7 +1239,7 @@ func (x *GetProviderSchema) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetProviderSchema.ProtoReflect.Descriptor instead.
 func (*GetProviderSchema) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{15}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{16}
 }
 
 type ValidateProviderConfig struct {
@@ -1214,7 +1250,7 @@ type ValidateProviderConfig struct {
 
 func (x *ValidateProviderConfig) Reset() {
 	*x = ValidateProviderConfig{}
-	mi := &file_tfplugin6_proto_msgTypes[16]
+	mi := &file_tfplugin6_proto_msgTypes[17]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1226,7 +1262,7 @@ func (x *ValidateProviderConfig) String() string {
 func (*ValidateProviderConfig) ProtoMessage() {}
 
 func (x *ValidateProviderConfig) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[16]
+	mi := &file_tfplugin6_proto_msgTypes[17]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1239,7 +1275,7 @@ func (x *ValidateProviderConfig) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ValidateProviderConfig.ProtoReflect.Descriptor instead.
 func (*ValidateProviderConfig) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{16}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{17}
 }
 
 type UpgradeResourceState struct {
@@ -1250,7 +1286,7 @@ type UpgradeResourceState struct {
 
 func (x *UpgradeResourceState) Reset() {
 	*x = UpgradeResourceState{}
-	mi := &file_tfplugin6_proto_msgTypes[17]
+	mi := &file_tfplugin6_proto_msgTypes[18]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1262,7 +1298,7 @@ func (x *UpgradeResourceState) String() string {
 func (*UpgradeResourceState) ProtoMessage() {}
 
 func (x *UpgradeResourceState) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[17]
+	mi := &file_tfplugin6_proto_msgTypes[18]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1275,7 +1311,7 @@ func (x *UpgradeResourceState) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UpgradeResourceState.ProtoReflect.Descriptor instead.
 func (*UpgradeResourceState) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{17}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{18}
 }
 
 type GetResourceIdentitySchemas struct {
@@ -1286,7 +1322,7 @@ type GetResourceIdentitySchemas struct {
 
 func (x *GetResourceIdentitySchemas) Reset() {
 	*x = GetResourceIdentitySchemas{}
-	mi := &file_tfplugin6_proto_msgTypes[18]
+	mi := &file_tfplugin6_proto_msgTypes[19]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1298,7 +1334,7 @@ func (x *GetResourceIdentitySchemas) String() string {
 func (*GetResourceIdentitySchemas) ProtoMessage() {}
 
 func (x *GetResourceIdentitySchemas) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[18]
+	mi := &file_tfplugin6_proto_msgTypes[19]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1311,7 +1347,7 @@ func (x *GetResourceIdentitySchemas) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetResourceIdentitySchemas.ProtoReflect.Descriptor instead.
 func (*GetResourceIdentitySchemas) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{18}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{19}
 }
 
 type UpgradeResourceIdentity struct {
@@ -1322,7 +1358,7 @@ type UpgradeResourceIdentity struct {
 
 func (x *UpgradeResourceIdentity) Reset() {
 	*x = UpgradeResourceIdentity{}
-	mi := &file_tfplugin6_proto_msgTypes[19]
+	mi := &file_tfplugin6_proto_msgTypes[20]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1334,7 +1370,7 @@ func (x *UpgradeResourceIdentity) String() string {
 func (*UpgradeResourceIdentity) ProtoMessage() {}
 
 func (x *UpgradeResourceIdentity) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[19]
+	mi := &file_tfplugin6_proto_msgTypes[20]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1347,7 +1383,7 @@ func (x *UpgradeResourceIdentity) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UpgradeResourceIdentity.ProtoReflect.Descriptor instead.
 func (*UpgradeResourceIdentity) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{19}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{20}
 }
 
 type ValidateResourceConfig struct {
@@ -1358,7 +1394,7 @@ type ValidateResourceConfig struct {
 
 func (x *ValidateResourceConfig) Reset() {
 	*x = ValidateResourceConfig{}
-	mi := &file_tfplugin6_proto_msgTypes[20]
+	mi := &file_tfplugin6_proto_msgTypes[21]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1370,7 +1406,7 @@ func (x *ValidateResourceConfig) String() string {
 func (*ValidateResourceConfig) ProtoMessage() {}
 
 func (x *ValidateResourceConfig) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[20]
+	mi := &file_tfplugin6_proto_msgTypes[21]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1383,7 +1419,7 @@ func (x *ValidateResourceConfig) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ValidateResourceConfig.ProtoReflect.Descriptor instead.
 func (*ValidateResourceConfig) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{20}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{21}
 }
 
 type ValidateDataResourceConfig struct {
@@ -1394,7 +1430,7 @@ type ValidateDataResourceConfig struct {
 
 func (x *ValidateDataResourceConfig) Reset() {
 	*x = ValidateDataResourceConfig{}
-	mi := &file_tfplugin6_proto_msgTypes[21]
+	mi := &file_tfplugin6_proto_msgTypes[22]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1406,7 +1442,7 @@ func (x *ValidateDataResourceConfig) String() string {
 func (*ValidateDataResourceConfig) ProtoMessage() {}
 
 func (x *ValidateDataResourceConfig) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[21]
+	mi := &file_tfplugin6_proto_msgTypes[22]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1419,7 +1455,7 @@ func (x *ValidateDataResourceConfig) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ValidateDataResourceConfig.ProtoReflect.Descriptor instead.
 func (*ValidateDataResourceConfig) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{21}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{22}
 }
 
 type ValidateEphemeralResourceConfig struct {
@@ -1430,7 +1466,7 @@ type ValidateEphemeralResourceConfig struct {
 
 func (x *ValidateEphemeralResourceConfig) Reset() {
 	*x = ValidateEphemeralResourceConfig{}
-	mi := &file_tfplugin6_proto_msgTypes[22]
+	mi := &file_tfplugin6_proto_msgTypes[23]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1442,7 +1478,7 @@ func (x *ValidateEphemeralResourceConfig) String() string {
 func (*ValidateEphemeralResourceConfig) ProtoMessage() {}
 
 func (x *ValidateEphemeralResourceConfig) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[22]
+	mi := &file_tfplugin6_proto_msgTypes[23]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1455,7 +1491,7 @@ func (x *ValidateEphemeralResourceConfig) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ValidateEphemeralResourceConfig.ProtoReflect.Descriptor instead.
 func (*ValidateEphemeralResourceConfig) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{22}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{23}
 }
 
 type ConfigureProvider struct {
@@ -1466,7 +1502,7 @@ type ConfigureProvider struct {
 
 func (x *ConfigureProvider) Reset() {
 	*x = ConfigureProvider{}
-	mi := &file_tfplugin6_proto_msgTypes[23]
+	mi := &file_tfplugin6_proto_msgTypes[24]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1478,7 +1514,7 @@ func (x *ConfigureProvider) String() string {
 func (*ConfigureProvider) ProtoMessage() {}
 
 func (x *ConfigureProvider) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[23]
+	mi := &file_tfplugin6_proto_msgTypes[24]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1491,7 +1527,7 @@ func (x *ConfigureProvider) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ConfigureProvider.ProtoReflect.Descriptor instead.
 func (*ConfigureProvider) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{23}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{24}
 }
 
 type ReadResource struct {
@@ -1502,7 +1538,7 @@ type ReadResource struct {
 
 func (x *ReadResource) Reset() {
 	*x = ReadResource{}
-	mi := &file_tfplugin6_proto_msgTypes[24]
+	mi := &file_tfplugin6_proto_msgTypes[25]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1514,7 +1550,7 @@ func (x *ReadResource) String() string {
 func (*ReadResource) ProtoMessage() {}
 
 func (x *ReadResource) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[24]
+	mi := &file_tfplugin6_proto_msgTypes[25]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1527,7 +1563,7 @@ func (x *ReadResource) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ReadResource.ProtoReflect.Descriptor instead.
 func (*ReadResource) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{24}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{25}
 }
 
 type PlanResourceChange struct {
@@ -1538,7 +1574,7 @@ type PlanResourceChange struct {
 
 func (x *PlanResourceChange) Reset() {
 	*x = PlanResourceChange{}
-	mi := &file_tfplugin6_proto_msgTypes[25]
+	mi := &file_tfplugin6_proto_msgTypes[26]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1550,7 +1586,7 @@ func (x *PlanResourceChange) String() string {
 func (*PlanResourceChange) ProtoMessage() {}
 
 func (x *PlanResourceChange) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[25]
+	mi := &file_tfplugin6_proto_msgTypes[26]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1563,7 +1599,7 @@ func (x *PlanResourceChange) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use PlanResourceChange.ProtoReflect.Descriptor instead.
 func (*PlanResourceChange) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{25}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{26}
 }
 
 type ApplyResourceChange struct {
@@ -1574,7 +1610,7 @@ type ApplyResourceChange struct {
 
 func (x *ApplyResourceChange) Reset() {
 	*x = ApplyResourceChange{}
-	mi := &file_tfplugin6_proto_msgTypes[26]
+	mi := &file_tfplugin6_proto_msgTypes[27]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1586,7 +1622,7 @@ func (x *ApplyResourceChange) String() string {
 func (*ApplyResourceChange) ProtoMessage() {}
 
 func (x *ApplyResourceChange) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[26]
+	mi := &file_tfplugin6_proto_msgTypes[27]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1599,7 +1635,7 @@ func (x *ApplyResourceChange) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ApplyResourceChange.ProtoReflect.Descriptor instead.
 func (*ApplyResourceChange) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{26}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{27}
 }
 
 type ImportResourceState struct {
@@ -1610,7 +1646,7 @@ type ImportResourceState struct {
 
 func (x *ImportResourceState) Reset() {
 	*x = ImportResourceState{}
-	mi := &file_tfplugin6_proto_msgTypes[27]
+	mi := &file_tfplugin6_proto_msgTypes[28]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1622,7 +1658,7 @@ func (x *ImportResourceState) String() string {
 func (*ImportResourceState) ProtoMessage() {}
 
 func (x *ImportResourceState) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[27]
+	mi := &file_tfplugin6_proto_msgTypes[28]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1635,7 +1671,7 @@ func (x *ImportResourceState) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ImportResourceState.ProtoReflect.Descriptor instead.
 func (*ImportResourceState) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{27}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{28}
 }
 
 type GenerateResourceConfig struct {
@@ -1646,7 +1682,7 @@ type GenerateResourceConfig struct {
 
 func (x *GenerateResourceConfig) Reset() {
 	*x = GenerateResourceConfig{}
-	mi := &file_tfplugin6_proto_msgTypes[28]
+	mi := &file_tfplugin6_proto_msgTypes[29]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1658,7 +1694,7 @@ func (x *GenerateResourceConfig) String() string {
 func (*GenerateResourceConfig) ProtoMessage() {}
 
 func (x *GenerateResourceConfig) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[28]
+	mi := &file_tfplugin6_proto_msgTypes[29]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1671,7 +1707,7 @@ func (x *GenerateResourceConfig) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GenerateResourceConfig.ProtoReflect.Descriptor instead.
 func (*GenerateResourceConfig) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{28}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{29}
 }
 
 type MoveResourceState struct {
@@ -1682,7 +1718,7 @@ type MoveResourceState struct {
 
 func (x *MoveResourceState) Reset() {
 	*x = MoveResourceState{}
-	mi := &file_tfplugin6_proto_msgTypes[29]
+	mi := &file_tfplugin6_proto_msgTypes[30]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1694,7 +1730,7 @@ func (x *MoveResourceState) String() string {
 func (*MoveResourceState) ProtoMessage() {}
 
 func (x *MoveResourceState) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[29]
+	mi := &file_tfplugin6_proto_msgTypes[30]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1707,7 +1743,7 @@ func (x *MoveResourceState) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use MoveResourceState.ProtoReflect.Descriptor instead.
 func (*MoveResourceState) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{29}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{30}
 }
 
 type ReadDataSource struct {
@@ -1718,7 +1754,7 @@ type ReadDataSource struct {
 
 func (x *ReadDataSource) Reset() {
 	*x = ReadDataSource{}
-	mi := &file_tfplugin6_proto_msgTypes[30]
+	mi := &file_tfplugin6_proto_msgTypes[31]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1730,7 +1766,7 @@ func (x *ReadDataSource) String() string {
 func (*ReadDataSource) ProtoMessage() {}
 
 func (x *ReadDataSource) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[30]
+	mi := &file_tfplugin6_proto_msgTypes[31]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1743,7 +1779,7 @@ func (x *ReadDataSource) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ReadDataSource.ProtoReflect.Descriptor instead.
 func (*ReadDataSource) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{30}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{31}
 }
 
 type OpenEphemeralResource struct {
@@ -1754,7 +1790,7 @@ type OpenEphemeralResource struct {
 
 func (x *OpenEphemeralResource) Reset() {
 	*x = OpenEphemeralResource{}
-	mi := &file_tfplugin6_proto_msgTypes[31]
+	mi := &file_tfplugin6_proto_msgTypes[32]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1766,7 +1802,7 @@ func (x *OpenEphemeralResource) String() string {
 func (*OpenEphemeralResource) ProtoMessage() {}
 
 func (x *OpenEphemeralResource) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[31]
+	mi := &file_tfplugin6_proto_msgTypes[32]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1779,7 +1815,7 @@ func (x *OpenEphemeralResource) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use OpenEphemeralResource.ProtoReflect.Descriptor instead.
 func (*OpenEphemeralResource) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{31}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{32}
 }
 
 type RenewEphemeralResource struct {
@@ -1790,7 +1826,7 @@ type RenewEphemeralResource struct {
 
 func (x *RenewEphemeralResource) Reset() {
 	*x = RenewEphemeralResource{}
-	mi := &file_tfplugin6_proto_msgTypes[32]
+	mi := &file_tfplugin6_proto_msgTypes[33]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1802,7 +1838,7 @@ func (x *RenewEphemeralResource) String() string {
 func (*RenewEphemeralResource) ProtoMessage() {}
 
 func (x *RenewEphemeralResource) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[32]
+	mi := &file_tfplugin6_proto_msgTypes[33]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1815,7 +1851,7 @@ func (x *RenewEphemeralResource) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RenewEphemeralResource.ProtoReflect.Descriptor instead.
 func (*RenewEphemeralResource) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{32}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{33}
 }
 
 type CloseEphemeralResource struct {
@@ -1826,7 +1862,7 @@ type CloseEphemeralResource struct {
 
 func (x *CloseEphemeralResource) Reset() {
 	*x = CloseEphemeralResource{}
-	mi := &file_tfplugin6_proto_msgTypes[33]
+	mi := &file_tfplugin6_proto_msgTypes[34]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1838,7 +1874,7 @@ func (x *CloseEphemeralResource) String() string {
 func (*CloseEphemeralResource) ProtoMessage() {}
 
 func (x *CloseEphemeralResource) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[33]
+	mi := &file_tfplugin6_proto_msgTypes[34]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1851,7 +1887,7 @@ func (x *CloseEphemeralResource) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CloseEphemeralResource.ProtoReflect.Descriptor instead.
 func (*CloseEphemeralResource) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{33}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{34}
 }
 
 type GetFunctions struct {
@@ -1862,7 +1898,7 @@ type GetFunctions struct {
 
 func (x *GetFunctions) Reset() {
 	*x = GetFunctions{}
-	mi := &file_tfplugin6_proto_msgTypes[34]
+	mi := &file_tfplugin6_proto_msgTypes[35]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1874,7 +1910,7 @@ func (x *GetFunctions) String() string {
 func (*GetFunctions) ProtoMessage() {}
 
 func (x *GetFunctions) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[34]
+	mi := &file_tfplugin6_proto_msgTypes[35]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1887,7 +1923,7 @@ func (x *GetFunctions) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetFunctions.ProtoReflect.Descriptor instead.
 func (*GetFunctions) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{34}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{35}
 }
 
 type CallFunction struct {
@@ -1898,7 +1934,7 @@ type CallFunction struct {
 
 func (x *CallFunction) Reset() {
 	*x = CallFunction{}
-	mi := &file_tfplugin6_proto_msgTypes[35]
+	mi := &file_tfplugin6_proto_msgTypes[36]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1910,7 +1946,7 @@ func (x *CallFunction) String() string {
 func (*CallFunction) ProtoMessage() {}
 
 func (x *CallFunction) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[35]
+	mi := &file_tfplugin6_proto_msgTypes[36]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1923,7 +1959,7 @@ func (x *CallFunction) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CallFunction.ProtoReflect.Descriptor instead.
 func (*CallFunction) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{35}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{36}
 }
 
 type ListResource struct {
@@ -1934,7 +1970,7 @@ type ListResource struct {
 
 func (x *ListResource) Reset() {
 	*x = ListResource{}
-	mi := &file_tfplugin6_proto_msgTypes[36]
+	mi := &file_tfplugin6_proto_msgTypes[37]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1946,7 +1982,7 @@ func (x *ListResource) String() string {
 func (*ListResource) ProtoMessage() {}
 
 func (x *ListResource) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[36]
+	mi := &file_tfplugin6_proto_msgTypes[37]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1959,7 +1995,7 @@ func (x *ListResource) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ListResource.ProtoReflect.Descriptor instead.
 func (*ListResource) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{36}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{37}
 }
 
 type ValidateListResourceConfig struct {
@@ -1970,7 +2006,7 @@ type ValidateListResourceConfig struct {
 
 func (x *ValidateListResourceConfig) Reset() {
 	*x = ValidateListResourceConfig{}
-	mi := &file_tfplugin6_proto_msgTypes[37]
+	mi := &file_tfplugin6_proto_msgTypes[38]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1982,7 +2018,7 @@ func (x *ValidateListResourceConfig) String() string {
 func (*ValidateListResourceConfig) ProtoMessage() {}
 
 func (x *ValidateListResourceConfig) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[37]
+	mi := &file_tfplugin6_proto_msgTypes[38]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1995,7 +2031,7 @@ func (x *ValidateListResourceConfig) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ValidateListResourceConfig.ProtoReflect.Descriptor instead.
 func (*ValidateListResourceConfig) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{37}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{38}
 }
 
 type ValidateStateStore struct {
@@ -2006,7 +2042,7 @@ type ValidateStateStore struct {
 
 func (x *ValidateStateStore) Reset() {
 	*x = ValidateStateStore{}
-	mi := &file_tfplugin6_proto_msgTypes[38]
+	mi := &file_tfplugin6_proto_msgTypes[39]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2018,7 +2054,7 @@ func (x *ValidateStateStore) String() string {
 func (*ValidateStateStore) ProtoMessage() {}
 
 func (x *ValidateStateStore) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[38]
+	mi := &file_tfplugin6_proto_msgTypes[39]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2031,7 +2067,7 @@ func (x *ValidateStateStore) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ValidateStateStore.ProtoReflect.Descriptor instead.
 func (*ValidateStateStore) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{38}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{39}
 }
 
 type ConfigureStateStore struct {
@@ -2042,7 +2078,7 @@ type ConfigureStateStore struct {
 
 func (x *ConfigureStateStore) Reset() {
 	*x = ConfigureStateStore{}
-	mi := &file_tfplugin6_proto_msgTypes[39]
+	mi := &file_tfplugin6_proto_msgTypes[40]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2054,7 +2090,7 @@ func (x *ConfigureStateStore) String() string {
 func (*ConfigureStateStore) ProtoMessage() {}
 
 func (x *ConfigureStateStore) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[39]
+	mi := &file_tfplugin6_proto_msgTypes[40]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2067,7 +2103,7 @@ func (x *ConfigureStateStore) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ConfigureStateStore.ProtoReflect.Descriptor instead.
 func (*ConfigureStateStore) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{39}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{40}
 }
 
 type StateStoreClientCapabilities struct {
@@ -2079,7 +2115,7 @@ type StateStoreClientCapabilities struct {
 
 func (x *StateStoreClientCapabilities) Reset() {
 	*x = StateStoreClientCapabilities{}
-	mi := &file_tfplugin6_proto_msgTypes[40]
+	mi := &file_tfplugin6_proto_msgTypes[41]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2091,7 +2127,7 @@ func (x *StateStoreClientCapabilities) String() string {
 func (*StateStoreClientCapabilities) ProtoMessage() {}
 
 func (x *StateStoreClientCapabilities) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[40]
+	mi := &file_tfplugin6_proto_msgTypes[41]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2104,7 +2140,7 @@ func (x *StateStoreClientCapabilities) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use StateStoreClientCapabilities.ProtoReflect.Descriptor instead.
 func (*StateStoreClientCapabilities) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{40}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{41}
 }
 
 func (x *StateStoreClientCapabilities) GetChunkSize() int64 {
@@ -2123,7 +2159,7 @@ type StateStoreServerCapabilities struct {
 
 func (x *StateStoreServerCapabilities) Reset() {
 	*x = StateStoreServerCapabilities{}
-	mi := &file_tfplugin6_proto_msgTypes[41]
+	mi := &file_tfplugin6_proto_msgTypes[42]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2135,7 +2171,7 @@ func (x *StateStoreServerCapabilities) String() string {
 func (*StateStoreServerCapabilities) ProtoMessage() {}
 
 func (x *StateStoreServerCapabilities) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[41]
+	mi := &file_tfplugin6_proto_msgTypes[42]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2148,7 +2184,7 @@ func (x *StateStoreServerCapabilities) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use StateStoreServerCapabilities.ProtoReflect.Descriptor instead.
 func (*StateStoreServerCapabilities) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{41}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{42}
 }
 
 func (x *StateStoreServerCapabilities) GetChunkSize() int64 {
@@ -2166,7 +2202,7 @@ type ReadStateBytes struct {
 
 func (x *ReadStateBytes) Reset() {
 	*x = ReadStateBytes{}
-	mi := &file_tfplugin6_proto_msgTypes[42]
+	mi := &file_tfplugin6_proto_msgTypes[43]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2178,7 +2214,7 @@ func (x *ReadStateBytes) String() string {
 func (*ReadStateBytes) ProtoMessage() {}
 
 func (x *ReadStateBytes) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[42]
+	mi := &file_tfplugin6_proto_msgTypes[43]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2191,7 +2227,7 @@ func (x *ReadStateBytes) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ReadStateBytes.ProtoReflect.Descriptor instead.
 func (*ReadStateBytes) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{42}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{43}
 }
 
 type WriteStateBytes struct {
@@ -2202,7 +2238,7 @@ type WriteStateBytes struct {
 
 func (x *WriteStateBytes) Reset() {
 	*x = WriteStateBytes{}
-	mi := &file_tfplugin6_proto_msgTypes[43]
+	mi := &file_tfplugin6_proto_msgTypes[44]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2214,7 +2250,7 @@ func (x *WriteStateBytes) String() string {
 func (*WriteStateBytes) ProtoMessage() {}
 
 func (x *WriteStateBytes) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[43]
+	mi := &file_tfplugin6_proto_msgTypes[44]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2227,7 +2263,7 @@ func (x *WriteStateBytes) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use WriteStateBytes.ProtoReflect.Descriptor instead.
 func (*WriteStateBytes) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{43}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{44}
 }
 
 type RequestChunkMeta struct {
@@ -2240,7 +2276,7 @@ type RequestChunkMeta struct {
 
 func (x *RequestChunkMeta) Reset() {
 	*x = RequestChunkMeta{}
-	mi := &file_tfplugin6_proto_msgTypes[44]
+	mi := &file_tfplugin6_proto_msgTypes[45]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2252,7 +2288,7 @@ func (x *RequestChunkMeta) String() string {
 func (*RequestChunkMeta) ProtoMessage() {}
 
 func (x *RequestChunkMeta) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[44]
+	mi := &file_tfplugin6_proto_msgTypes[45]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2265,7 +2301,7 @@ func (x *RequestChunkMeta) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RequestChunkMeta.ProtoReflect.Descriptor instead.
 func (*RequestChunkMeta) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{44}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{45}
 }
 
 func (x *RequestChunkMeta) GetTypeName() string {
@@ -2296,7 +2332,7 @@ type StateRange struct {
 
 func (x *StateRange) Reset() {
 	*x = StateRange{}
-	mi := &file_tfplugin6_proto_msgTypes[45]
+	mi := &file_tfplugin6_proto_msgTypes[46]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2308,7 +2344,7 @@ func (x *StateRange) String() string {
 func (*StateRange) ProtoMessage() {}
 
 func (x *StateRange) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[45]
+	mi := &file_tfplugin6_proto_msgTypes[46]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2321,7 +2357,7 @@ func (x *StateRange) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use StateRange.ProtoReflect.Descriptor instead.
 func (*StateRange) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{45}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{46}
 }
 
 func (x *StateRange) GetStart() int64 {
@@ -2346,7 +2382,7 @@ type LockState struct {
 
 func (x *LockState) Reset() {
 	*x = LockState{}
-	mi := &file_tfplugin6_proto_msgTypes[46]
+	mi := &file_tfplugin6_proto_msgTypes[47]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2358,7 +2394,7 @@ func (x *LockState) String() string {
 func (*LockState) ProtoMessage() {}
 
 func (x *LockState) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[46]
+	mi := &file_tfplugin6_proto_msgTypes[47]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2371,7 +2407,7 @@ func (x *LockState) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use LockState.ProtoReflect.Descriptor instead.
 func (*LockState) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{46}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{47}
 }
 
 type UnlockState struct {
@@ -2382,7 +2418,7 @@ type UnlockState struct {
 
 func (x *UnlockState) Reset() {
 	*x = UnlockState{}
-	mi := &file_tfplugin6_proto_msgTypes[47]
+	mi := &file_tfplugin6_proto_msgTypes[48]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2394,7 +2430,7 @@ func (x *UnlockState) String() string {
 func (*UnlockState) ProtoMessage() {}
 
 func (x *UnlockState) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[47]
+	mi := &file_tfplugin6_proto_msgTypes[48]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2407,7 +2443,7 @@ func (x *UnlockState) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UnlockState.ProtoReflect.Descriptor instead.
 func (*UnlockState) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{47}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{48}
 }
 
 type GetStates struct {
@@ -2418,7 +2454,7 @@ type GetStates struct {
 
 func (x *GetStates) Reset() {
 	*x = GetStates{}
-	mi := &file_tfplugin6_proto_msgTypes[48]
+	mi := &file_tfplugin6_proto_msgTypes[49]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2430,7 +2466,7 @@ func (x *GetStates) String() string {
 func (*GetStates) ProtoMessage() {}
 
 func (x *GetStates) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[48]
+	mi := &file_tfplugin6_proto_msgTypes[49]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2443,7 +2479,7 @@ func (x *GetStates) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetStates.ProtoReflect.Descriptor instead.
 func (*GetStates) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{48}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{49}
 }
 
 type DeleteState struct {
@@ -2454,7 +2490,7 @@ type DeleteState struct {
 
 func (x *DeleteState) Reset() {
 	*x = DeleteState{}
-	mi := &file_tfplugin6_proto_msgTypes[49]
+	mi := &file_tfplugin6_proto_msgTypes[50]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2466,7 +2502,7 @@ func (x *DeleteState) String() string {
 func (*DeleteState) ProtoMessage() {}
 
 func (x *DeleteState) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[49]
+	mi := &file_tfplugin6_proto_msgTypes[50]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2479,7 +2515,7 @@ func (x *DeleteState) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use DeleteState.ProtoReflect.Descriptor instead.
 func (*DeleteState) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{49}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{50}
 }
 
 type PlanAction struct {
@@ -2490,7 +2526,7 @@ type PlanAction struct {
 
 func (x *PlanAction) Reset() {
 	*x = PlanAction{}
-	mi := &file_tfplugin6_proto_msgTypes[50]
+	mi := &file_tfplugin6_proto_msgTypes[51]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2502,7 +2538,7 @@ func (x *PlanAction) String() string {
 func (*PlanAction) ProtoMessage() {}
 
 func (x *PlanAction) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[50]
+	mi := &file_tfplugin6_proto_msgTypes[51]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2515,7 +2551,7 @@ func (x *PlanAction) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use PlanAction.ProtoReflect.Descriptor instead.
 func (*PlanAction) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{50}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{51}
 }
 
 type InvokeAction struct {
@@ -2526,7 +2562,7 @@ type InvokeAction struct {
 
 func (x *InvokeAction) Reset() {
 	*x = InvokeAction{}
-	mi := &file_tfplugin6_proto_msgTypes[51]
+	mi := &file_tfplugin6_proto_msgTypes[52]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2538,7 +2574,7 @@ func (x *InvokeAction) String() string {
 func (*InvokeAction) ProtoMessage() {}
 
 func (x *InvokeAction) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[51]
+	mi := &file_tfplugin6_proto_msgTypes[52]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2551,7 +2587,7 @@ func (x *InvokeAction) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use InvokeAction.ProtoReflect.Descriptor instead.
 func (*InvokeAction) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{51}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{52}
 }
 
 type ValidateActionConfig struct {
@@ -2562,7 +2598,7 @@ type ValidateActionConfig struct {
 
 func (x *ValidateActionConfig) Reset() {
 	*x = ValidateActionConfig{}
-	mi := &file_tfplugin6_proto_msgTypes[52]
+	mi := &file_tfplugin6_proto_msgTypes[53]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2574,7 +2610,7 @@ func (x *ValidateActionConfig) String() string {
 func (*ValidateActionConfig) ProtoMessage() {}
 
 func (x *ValidateActionConfig) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[52]
+	mi := &file_tfplugin6_proto_msgTypes[53]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2587,7 +2623,7 @@ func (x *ValidateActionConfig) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ValidateActionConfig.ProtoReflect.Descriptor instead.
 func (*ValidateActionConfig) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{52}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{53}
 }
 
 type AttributePath_Step struct {
@@ -2604,7 +2640,7 @@ type AttributePath_Step struct {
 
 func (x *AttributePath_Step) Reset() {
 	*x = AttributePath_Step{}
-	mi := &file_tfplugin6_proto_msgTypes[53]
+	mi := &file_tfplugin6_proto_msgTypes[54]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2616,7 +2652,7 @@ func (x *AttributePath_Step) String() string {
 func (*AttributePath_Step) ProtoMessage() {}
 
 func (x *AttributePath_Step) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[53]
+	mi := &file_tfplugin6_proto_msgTypes[54]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2700,7 +2736,7 @@ type StopProvider_Request struct {
 
 func (x *StopProvider_Request) Reset() {
 	*x = StopProvider_Request{}
-	mi := &file_tfplugin6_proto_msgTypes[54]
+	mi := &file_tfplugin6_proto_msgTypes[55]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2712,7 +2748,7 @@ func (x *StopProvider_Request) String() string {
 func (*StopProvider_Request) ProtoMessage() {}
 
 func (x *StopProvider_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[54]
+	mi := &file_tfplugin6_proto_msgTypes[55]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2737,7 +2773,7 @@ type StopProvider_Response struct {
 
 func (x *StopProvider_Response) Reset() {
 	*x = StopProvider_Response{}
-	mi := &file_tfplugin6_proto_msgTypes[55]
+	mi := &file_tfplugin6_proto_msgTypes[56]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2749,7 +2785,7 @@ func (x *StopProvider_Response) String() string {
 func (*StopProvider_Response) ProtoMessage() {}
 
 func (x *StopProvider_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[55]
+	mi := &file_tfplugin6_proto_msgTypes[56]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2795,7 +2831,7 @@ type ResourceIdentitySchema_IdentityAttribute struct {
 
 func (x *ResourceIdentitySchema_IdentityAttribute) Reset() {
 	*x = ResourceIdentitySchema_IdentityAttribute{}
-	mi := &file_tfplugin6_proto_msgTypes[57]
+	mi := &file_tfplugin6_proto_msgTypes[58]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2807,7 +2843,7 @@ func (x *ResourceIdentitySchema_IdentityAttribute) String() string {
 func (*ResourceIdentitySchema_IdentityAttribute) ProtoMessage() {}
 
 func (x *ResourceIdentitySchema_IdentityAttribute) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[57]
+	mi := &file_tfplugin6_proto_msgTypes[58]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2873,7 +2909,7 @@ type Schema_Block struct {
 
 func (x *Schema_Block) Reset() {
 	*x = Schema_Block{}
-	mi := &file_tfplugin6_proto_msgTypes[58]
+	mi := &file_tfplugin6_proto_msgTypes[59]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2885,7 +2921,7 @@ func (x *Schema_Block) String() string {
 func (*Schema_Block) ProtoMessage() {}
 
 func (x *Schema_Block) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[58]
+	mi := &file_tfplugin6_proto_msgTypes[59]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2970,7 +3006,7 @@ type Schema_Attribute struct {
 
 func (x *Schema_Attribute) Reset() {
 	*x = Schema_Attribute{}
-	mi := &file_tfplugin6_proto_msgTypes[59]
+	mi := &file_tfplugin6_proto_msgTypes[60]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2982,7 +3018,7 @@ func (x *Schema_Attribute) String() string {
 func (*Schema_Attribute) ProtoMessage() {}
 
 func (x *Schema_Attribute) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[59]
+	mi := &file_tfplugin6_proto_msgTypes[60]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3095,7 +3131,7 @@ type Schema_NestedBlock struct {
 
 func (x *Schema_NestedBlock) Reset() {
 	*x = Schema_NestedBlock{}
-	mi := &file_tfplugin6_proto_msgTypes[60]
+	mi := &file_tfplugin6_proto_msgTypes[61]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -3107,7 +3143,7 @@ func (x *Schema_NestedBlock) String() string {
 func (*Schema_NestedBlock) ProtoMessage() {}
 
 func (x *Schema_NestedBlock) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[60]
+	mi := &file_tfplugin6_proto_msgTypes[61]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3175,7 +3211,7 @@ type Schema_Object struct {
 
 func (x *Schema_Object) Reset() {
 	*x = Schema_Object{}
-	mi := &file_tfplugin6_proto_msgTypes[61]
+	mi := &file_tfplugin6_proto_msgTypes[62]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -3187,7 +3223,7 @@ func (x *Schema_Object) String() string {
 func (*Schema_Object) ProtoMessage() {}
 
 func (x *Schema_Object) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[61]
+	mi := &file_tfplugin6_proto_msgTypes[62]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3258,7 +3294,7 @@ type Function_Parameter struct {
 
 func (x *Function_Parameter) Reset() {
 	*x = Function_Parameter{}
-	mi := &file_tfplugin6_proto_msgTypes[62]
+	mi := &file_tfplugin6_proto_msgTypes[63]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -3270,7 +3306,7 @@ func (x *Function_Parameter) String() string {
 func (*Function_Parameter) ProtoMessage() {}
 
 func (x *Function_Parameter) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[62]
+	mi := &file_tfplugin6_proto_msgTypes[63]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3338,7 +3374,7 @@ type Function_Return struct {
 
 func (x *Function_Return) Reset() {
 	*x = Function_Return{}
-	mi := &file_tfplugin6_proto_msgTypes[63]
+	mi := &file_tfplugin6_proto_msgTypes[64]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -3350,7 +3386,7 @@ func (x *Function_Return) String() string {
 func (*Function_Return) ProtoMessage() {}
 
 func (x *Function_Return) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[63]
+	mi := &file_tfplugin6_proto_msgTypes[64]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3373,6 +3409,560 @@ func (x *Function_Return) GetType() []byte {
 	return nil
 }
 
+type GetCodeMigrations_Request struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *GetCodeMigrations_Request) Reset() {
+	*x = GetCodeMigrations_Request{}
+	mi := &file_tfplugin6_proto_msgTypes[65]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GetCodeMigrations_Request) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetCodeMigrations_Request) ProtoMessage() {}
+
+func (x *GetCodeMigrations_Request) ProtoReflect() protoreflect.Message {
+	mi := &file_tfplugin6_proto_msgTypes[65]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetCodeMigrations_Request.ProtoReflect.Descriptor instead.
+func (*GetCodeMigrations_Request) Descriptor() ([]byte, []int) {
+	return file_tfplugin6_proto_rawDescGZIP(), []int{14, 0}
+}
+
+// Examples:
+// - nested block to nested attribute
+// - DNS IP config rewrite (remove leading zeroes from IPs defined in config)
+//   - This was one of the reasons that the DNS provider still uses SDKv2: https://github.com/hashicorp/terraform-provider-dns/issues/234
+//
+// - s3 bucket refactor (i.e. one resource to multiple?)
+type GetCodeMigrations_Response struct {
+	state          protoimpl.MessageState             `protogen:"open.v1"`
+	CodeMigrations []*GetCodeMigrations_CodeMigration `protobuf:"bytes,1,rep,name=code_migrations,json=codeMigrations,proto3" json:"code_migrations,omitempty"`
+	Diagnostics    []*Diagnostic                      `protobuf:"bytes,2,rep,name=diagnostics,proto3" json:"diagnostics,omitempty"`
+	unknownFields  protoimpl.UnknownFields
+	sizeCache      protoimpl.SizeCache
+}
+
+func (x *GetCodeMigrations_Response) Reset() {
+	*x = GetCodeMigrations_Response{}
+	mi := &file_tfplugin6_proto_msgTypes[66]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GetCodeMigrations_Response) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetCodeMigrations_Response) ProtoMessage() {}
+
+func (x *GetCodeMigrations_Response) ProtoReflect() protoreflect.Message {
+	mi := &file_tfplugin6_proto_msgTypes[66]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetCodeMigrations_Response.ProtoReflect.Descriptor instead.
+func (*GetCodeMigrations_Response) Descriptor() ([]byte, []int) {
+	return file_tfplugin6_proto_rawDescGZIP(), []int{14, 1}
+}
+
+func (x *GetCodeMigrations_Response) GetCodeMigrations() []*GetCodeMigrations_CodeMigration {
+	if x != nil {
+		return x.CodeMigrations
+	}
+	return nil
+}
+
+func (x *GetCodeMigrations_Response) GetDiagnostics() []*Diagnostic {
+	if x != nil {
+		return x.Diagnostics
+	}
+	return nil
+}
+
+type GetCodeMigrations_CodeMigration struct {
+	state protoimpl.MessageState `protogen:"open.v1"`
+	// Managed resource type name that this code migration is related to
+	//
+	// TODO: Do code migrations need to only be related to a managed resource? i.e. should there also be an indicator of managed resource vs. data source vs. ephemeral, etc.
+	// - provider changes: https://registry.terraform.io/providers/hashicorp/aws/latest/docs/guides/version-6-upgrade#removed-provider-arguments
+	// TODO: Do code migrations need to only be related to a managed resource owned by this provider (or any earlier versions of this provider)?
+	//
+	// The idea is that TF core should use this type name as an indicator that a code migration might be necessary
+	TypeName string `protobuf:"bytes,1,opt,name=type_name,json=typeName,proto3" json:"type_name,omitempty"`
+	// Name for the code migration, could be used to route to provider logic (in the case of an "online" migration), otherwise it's just used to distinguish it from other code migrations
+	// TODO: The combination of type_name + name should be unique?
+	Name string `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
+	// The actual migration definition itself (instructions on what to do, should be declarative)
+	// all of the current migrations are static, in that TF core knows how to perform the logic on it's own given just the definition.
+	//
+	// Types that are valid to be assigned to Migration:
+	//
+	//	*GetCodeMigrations_CodeMigration_NestedBlockToNestedAttr_
+	//	*GetCodeMigrations_CodeMigration_TransformAttr_
+	//	*GetCodeMigrations_CodeMigration_RenameAttr_
+	//	*GetCodeMigrations_CodeMigration_RemoveAttr_
+	Migration     isGetCodeMigrations_CodeMigration_Migration `protobuf_oneof:"migration"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *GetCodeMigrations_CodeMigration) Reset() {
+	*x = GetCodeMigrations_CodeMigration{}
+	mi := &file_tfplugin6_proto_msgTypes[67]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GetCodeMigrations_CodeMigration) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetCodeMigrations_CodeMigration) ProtoMessage() {}
+
+func (x *GetCodeMigrations_CodeMigration) ProtoReflect() protoreflect.Message {
+	mi := &file_tfplugin6_proto_msgTypes[67]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetCodeMigrations_CodeMigration.ProtoReflect.Descriptor instead.
+func (*GetCodeMigrations_CodeMigration) Descriptor() ([]byte, []int) {
+	return file_tfplugin6_proto_rawDescGZIP(), []int{14, 2}
+}
+
+func (x *GetCodeMigrations_CodeMigration) GetTypeName() string {
+	if x != nil {
+		return x.TypeName
+	}
+	return ""
+}
+
+func (x *GetCodeMigrations_CodeMigration) GetName() string {
+	if x != nil {
+		return x.Name
+	}
+	return ""
+}
+
+func (x *GetCodeMigrations_CodeMigration) GetMigration() isGetCodeMigrations_CodeMigration_Migration {
+	if x != nil {
+		return x.Migration
+	}
+	return nil
+}
+
+func (x *GetCodeMigrations_CodeMigration) GetNestedBlockToNestedAttr() *GetCodeMigrations_CodeMigration_NestedBlockToNestedAttr {
+	if x != nil {
+		if x, ok := x.Migration.(*GetCodeMigrations_CodeMigration_NestedBlockToNestedAttr_); ok {
+			return x.NestedBlockToNestedAttr
+		}
+	}
+	return nil
+}
+
+func (x *GetCodeMigrations_CodeMigration) GetTransformAttr() *GetCodeMigrations_CodeMigration_TransformAttr {
+	if x != nil {
+		if x, ok := x.Migration.(*GetCodeMigrations_CodeMigration_TransformAttr_); ok {
+			return x.TransformAttr
+		}
+	}
+	return nil
+}
+
+func (x *GetCodeMigrations_CodeMigration) GetRenameAttr() *GetCodeMigrations_CodeMigration_RenameAttr {
+	if x != nil {
+		if x, ok := x.Migration.(*GetCodeMigrations_CodeMigration_RenameAttr_); ok {
+			return x.RenameAttr
+		}
+	}
+	return nil
+}
+
+func (x *GetCodeMigrations_CodeMigration) GetRemoveAttr() *GetCodeMigrations_CodeMigration_RemoveAttr {
+	if x != nil {
+		if x, ok := x.Migration.(*GetCodeMigrations_CodeMigration_RemoveAttr_); ok {
+			return x.RemoveAttr
+		}
+	}
+	return nil
+}
+
+type isGetCodeMigrations_CodeMigration_Migration interface {
+	isGetCodeMigrations_CodeMigration_Migration()
+}
+
+type GetCodeMigrations_CodeMigration_NestedBlockToNestedAttr_ struct {
+	NestedBlockToNestedAttr *GetCodeMigrations_CodeMigration_NestedBlockToNestedAttr `protobuf:"bytes,3,opt,name=nested_block_to_nested_attr,json=nestedBlockToNestedAttr,proto3,oneof"`
+}
+
+type GetCodeMigrations_CodeMigration_TransformAttr_ struct {
+	TransformAttr *GetCodeMigrations_CodeMigration_TransformAttr `protobuf:"bytes,4,opt,name=transform_attr,json=transformAttr,proto3,oneof"`
+}
+
+type GetCodeMigrations_CodeMigration_RenameAttr_ struct {
+	RenameAttr *GetCodeMigrations_CodeMigration_RenameAttr `protobuf:"bytes,5,opt,name=rename_attr,json=renameAttr,proto3,oneof"`
+}
+
+type GetCodeMigrations_CodeMigration_RemoveAttr_ struct {
+	RemoveAttr *GetCodeMigrations_CodeMigration_RemoveAttr `protobuf:"bytes,6,opt,name=remove_attr,json=removeAttr,proto3,oneof"`
+}
+
+func (*GetCodeMigrations_CodeMigration_NestedBlockToNestedAttr_) isGetCodeMigrations_CodeMigration_Migration() {
+}
+
+func (*GetCodeMigrations_CodeMigration_TransformAttr_) isGetCodeMigrations_CodeMigration_Migration() {
+}
+
+func (*GetCodeMigrations_CodeMigration_RenameAttr_) isGetCodeMigrations_CodeMigration_Migration() {}
+
+func (*GetCodeMigrations_CodeMigration_RemoveAttr_) isGetCodeMigrations_CodeMigration_Migration() {}
+
+// This migration takes a nested block type and changes it to a nested attribute type (the cty type should match with this one, so list nested block -> list nested attribute)
+// No references to the target path need to be updated
+//
+// No known examples right now, but this would be the change typically required when migrating from SDKv2 to Framework with optional+"computed" nested blocks
+//
+// ----- Before
+//
+//	resource "examplecloud_thing" "example" {
+//	  disk {
+//	    attr_1 = "hello"
+//	    attr_2 = "world one!"
+//	  }
+//	  disk {
+//	    attr_1 = "hello"
+//	    attr_2 = "world two!"
+//	  }
+//	}
+//
+// ----- After
+//
+//	resource "examplecloud_thing" "example" {
+//	  disk = [
+//	    {
+//	      attr_1 = "hello"
+//	      attr_2 = "world one!"
+//	    },
+//	    {
+//	      attr_1 = "hello"
+//	      attr_2 = "world two!"
+//	    }
+//	  ]
+//	}
+type GetCodeMigrations_CodeMigration_NestedBlockToNestedAttr struct {
+	state protoimpl.MessageState `protogen:"open.v1"`
+	// TODO: Just using the already established attribute path for now, but this will definitely need to change to be something akin to a path expression instead of an absolute path.
+	// Luckily, framework already supports that (used mostly in validators), so if core already supports it then we just need to agree on a protocol definition for it.
+	// https://developer.hashicorp.com/terraform/plugin/framework/handling-data/path-expressions
+	//
+	// For now, absolute paths will work fine for root paths
+	NestedBlockPath *AttributePath `protobuf:"bytes,1,opt,name=nested_block_path,json=nestedBlockPath,proto3" json:"nested_block_path,omitempty"`
+	unknownFields   protoimpl.UnknownFields
+	sizeCache       protoimpl.SizeCache
+}
+
+func (x *GetCodeMigrations_CodeMigration_NestedBlockToNestedAttr) Reset() {
+	*x = GetCodeMigrations_CodeMigration_NestedBlockToNestedAttr{}
+	mi := &file_tfplugin6_proto_msgTypes[68]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GetCodeMigrations_CodeMigration_NestedBlockToNestedAttr) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetCodeMigrations_CodeMigration_NestedBlockToNestedAttr) ProtoMessage() {}
+
+func (x *GetCodeMigrations_CodeMigration_NestedBlockToNestedAttr) ProtoReflect() protoreflect.Message {
+	mi := &file_tfplugin6_proto_msgTypes[68]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetCodeMigrations_CodeMigration_NestedBlockToNestedAttr.ProtoReflect.Descriptor instead.
+func (*GetCodeMigrations_CodeMigration_NestedBlockToNestedAttr) Descriptor() ([]byte, []int) {
+	return file_tfplugin6_proto_rawDescGZIP(), []int{14, 2, 0}
+}
+
+func (x *GetCodeMigrations_CodeMigration_NestedBlockToNestedAttr) GetNestedBlockPath() *AttributePath {
+	if x != nil {
+		return x.NestedBlockPath
+	}
+	return nil
+}
+
+// This migration takes an expression assigned to an attribute and:
+// - If it's a static literal value, immediately invokes the built-in HCL function or provider defined function, replacing the value with the result
+// - If it's an expression, wrap the expression with the built-in HCL function or provider defined function.
+//
+// NOTE: Allowing provider defined functions here would enable providers to write custom functions that can then be used on expressions (rather then limiting transforms to just literal values),
+// luckily provider functions are already considered "offline", so Terraform can invoke them whenever it wants :D
+//
+// Examples:
+// - https://registry.terraform.io/providers/hashicorp/aws/latest/docs/guides/version-6-upgrade#nullable-boolean-validation-update
+//   - https://github.com/hashicorp/terraform-provider-aws/issues/29379
+//
+// - https://github.com/hashicorp/terraform-provider-dns/issues/234 (breaking change hasn't been made yet, but we need to remove leading zeroes from IPs defined in configurations)
+//
+// ----- Before (literal)
+//
+//	resource "examplecloud_thing" "example" {
+//	  ip_addr = "127.000.000.001"
+//	}
+//
+// ----- After (literal)
+//
+//	resource "examplecloud_thing" "example" {
+//	  ip_addr = "127.0.0.1"
+//	}
+//
+// ----- Before (expression)
+//
+//	resource "examplecloud_thing" "example" {
+//	  ip_addr = var.a_super_cool_ip_addr
+//	}
+//
+// ----- After (expression)
+//
+//	resource "examplecloud_thing" "example" {
+//	  ip_addr = provider::dns::strip_leading_zeroes(var.a_super_cool_ip_addr)
+//	}
+//
+// TODO: This highlights the (already known) idea that some form of matcher/condition needs to be evaluated prior to running this upgrade,
+// it's possible we have no idea if "var.a_super_cool_ip_addr" has leading zeroes or not.
+type GetCodeMigrations_CodeMigration_TransformAttr struct {
+	state protoimpl.MessageState `protogen:"open.v1"`
+	// TODO: Just using the already established attribute path for now, but this will definitely need to change to be something akin to a path expression instead of an absolute path.
+	// Luckily, framework already supports that (used mostly in validators), so if core already supports it then we just need to agree on a protocol definition for it.
+	// https://developer.hashicorp.com/terraform/plugin/framework/handling-data/path-expressions
+	//
+	// For now, absolute paths will work fine for root paths
+	TargetAttrPath *AttributePath `protobuf:"bytes,1,opt,name=target_attr_path,json=targetAttrPath,proto3" json:"target_attr_path,omitempty"`
+	// Name of the function to invoke (no provider prefix for built-in, provider prefix for provider defined functions)
+	//
+	// TODO: This feels a little simple/open, so possibly should come back and evaluate how reasonable this approach is (whether we need more fields).
+	//
+	// After receiving the static code migration, Terraform should have all of the information needed to validate whether the HCL function / provider code defined function can be invoked
+	// or whether the code migration is incorrect (The SDKs could validate this as well? Maybe internally via GetProviderSchema?).
+	FunctionName string `protobuf:"bytes,2,opt,name=function_name,json=functionName,proto3" json:"function_name,omitempty"`
+	// Additional arguments to invoke function with (all known values), the first argument would always be the expression from "target_attr_path"
+	//
+	// TODO: This is almost certainly too simple, since it's very possible the expression could be the input for different argument indexes besides the first. (or it could be used multiple times :P)
+	AdditionalArguments []*DynamicValue `protobuf:"bytes,3,rep,name=additional_arguments,json=additionalArguments,proto3" json:"additional_arguments,omitempty"`
+	unknownFields       protoimpl.UnknownFields
+	sizeCache           protoimpl.SizeCache
+}
+
+func (x *GetCodeMigrations_CodeMigration_TransformAttr) Reset() {
+	*x = GetCodeMigrations_CodeMigration_TransformAttr{}
+	mi := &file_tfplugin6_proto_msgTypes[69]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GetCodeMigrations_CodeMigration_TransformAttr) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetCodeMigrations_CodeMigration_TransformAttr) ProtoMessage() {}
+
+func (x *GetCodeMigrations_CodeMigration_TransformAttr) ProtoReflect() protoreflect.Message {
+	mi := &file_tfplugin6_proto_msgTypes[69]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetCodeMigrations_CodeMigration_TransformAttr.ProtoReflect.Descriptor instead.
+func (*GetCodeMigrations_CodeMigration_TransformAttr) Descriptor() ([]byte, []int) {
+	return file_tfplugin6_proto_rawDescGZIP(), []int{14, 2, 1}
+}
+
+func (x *GetCodeMigrations_CodeMigration_TransformAttr) GetTargetAttrPath() *AttributePath {
+	if x != nil {
+		return x.TargetAttrPath
+	}
+	return nil
+}
+
+func (x *GetCodeMigrations_CodeMigration_TransformAttr) GetFunctionName() string {
+	if x != nil {
+		return x.FunctionName
+	}
+	return ""
+}
+
+func (x *GetCodeMigrations_CodeMigration_TransformAttr) GetAdditionalArguments() []*DynamicValue {
+	if x != nil {
+		return x.AdditionalArguments
+	}
+	return nil
+}
+
+// This migration takes an expression assigned to the target path and moves it to the destination path (they should be the exact same schema/type)
+// References to the target path should be updated to the destination path, but they should stay the same type
+//
+// Examples:
+// - https://registry.terraform.io/providers/hashicorp/google/latest/docs/guides/version_7_upgrade#resource-google_bigtable_table_iam_member
+// - https://registry.terraform.io/providers/hashicorp/google/latest/docs/guides/version_7_upgrade#resource-google_bigtable_table_iam_policy
+// - https://registry.terraform.io/providers/hashicorp/aws/latest/docs/guides/version-6-upgrade#data-source-aws_batch_compute_environment
+type GetCodeMigrations_CodeMigration_RenameAttr struct {
+	state protoimpl.MessageState `protogen:"open.v1"`
+	// TODO: Just using the already established attribute path for now, but this will definitely need to change to be something akin to a path expression instead of an absolute path.
+	// Luckily, framework already supports that (used mostly in validators), so if core already supports it then we just need to agree on a protocol definition for it.
+	// https://developer.hashicorp.com/terraform/plugin/framework/handling-data/path-expressions
+	//
+	// For now, absolute paths will work fine for root paths
+	TargetAttrPath      *AttributePath `protobuf:"bytes,1,opt,name=target_attr_path,json=targetAttrPath,proto3" json:"target_attr_path,omitempty"`
+	DestinationAttrPath *AttributePath `protobuf:"bytes,2,opt,name=destination_attr_path,json=destinationAttrPath,proto3" json:"destination_attr_path,omitempty"`
+	unknownFields       protoimpl.UnknownFields
+	sizeCache           protoimpl.SizeCache
+}
+
+func (x *GetCodeMigrations_CodeMigration_RenameAttr) Reset() {
+	*x = GetCodeMigrations_CodeMigration_RenameAttr{}
+	mi := &file_tfplugin6_proto_msgTypes[70]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GetCodeMigrations_CodeMigration_RenameAttr) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetCodeMigrations_CodeMigration_RenameAttr) ProtoMessage() {}
+
+func (x *GetCodeMigrations_CodeMigration_RenameAttr) ProtoReflect() protoreflect.Message {
+	mi := &file_tfplugin6_proto_msgTypes[70]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetCodeMigrations_CodeMigration_RenameAttr.ProtoReflect.Descriptor instead.
+func (*GetCodeMigrations_CodeMigration_RenameAttr) Descriptor() ([]byte, []int) {
+	return file_tfplugin6_proto_rawDescGZIP(), []int{14, 2, 2}
+}
+
+func (x *GetCodeMigrations_CodeMigration_RenameAttr) GetTargetAttrPath() *AttributePath {
+	if x != nil {
+		return x.TargetAttrPath
+	}
+	return nil
+}
+
+func (x *GetCodeMigrations_CodeMigration_RenameAttr) GetDestinationAttrPath() *AttributePath {
+	if x != nil {
+		return x.DestinationAttrPath
+	}
+	return nil
+}
+
+// This migration removes the attribute at the target path from configuration, typically would be the last step after deprecating an attribute.
+//
+// TODO: I'm not sure what we should do if there are references to this attribute, removing them seems too aggressive, but the only other option is to just error :/
+//
+// Examples:
+// - https://registry.terraform.io/providers/hashicorp/google/latest/docs/guides/version_7_upgrade#datasource-google_service_account_key
+// - https://registry.terraform.io/providers/hashicorp/google/latest/docs/guides/version_7_upgrade#service_configservice-is-now-an-output-only-field
+// - https://registry.terraform.io/providers/hashicorp/aws/latest/docs/guides/version-6-upgrade#removed-provider-arguments
+// - https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/4.0-upgrade-guide#behaviour-changes-and-removed-properties-in-resources
+type GetCodeMigrations_CodeMigration_RemoveAttr struct {
+	state protoimpl.MessageState `protogen:"open.v1"`
+	// TODO: Just using the already established attribute path for now, but this will definitely need to change to be something akin to a path expression instead of an absolute path.
+	// Luckily, framework already supports that (used mostly in validators), so if core already supports it then we just need to agree on a protocol definition for it.
+	// https://developer.hashicorp.com/terraform/plugin/framework/handling-data/path-expressions
+	//
+	// For now, absolute paths will work fine for root paths
+	TargetAttrPath *AttributePath `protobuf:"bytes,1,opt,name=target_attr_path,json=targetAttrPath,proto3" json:"target_attr_path,omitempty"`
+	unknownFields  protoimpl.UnknownFields
+	sizeCache      protoimpl.SizeCache
+}
+
+func (x *GetCodeMigrations_CodeMigration_RemoveAttr) Reset() {
+	*x = GetCodeMigrations_CodeMigration_RemoveAttr{}
+	mi := &file_tfplugin6_proto_msgTypes[71]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GetCodeMigrations_CodeMigration_RemoveAttr) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetCodeMigrations_CodeMigration_RemoveAttr) ProtoMessage() {}
+
+func (x *GetCodeMigrations_CodeMigration_RemoveAttr) ProtoReflect() protoreflect.Message {
+	mi := &file_tfplugin6_proto_msgTypes[71]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetCodeMigrations_CodeMigration_RemoveAttr.ProtoReflect.Descriptor instead.
+func (*GetCodeMigrations_CodeMigration_RemoveAttr) Descriptor() ([]byte, []int) {
+	return file_tfplugin6_proto_rawDescGZIP(), []int{14, 2, 3}
+}
+
+func (x *GetCodeMigrations_CodeMigration_RemoveAttr) GetTargetAttrPath() *AttributePath {
+	if x != nil {
+		return x.TargetAttrPath
+	}
+	return nil
+}
+
 type GetMetadata_Request struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	unknownFields protoimpl.UnknownFields
@@ -3381,7 +3971,7 @@ type GetMetadata_Request struct {
 
 func (x *GetMetadata_Request) Reset() {
 	*x = GetMetadata_Request{}
-	mi := &file_tfplugin6_proto_msgTypes[64]
+	mi := &file_tfplugin6_proto_msgTypes[72]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -3393,7 +3983,7 @@ func (x *GetMetadata_Request) String() string {
 func (*GetMetadata_Request) ProtoMessage() {}
 
 func (x *GetMetadata_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[64]
+	mi := &file_tfplugin6_proto_msgTypes[72]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3406,7 +3996,7 @@ func (x *GetMetadata_Request) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetMetadata_Request.ProtoReflect.Descriptor instead.
 func (*GetMetadata_Request) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{14, 0}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{15, 0}
 }
 
 type GetMetadata_Response struct {
@@ -3427,7 +4017,7 @@ type GetMetadata_Response struct {
 
 func (x *GetMetadata_Response) Reset() {
 	*x = GetMetadata_Response{}
-	mi := &file_tfplugin6_proto_msgTypes[65]
+	mi := &file_tfplugin6_proto_msgTypes[73]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -3439,7 +4029,7 @@ func (x *GetMetadata_Response) String() string {
 func (*GetMetadata_Response) ProtoMessage() {}
 
 func (x *GetMetadata_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[65]
+	mi := &file_tfplugin6_proto_msgTypes[73]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3452,7 +4042,7 @@ func (x *GetMetadata_Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetMetadata_Response.ProtoReflect.Descriptor instead.
 func (*GetMetadata_Response) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{14, 1}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{15, 1}
 }
 
 func (x *GetMetadata_Response) GetServerCapabilities() *ServerCapabilities {
@@ -3527,7 +4117,7 @@ type GetMetadata_EphemeralMetadata struct {
 
 func (x *GetMetadata_EphemeralMetadata) Reset() {
 	*x = GetMetadata_EphemeralMetadata{}
-	mi := &file_tfplugin6_proto_msgTypes[66]
+	mi := &file_tfplugin6_proto_msgTypes[74]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -3539,7 +4129,7 @@ func (x *GetMetadata_EphemeralMetadata) String() string {
 func (*GetMetadata_EphemeralMetadata) ProtoMessage() {}
 
 func (x *GetMetadata_EphemeralMetadata) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[66]
+	mi := &file_tfplugin6_proto_msgTypes[74]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3552,7 +4142,7 @@ func (x *GetMetadata_EphemeralMetadata) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetMetadata_EphemeralMetadata.ProtoReflect.Descriptor instead.
 func (*GetMetadata_EphemeralMetadata) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{14, 2}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{15, 2}
 }
 
 func (x *GetMetadata_EphemeralMetadata) GetTypeName() string {
@@ -3572,7 +4162,7 @@ type GetMetadata_FunctionMetadata struct {
 
 func (x *GetMetadata_FunctionMetadata) Reset() {
 	*x = GetMetadata_FunctionMetadata{}
-	mi := &file_tfplugin6_proto_msgTypes[67]
+	mi := &file_tfplugin6_proto_msgTypes[75]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -3584,7 +4174,7 @@ func (x *GetMetadata_FunctionMetadata) String() string {
 func (*GetMetadata_FunctionMetadata) ProtoMessage() {}
 
 func (x *GetMetadata_FunctionMetadata) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[67]
+	mi := &file_tfplugin6_proto_msgTypes[75]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3597,7 +4187,7 @@ func (x *GetMetadata_FunctionMetadata) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetMetadata_FunctionMetadata.ProtoReflect.Descriptor instead.
 func (*GetMetadata_FunctionMetadata) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{14, 3}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{15, 3}
 }
 
 func (x *GetMetadata_FunctionMetadata) GetName() string {
@@ -3616,7 +4206,7 @@ type GetMetadata_DataSourceMetadata struct {
 
 func (x *GetMetadata_DataSourceMetadata) Reset() {
 	*x = GetMetadata_DataSourceMetadata{}
-	mi := &file_tfplugin6_proto_msgTypes[68]
+	mi := &file_tfplugin6_proto_msgTypes[76]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -3628,7 +4218,7 @@ func (x *GetMetadata_DataSourceMetadata) String() string {
 func (*GetMetadata_DataSourceMetadata) ProtoMessage() {}
 
 func (x *GetMetadata_DataSourceMetadata) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[68]
+	mi := &file_tfplugin6_proto_msgTypes[76]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3641,7 +4231,7 @@ func (x *GetMetadata_DataSourceMetadata) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetMetadata_DataSourceMetadata.ProtoReflect.Descriptor instead.
 func (*GetMetadata_DataSourceMetadata) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{14, 4}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{15, 4}
 }
 
 func (x *GetMetadata_DataSourceMetadata) GetTypeName() string {
@@ -3660,7 +4250,7 @@ type GetMetadata_ResourceMetadata struct {
 
 func (x *GetMetadata_ResourceMetadata) Reset() {
 	*x = GetMetadata_ResourceMetadata{}
-	mi := &file_tfplugin6_proto_msgTypes[69]
+	mi := &file_tfplugin6_proto_msgTypes[77]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -3672,7 +4262,7 @@ func (x *GetMetadata_ResourceMetadata) String() string {
 func (*GetMetadata_ResourceMetadata) ProtoMessage() {}
 
 func (x *GetMetadata_ResourceMetadata) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[69]
+	mi := &file_tfplugin6_proto_msgTypes[77]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3685,7 +4275,7 @@ func (x *GetMetadata_ResourceMetadata) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetMetadata_ResourceMetadata.ProtoReflect.Descriptor instead.
 func (*GetMetadata_ResourceMetadata) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{14, 5}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{15, 5}
 }
 
 func (x *GetMetadata_ResourceMetadata) GetTypeName() string {
@@ -3704,7 +4294,7 @@ type GetMetadata_ListResourceMetadata struct {
 
 func (x *GetMetadata_ListResourceMetadata) Reset() {
 	*x = GetMetadata_ListResourceMetadata{}
-	mi := &file_tfplugin6_proto_msgTypes[70]
+	mi := &file_tfplugin6_proto_msgTypes[78]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -3716,7 +4306,7 @@ func (x *GetMetadata_ListResourceMetadata) String() string {
 func (*GetMetadata_ListResourceMetadata) ProtoMessage() {}
 
 func (x *GetMetadata_ListResourceMetadata) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[70]
+	mi := &file_tfplugin6_proto_msgTypes[78]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3729,7 +4319,7 @@ func (x *GetMetadata_ListResourceMetadata) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetMetadata_ListResourceMetadata.ProtoReflect.Descriptor instead.
 func (*GetMetadata_ListResourceMetadata) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{14, 6}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{15, 6}
 }
 
 func (x *GetMetadata_ListResourceMetadata) GetTypeName() string {
@@ -3748,7 +4338,7 @@ type GetMetadata_StateStoreMetadata struct {
 
 func (x *GetMetadata_StateStoreMetadata) Reset() {
 	*x = GetMetadata_StateStoreMetadata{}
-	mi := &file_tfplugin6_proto_msgTypes[71]
+	mi := &file_tfplugin6_proto_msgTypes[79]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -3760,7 +4350,7 @@ func (x *GetMetadata_StateStoreMetadata) String() string {
 func (*GetMetadata_StateStoreMetadata) ProtoMessage() {}
 
 func (x *GetMetadata_StateStoreMetadata) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[71]
+	mi := &file_tfplugin6_proto_msgTypes[79]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3773,7 +4363,7 @@ func (x *GetMetadata_StateStoreMetadata) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetMetadata_StateStoreMetadata.ProtoReflect.Descriptor instead.
 func (*GetMetadata_StateStoreMetadata) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{14, 7}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{15, 7}
 }
 
 func (x *GetMetadata_StateStoreMetadata) GetTypeName() string {
@@ -3792,7 +4382,7 @@ type GetMetadata_ActionMetadata struct {
 
 func (x *GetMetadata_ActionMetadata) Reset() {
 	*x = GetMetadata_ActionMetadata{}
-	mi := &file_tfplugin6_proto_msgTypes[72]
+	mi := &file_tfplugin6_proto_msgTypes[80]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -3804,7 +4394,7 @@ func (x *GetMetadata_ActionMetadata) String() string {
 func (*GetMetadata_ActionMetadata) ProtoMessage() {}
 
 func (x *GetMetadata_ActionMetadata) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[72]
+	mi := &file_tfplugin6_proto_msgTypes[80]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3817,7 +4407,7 @@ func (x *GetMetadata_ActionMetadata) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetMetadata_ActionMetadata.ProtoReflect.Descriptor instead.
 func (*GetMetadata_ActionMetadata) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{14, 8}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{15, 8}
 }
 
 func (x *GetMetadata_ActionMetadata) GetTypeName() string {
@@ -3835,7 +4425,7 @@ type GetProviderSchema_Request struct {
 
 func (x *GetProviderSchema_Request) Reset() {
 	*x = GetProviderSchema_Request{}
-	mi := &file_tfplugin6_proto_msgTypes[73]
+	mi := &file_tfplugin6_proto_msgTypes[81]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -3847,7 +4437,7 @@ func (x *GetProviderSchema_Request) String() string {
 func (*GetProviderSchema_Request) ProtoMessage() {}
 
 func (x *GetProviderSchema_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[73]
+	mi := &file_tfplugin6_proto_msgTypes[81]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3860,7 +4450,7 @@ func (x *GetProviderSchema_Request) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetProviderSchema_Request.ProtoReflect.Descriptor instead.
 func (*GetProviderSchema_Request) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{15, 0}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{16, 0}
 }
 
 type GetProviderSchema_Response struct {
@@ -3882,7 +4472,7 @@ type GetProviderSchema_Response struct {
 
 func (x *GetProviderSchema_Response) Reset() {
 	*x = GetProviderSchema_Response{}
-	mi := &file_tfplugin6_proto_msgTypes[74]
+	mi := &file_tfplugin6_proto_msgTypes[82]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -3894,7 +4484,7 @@ func (x *GetProviderSchema_Response) String() string {
 func (*GetProviderSchema_Response) ProtoMessage() {}
 
 func (x *GetProviderSchema_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[74]
+	mi := &file_tfplugin6_proto_msgTypes[82]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3907,7 +4497,7 @@ func (x *GetProviderSchema_Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetProviderSchema_Response.ProtoReflect.Descriptor instead.
 func (*GetProviderSchema_Response) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{15, 1}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{16, 1}
 }
 
 func (x *GetProviderSchema_Response) GetProvider() *Schema {
@@ -3996,7 +4586,7 @@ type ValidateProviderConfig_Request struct {
 
 func (x *ValidateProviderConfig_Request) Reset() {
 	*x = ValidateProviderConfig_Request{}
-	mi := &file_tfplugin6_proto_msgTypes[82]
+	mi := &file_tfplugin6_proto_msgTypes[90]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -4008,7 +4598,7 @@ func (x *ValidateProviderConfig_Request) String() string {
 func (*ValidateProviderConfig_Request) ProtoMessage() {}
 
 func (x *ValidateProviderConfig_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[82]
+	mi := &file_tfplugin6_proto_msgTypes[90]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4021,7 +4611,7 @@ func (x *ValidateProviderConfig_Request) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ValidateProviderConfig_Request.ProtoReflect.Descriptor instead.
 func (*ValidateProviderConfig_Request) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{16, 0}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{17, 0}
 }
 
 func (x *ValidateProviderConfig_Request) GetConfig() *DynamicValue {
@@ -4040,7 +4630,7 @@ type ValidateProviderConfig_Response struct {
 
 func (x *ValidateProviderConfig_Response) Reset() {
 	*x = ValidateProviderConfig_Response{}
-	mi := &file_tfplugin6_proto_msgTypes[83]
+	mi := &file_tfplugin6_proto_msgTypes[91]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -4052,7 +4642,7 @@ func (x *ValidateProviderConfig_Response) String() string {
 func (*ValidateProviderConfig_Response) ProtoMessage() {}
 
 func (x *ValidateProviderConfig_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[83]
+	mi := &file_tfplugin6_proto_msgTypes[91]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4065,7 +4655,7 @@ func (x *ValidateProviderConfig_Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ValidateProviderConfig_Response.ProtoReflect.Descriptor instead.
 func (*ValidateProviderConfig_Response) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{16, 1}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{17, 1}
 }
 
 func (x *ValidateProviderConfig_Response) GetDiagnostics() []*Diagnostic {
@@ -4101,7 +4691,7 @@ type UpgradeResourceState_Request struct {
 
 func (x *UpgradeResourceState_Request) Reset() {
 	*x = UpgradeResourceState_Request{}
-	mi := &file_tfplugin6_proto_msgTypes[84]
+	mi := &file_tfplugin6_proto_msgTypes[92]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -4113,7 +4703,7 @@ func (x *UpgradeResourceState_Request) String() string {
 func (*UpgradeResourceState_Request) ProtoMessage() {}
 
 func (x *UpgradeResourceState_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[84]
+	mi := &file_tfplugin6_proto_msgTypes[92]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4126,7 +4716,7 @@ func (x *UpgradeResourceState_Request) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UpgradeResourceState_Request.ProtoReflect.Descriptor instead.
 func (*UpgradeResourceState_Request) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{17, 0}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{18, 0}
 }
 
 func (x *UpgradeResourceState_Request) GetTypeName() string {
@@ -4166,7 +4756,7 @@ type UpgradeResourceState_Response struct {
 
 func (x *UpgradeResourceState_Response) Reset() {
 	*x = UpgradeResourceState_Response{}
-	mi := &file_tfplugin6_proto_msgTypes[85]
+	mi := &file_tfplugin6_proto_msgTypes[93]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -4178,7 +4768,7 @@ func (x *UpgradeResourceState_Response) String() string {
 func (*UpgradeResourceState_Response) ProtoMessage() {}
 
 func (x *UpgradeResourceState_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[85]
+	mi := &file_tfplugin6_proto_msgTypes[93]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4191,7 +4781,7 @@ func (x *UpgradeResourceState_Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UpgradeResourceState_Response.ProtoReflect.Descriptor instead.
 func (*UpgradeResourceState_Response) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{17, 1}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{18, 1}
 }
 
 func (x *UpgradeResourceState_Response) GetUpgradedState() *DynamicValue {
@@ -4216,7 +4806,7 @@ type GetResourceIdentitySchemas_Request struct {
 
 func (x *GetResourceIdentitySchemas_Request) Reset() {
 	*x = GetResourceIdentitySchemas_Request{}
-	mi := &file_tfplugin6_proto_msgTypes[86]
+	mi := &file_tfplugin6_proto_msgTypes[94]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -4228,7 +4818,7 @@ func (x *GetResourceIdentitySchemas_Request) String() string {
 func (*GetResourceIdentitySchemas_Request) ProtoMessage() {}
 
 func (x *GetResourceIdentitySchemas_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[86]
+	mi := &file_tfplugin6_proto_msgTypes[94]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4241,7 +4831,7 @@ func (x *GetResourceIdentitySchemas_Request) ProtoReflect() protoreflect.Message
 
 // Deprecated: Use GetResourceIdentitySchemas_Request.ProtoReflect.Descriptor instead.
 func (*GetResourceIdentitySchemas_Request) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{18, 0}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{19, 0}
 }
 
 type GetResourceIdentitySchemas_Response struct {
@@ -4256,7 +4846,7 @@ type GetResourceIdentitySchemas_Response struct {
 
 func (x *GetResourceIdentitySchemas_Response) Reset() {
 	*x = GetResourceIdentitySchemas_Response{}
-	mi := &file_tfplugin6_proto_msgTypes[87]
+	mi := &file_tfplugin6_proto_msgTypes[95]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -4268,7 +4858,7 @@ func (x *GetResourceIdentitySchemas_Response) String() string {
 func (*GetResourceIdentitySchemas_Response) ProtoMessage() {}
 
 func (x *GetResourceIdentitySchemas_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[87]
+	mi := &file_tfplugin6_proto_msgTypes[95]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4281,7 +4871,7 @@ func (x *GetResourceIdentitySchemas_Response) ProtoReflect() protoreflect.Messag
 
 // Deprecated: Use GetResourceIdentitySchemas_Response.ProtoReflect.Descriptor instead.
 func (*GetResourceIdentitySchemas_Response) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{18, 1}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{19, 1}
 }
 
 func (x *GetResourceIdentitySchemas_Response) GetIdentitySchemas() map[string]*ResourceIdentitySchema {
@@ -4315,7 +4905,7 @@ type UpgradeResourceIdentity_Request struct {
 
 func (x *UpgradeResourceIdentity_Request) Reset() {
 	*x = UpgradeResourceIdentity_Request{}
-	mi := &file_tfplugin6_proto_msgTypes[89]
+	mi := &file_tfplugin6_proto_msgTypes[97]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -4327,7 +4917,7 @@ func (x *UpgradeResourceIdentity_Request) String() string {
 func (*UpgradeResourceIdentity_Request) ProtoMessage() {}
 
 func (x *UpgradeResourceIdentity_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[89]
+	mi := &file_tfplugin6_proto_msgTypes[97]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4340,7 +4930,7 @@ func (x *UpgradeResourceIdentity_Request) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UpgradeResourceIdentity_Request.ProtoReflect.Descriptor instead.
 func (*UpgradeResourceIdentity_Request) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{19, 0}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{20, 0}
 }
 
 func (x *UpgradeResourceIdentity_Request) GetTypeName() string {
@@ -4376,7 +4966,7 @@ type UpgradeResourceIdentity_Response struct {
 
 func (x *UpgradeResourceIdentity_Response) Reset() {
 	*x = UpgradeResourceIdentity_Response{}
-	mi := &file_tfplugin6_proto_msgTypes[90]
+	mi := &file_tfplugin6_proto_msgTypes[98]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -4388,7 +4978,7 @@ func (x *UpgradeResourceIdentity_Response) String() string {
 func (*UpgradeResourceIdentity_Response) ProtoMessage() {}
 
 func (x *UpgradeResourceIdentity_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[90]
+	mi := &file_tfplugin6_proto_msgTypes[98]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4401,7 +4991,7 @@ func (x *UpgradeResourceIdentity_Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UpgradeResourceIdentity_Response.ProtoReflect.Descriptor instead.
 func (*UpgradeResourceIdentity_Response) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{19, 1}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{20, 1}
 }
 
 func (x *UpgradeResourceIdentity_Response) GetUpgradedIdentity() *ResourceIdentityData {
@@ -4429,7 +5019,7 @@ type ValidateResourceConfig_Request struct {
 
 func (x *ValidateResourceConfig_Request) Reset() {
 	*x = ValidateResourceConfig_Request{}
-	mi := &file_tfplugin6_proto_msgTypes[91]
+	mi := &file_tfplugin6_proto_msgTypes[99]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -4441,7 +5031,7 @@ func (x *ValidateResourceConfig_Request) String() string {
 func (*ValidateResourceConfig_Request) ProtoMessage() {}
 
 func (x *ValidateResourceConfig_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[91]
+	mi := &file_tfplugin6_proto_msgTypes[99]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4454,7 +5044,7 @@ func (x *ValidateResourceConfig_Request) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ValidateResourceConfig_Request.ProtoReflect.Descriptor instead.
 func (*ValidateResourceConfig_Request) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{20, 0}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{21, 0}
 }
 
 func (x *ValidateResourceConfig_Request) GetTypeName() string {
@@ -4487,7 +5077,7 @@ type ValidateResourceConfig_Response struct {
 
 func (x *ValidateResourceConfig_Response) Reset() {
 	*x = ValidateResourceConfig_Response{}
-	mi := &file_tfplugin6_proto_msgTypes[92]
+	mi := &file_tfplugin6_proto_msgTypes[100]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -4499,7 +5089,7 @@ func (x *ValidateResourceConfig_Response) String() string {
 func (*ValidateResourceConfig_Response) ProtoMessage() {}
 
 func (x *ValidateResourceConfig_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[92]
+	mi := &file_tfplugin6_proto_msgTypes[100]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4512,7 +5102,7 @@ func (x *ValidateResourceConfig_Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ValidateResourceConfig_Response.ProtoReflect.Descriptor instead.
 func (*ValidateResourceConfig_Response) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{20, 1}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{21, 1}
 }
 
 func (x *ValidateResourceConfig_Response) GetDiagnostics() []*Diagnostic {
@@ -4532,7 +5122,7 @@ type ValidateDataResourceConfig_Request struct {
 
 func (x *ValidateDataResourceConfig_Request) Reset() {
 	*x = ValidateDataResourceConfig_Request{}
-	mi := &file_tfplugin6_proto_msgTypes[93]
+	mi := &file_tfplugin6_proto_msgTypes[101]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -4544,7 +5134,7 @@ func (x *ValidateDataResourceConfig_Request) String() string {
 func (*ValidateDataResourceConfig_Request) ProtoMessage() {}
 
 func (x *ValidateDataResourceConfig_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[93]
+	mi := &file_tfplugin6_proto_msgTypes[101]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4557,7 +5147,7 @@ func (x *ValidateDataResourceConfig_Request) ProtoReflect() protoreflect.Message
 
 // Deprecated: Use ValidateDataResourceConfig_Request.ProtoReflect.Descriptor instead.
 func (*ValidateDataResourceConfig_Request) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{21, 0}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{22, 0}
 }
 
 func (x *ValidateDataResourceConfig_Request) GetTypeName() string {
@@ -4583,7 +5173,7 @@ type ValidateDataResourceConfig_Response struct {
 
 func (x *ValidateDataResourceConfig_Response) Reset() {
 	*x = ValidateDataResourceConfig_Response{}
-	mi := &file_tfplugin6_proto_msgTypes[94]
+	mi := &file_tfplugin6_proto_msgTypes[102]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -4595,7 +5185,7 @@ func (x *ValidateDataResourceConfig_Response) String() string {
 func (*ValidateDataResourceConfig_Response) ProtoMessage() {}
 
 func (x *ValidateDataResourceConfig_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[94]
+	mi := &file_tfplugin6_proto_msgTypes[102]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4608,7 +5198,7 @@ func (x *ValidateDataResourceConfig_Response) ProtoReflect() protoreflect.Messag
 
 // Deprecated: Use ValidateDataResourceConfig_Response.ProtoReflect.Descriptor instead.
 func (*ValidateDataResourceConfig_Response) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{21, 1}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{22, 1}
 }
 
 func (x *ValidateDataResourceConfig_Response) GetDiagnostics() []*Diagnostic {
@@ -4628,7 +5218,7 @@ type ValidateEphemeralResourceConfig_Request struct {
 
 func (x *ValidateEphemeralResourceConfig_Request) Reset() {
 	*x = ValidateEphemeralResourceConfig_Request{}
-	mi := &file_tfplugin6_proto_msgTypes[95]
+	mi := &file_tfplugin6_proto_msgTypes[103]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -4640,7 +5230,7 @@ func (x *ValidateEphemeralResourceConfig_Request) String() string {
 func (*ValidateEphemeralResourceConfig_Request) ProtoMessage() {}
 
 func (x *ValidateEphemeralResourceConfig_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[95]
+	mi := &file_tfplugin6_proto_msgTypes[103]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4653,7 +5243,7 @@ func (x *ValidateEphemeralResourceConfig_Request) ProtoReflect() protoreflect.Me
 
 // Deprecated: Use ValidateEphemeralResourceConfig_Request.ProtoReflect.Descriptor instead.
 func (*ValidateEphemeralResourceConfig_Request) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{22, 0}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{23, 0}
 }
 
 func (x *ValidateEphemeralResourceConfig_Request) GetTypeName() string {
@@ -4679,7 +5269,7 @@ type ValidateEphemeralResourceConfig_Response struct {
 
 func (x *ValidateEphemeralResourceConfig_Response) Reset() {
 	*x = ValidateEphemeralResourceConfig_Response{}
-	mi := &file_tfplugin6_proto_msgTypes[96]
+	mi := &file_tfplugin6_proto_msgTypes[104]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -4691,7 +5281,7 @@ func (x *ValidateEphemeralResourceConfig_Response) String() string {
 func (*ValidateEphemeralResourceConfig_Response) ProtoMessage() {}
 
 func (x *ValidateEphemeralResourceConfig_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[96]
+	mi := &file_tfplugin6_proto_msgTypes[104]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4704,7 +5294,7 @@ func (x *ValidateEphemeralResourceConfig_Response) ProtoReflect() protoreflect.M
 
 // Deprecated: Use ValidateEphemeralResourceConfig_Response.ProtoReflect.Descriptor instead.
 func (*ValidateEphemeralResourceConfig_Response) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{22, 1}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{23, 1}
 }
 
 func (x *ValidateEphemeralResourceConfig_Response) GetDiagnostics() []*Diagnostic {
@@ -4725,7 +5315,7 @@ type ConfigureProvider_Request struct {
 
 func (x *ConfigureProvider_Request) Reset() {
 	*x = ConfigureProvider_Request{}
-	mi := &file_tfplugin6_proto_msgTypes[97]
+	mi := &file_tfplugin6_proto_msgTypes[105]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -4737,7 +5327,7 @@ func (x *ConfigureProvider_Request) String() string {
 func (*ConfigureProvider_Request) ProtoMessage() {}
 
 func (x *ConfigureProvider_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[97]
+	mi := &file_tfplugin6_proto_msgTypes[105]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4750,7 +5340,7 @@ func (x *ConfigureProvider_Request) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ConfigureProvider_Request.ProtoReflect.Descriptor instead.
 func (*ConfigureProvider_Request) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{23, 0}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{24, 0}
 }
 
 func (x *ConfigureProvider_Request) GetTerraformVersion() string {
@@ -4783,7 +5373,7 @@ type ConfigureProvider_Response struct {
 
 func (x *ConfigureProvider_Response) Reset() {
 	*x = ConfigureProvider_Response{}
-	mi := &file_tfplugin6_proto_msgTypes[98]
+	mi := &file_tfplugin6_proto_msgTypes[106]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -4795,7 +5385,7 @@ func (x *ConfigureProvider_Response) String() string {
 func (*ConfigureProvider_Response) ProtoMessage() {}
 
 func (x *ConfigureProvider_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[98]
+	mi := &file_tfplugin6_proto_msgTypes[106]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4808,7 +5398,7 @@ func (x *ConfigureProvider_Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ConfigureProvider_Response.ProtoReflect.Descriptor instead.
 func (*ConfigureProvider_Response) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{23, 1}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{24, 1}
 }
 
 func (x *ConfigureProvider_Response) GetDiagnostics() []*Diagnostic {
@@ -4840,7 +5430,7 @@ type ReadResource_Request struct {
 
 func (x *ReadResource_Request) Reset() {
 	*x = ReadResource_Request{}
-	mi := &file_tfplugin6_proto_msgTypes[99]
+	mi := &file_tfplugin6_proto_msgTypes[107]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -4852,7 +5442,7 @@ func (x *ReadResource_Request) String() string {
 func (*ReadResource_Request) ProtoMessage() {}
 
 func (x *ReadResource_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[99]
+	mi := &file_tfplugin6_proto_msgTypes[107]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4865,7 +5455,7 @@ func (x *ReadResource_Request) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ReadResource_Request.ProtoReflect.Descriptor instead.
 func (*ReadResource_Request) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{24, 0}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{25, 0}
 }
 
 func (x *ReadResource_Request) GetTypeName() string {
@@ -4925,7 +5515,7 @@ type ReadResource_Response struct {
 
 func (x *ReadResource_Response) Reset() {
 	*x = ReadResource_Response{}
-	mi := &file_tfplugin6_proto_msgTypes[100]
+	mi := &file_tfplugin6_proto_msgTypes[108]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -4937,7 +5527,7 @@ func (x *ReadResource_Response) String() string {
 func (*ReadResource_Response) ProtoMessage() {}
 
 func (x *ReadResource_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[100]
+	mi := &file_tfplugin6_proto_msgTypes[108]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4950,7 +5540,7 @@ func (x *ReadResource_Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ReadResource_Response.ProtoReflect.Descriptor instead.
 func (*ReadResource_Response) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{24, 1}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{25, 1}
 }
 
 func (x *ReadResource_Response) GetNewState() *DynamicValue {
@@ -5004,7 +5594,7 @@ type PlanResourceChange_Request struct {
 
 func (x *PlanResourceChange_Request) Reset() {
 	*x = PlanResourceChange_Request{}
-	mi := &file_tfplugin6_proto_msgTypes[101]
+	mi := &file_tfplugin6_proto_msgTypes[109]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -5016,7 +5606,7 @@ func (x *PlanResourceChange_Request) String() string {
 func (*PlanResourceChange_Request) ProtoMessage() {}
 
 func (x *PlanResourceChange_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[101]
+	mi := &file_tfplugin6_proto_msgTypes[109]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5029,7 +5619,7 @@ func (x *PlanResourceChange_Request) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use PlanResourceChange_Request.ProtoReflect.Descriptor instead.
 func (*PlanResourceChange_Request) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{25, 0}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{26, 0}
 }
 
 func (x *PlanResourceChange_Request) GetTypeName() string {
@@ -5116,7 +5706,7 @@ type PlanResourceChange_Response struct {
 
 func (x *PlanResourceChange_Response) Reset() {
 	*x = PlanResourceChange_Response{}
-	mi := &file_tfplugin6_proto_msgTypes[102]
+	mi := &file_tfplugin6_proto_msgTypes[110]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -5128,7 +5718,7 @@ func (x *PlanResourceChange_Response) String() string {
 func (*PlanResourceChange_Response) ProtoMessage() {}
 
 func (x *PlanResourceChange_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[102]
+	mi := &file_tfplugin6_proto_msgTypes[110]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5141,7 +5731,7 @@ func (x *PlanResourceChange_Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use PlanResourceChange_Response.ProtoReflect.Descriptor instead.
 func (*PlanResourceChange_Response) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{25, 1}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{26, 1}
 }
 
 func (x *PlanResourceChange_Response) GetPlannedState() *DynamicValue {
@@ -5208,7 +5798,7 @@ type ApplyResourceChange_Request struct {
 
 func (x *ApplyResourceChange_Request) Reset() {
 	*x = ApplyResourceChange_Request{}
-	mi := &file_tfplugin6_proto_msgTypes[103]
+	mi := &file_tfplugin6_proto_msgTypes[111]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -5220,7 +5810,7 @@ func (x *ApplyResourceChange_Request) String() string {
 func (*ApplyResourceChange_Request) ProtoMessage() {}
 
 func (x *ApplyResourceChange_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[103]
+	mi := &file_tfplugin6_proto_msgTypes[111]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5233,7 +5823,7 @@ func (x *ApplyResourceChange_Request) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ApplyResourceChange_Request.ProtoReflect.Descriptor instead.
 func (*ApplyResourceChange_Request) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{26, 0}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{27, 0}
 }
 
 func (x *ApplyResourceChange_Request) GetTypeName() string {
@@ -5309,7 +5899,7 @@ type ApplyResourceChange_Response struct {
 
 func (x *ApplyResourceChange_Response) Reset() {
 	*x = ApplyResourceChange_Response{}
-	mi := &file_tfplugin6_proto_msgTypes[104]
+	mi := &file_tfplugin6_proto_msgTypes[112]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -5321,7 +5911,7 @@ func (x *ApplyResourceChange_Response) String() string {
 func (*ApplyResourceChange_Response) ProtoMessage() {}
 
 func (x *ApplyResourceChange_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[104]
+	mi := &file_tfplugin6_proto_msgTypes[112]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5334,7 +5924,7 @@ func (x *ApplyResourceChange_Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ApplyResourceChange_Response.ProtoReflect.Descriptor instead.
 func (*ApplyResourceChange_Response) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{26, 1}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{27, 1}
 }
 
 func (x *ApplyResourceChange_Response) GetNewState() *DynamicValue {
@@ -5384,7 +5974,7 @@ type ImportResourceState_Request struct {
 
 func (x *ImportResourceState_Request) Reset() {
 	*x = ImportResourceState_Request{}
-	mi := &file_tfplugin6_proto_msgTypes[105]
+	mi := &file_tfplugin6_proto_msgTypes[113]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -5396,7 +5986,7 @@ func (x *ImportResourceState_Request) String() string {
 func (*ImportResourceState_Request) ProtoMessage() {}
 
 func (x *ImportResourceState_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[105]
+	mi := &file_tfplugin6_proto_msgTypes[113]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5409,7 +5999,7 @@ func (x *ImportResourceState_Request) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ImportResourceState_Request.ProtoReflect.Descriptor instead.
 func (*ImportResourceState_Request) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{27, 0}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{28, 0}
 }
 
 func (x *ImportResourceState_Request) GetTypeName() string {
@@ -5452,7 +6042,7 @@ type ImportResourceState_ImportedResource struct {
 
 func (x *ImportResourceState_ImportedResource) Reset() {
 	*x = ImportResourceState_ImportedResource{}
-	mi := &file_tfplugin6_proto_msgTypes[106]
+	mi := &file_tfplugin6_proto_msgTypes[114]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -5464,7 +6054,7 @@ func (x *ImportResourceState_ImportedResource) String() string {
 func (*ImportResourceState_ImportedResource) ProtoMessage() {}
 
 func (x *ImportResourceState_ImportedResource) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[106]
+	mi := &file_tfplugin6_proto_msgTypes[114]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5477,7 +6067,7 @@ func (x *ImportResourceState_ImportedResource) ProtoReflect() protoreflect.Messa
 
 // Deprecated: Use ImportResourceState_ImportedResource.ProtoReflect.Descriptor instead.
 func (*ImportResourceState_ImportedResource) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{27, 1}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{28, 1}
 }
 
 func (x *ImportResourceState_ImportedResource) GetTypeName() string {
@@ -5521,7 +6111,7 @@ type ImportResourceState_Response struct {
 
 func (x *ImportResourceState_Response) Reset() {
 	*x = ImportResourceState_Response{}
-	mi := &file_tfplugin6_proto_msgTypes[107]
+	mi := &file_tfplugin6_proto_msgTypes[115]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -5533,7 +6123,7 @@ func (x *ImportResourceState_Response) String() string {
 func (*ImportResourceState_Response) ProtoMessage() {}
 
 func (x *ImportResourceState_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[107]
+	mi := &file_tfplugin6_proto_msgTypes[115]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5546,7 +6136,7 @@ func (x *ImportResourceState_Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ImportResourceState_Response.ProtoReflect.Descriptor instead.
 func (*ImportResourceState_Response) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{27, 2}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{28, 2}
 }
 
 func (x *ImportResourceState_Response) GetImportedResources() []*ImportResourceState_ImportedResource {
@@ -5580,7 +6170,7 @@ type GenerateResourceConfig_Request struct {
 
 func (x *GenerateResourceConfig_Request) Reset() {
 	*x = GenerateResourceConfig_Request{}
-	mi := &file_tfplugin6_proto_msgTypes[108]
+	mi := &file_tfplugin6_proto_msgTypes[116]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -5592,7 +6182,7 @@ func (x *GenerateResourceConfig_Request) String() string {
 func (*GenerateResourceConfig_Request) ProtoMessage() {}
 
 func (x *GenerateResourceConfig_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[108]
+	mi := &file_tfplugin6_proto_msgTypes[116]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5605,7 +6195,7 @@ func (x *GenerateResourceConfig_Request) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GenerateResourceConfig_Request.ProtoReflect.Descriptor instead.
 func (*GenerateResourceConfig_Request) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{28, 0}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{29, 0}
 }
 
 func (x *GenerateResourceConfig_Request) GetTypeName() string {
@@ -5633,7 +6223,7 @@ type GenerateResourceConfig_Response struct {
 
 func (x *GenerateResourceConfig_Response) Reset() {
 	*x = GenerateResourceConfig_Response{}
-	mi := &file_tfplugin6_proto_msgTypes[109]
+	mi := &file_tfplugin6_proto_msgTypes[117]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -5645,7 +6235,7 @@ func (x *GenerateResourceConfig_Response) String() string {
 func (*GenerateResourceConfig_Response) ProtoMessage() {}
 
 func (x *GenerateResourceConfig_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[109]
+	mi := &file_tfplugin6_proto_msgTypes[117]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5658,7 +6248,7 @@ func (x *GenerateResourceConfig_Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GenerateResourceConfig_Response.ProtoReflect.Descriptor instead.
 func (*GenerateResourceConfig_Response) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{28, 1}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{29, 1}
 }
 
 func (x *GenerateResourceConfig_Response) GetConfig() *DynamicValue {
@@ -5705,7 +6295,7 @@ type MoveResourceState_Request struct {
 
 func (x *MoveResourceState_Request) Reset() {
 	*x = MoveResourceState_Request{}
-	mi := &file_tfplugin6_proto_msgTypes[110]
+	mi := &file_tfplugin6_proto_msgTypes[118]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -5717,7 +6307,7 @@ func (x *MoveResourceState_Request) String() string {
 func (*MoveResourceState_Request) ProtoMessage() {}
 
 func (x *MoveResourceState_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[110]
+	mi := &file_tfplugin6_proto_msgTypes[118]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5730,7 +6320,7 @@ func (x *MoveResourceState_Request) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use MoveResourceState_Request.ProtoReflect.Descriptor instead.
 func (*MoveResourceState_Request) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{29, 0}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{30, 0}
 }
 
 func (x *MoveResourceState_Request) GetSourceProviderAddress() string {
@@ -5804,7 +6394,7 @@ type MoveResourceState_Response struct {
 
 func (x *MoveResourceState_Response) Reset() {
 	*x = MoveResourceState_Response{}
-	mi := &file_tfplugin6_proto_msgTypes[111]
+	mi := &file_tfplugin6_proto_msgTypes[119]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -5816,7 +6406,7 @@ func (x *MoveResourceState_Response) String() string {
 func (*MoveResourceState_Response) ProtoMessage() {}
 
 func (x *MoveResourceState_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[111]
+	mi := &file_tfplugin6_proto_msgTypes[119]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5829,7 +6419,7 @@ func (x *MoveResourceState_Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use MoveResourceState_Response.ProtoReflect.Descriptor instead.
 func (*MoveResourceState_Response) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{29, 1}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{30, 1}
 }
 
 func (x *MoveResourceState_Response) GetTargetState() *DynamicValue {
@@ -5872,7 +6462,7 @@ type ReadDataSource_Request struct {
 
 func (x *ReadDataSource_Request) Reset() {
 	*x = ReadDataSource_Request{}
-	mi := &file_tfplugin6_proto_msgTypes[112]
+	mi := &file_tfplugin6_proto_msgTypes[120]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -5884,7 +6474,7 @@ func (x *ReadDataSource_Request) String() string {
 func (*ReadDataSource_Request) ProtoMessage() {}
 
 func (x *ReadDataSource_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[112]
+	mi := &file_tfplugin6_proto_msgTypes[120]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5897,7 +6487,7 @@ func (x *ReadDataSource_Request) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ReadDataSource_Request.ProtoReflect.Descriptor instead.
 func (*ReadDataSource_Request) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{30, 0}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{31, 0}
 }
 
 func (x *ReadDataSource_Request) GetTypeName() string {
@@ -5941,7 +6531,7 @@ type ReadDataSource_Response struct {
 
 func (x *ReadDataSource_Response) Reset() {
 	*x = ReadDataSource_Response{}
-	mi := &file_tfplugin6_proto_msgTypes[113]
+	mi := &file_tfplugin6_proto_msgTypes[121]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -5953,7 +6543,7 @@ func (x *ReadDataSource_Response) String() string {
 func (*ReadDataSource_Response) ProtoMessage() {}
 
 func (x *ReadDataSource_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[113]
+	mi := &file_tfplugin6_proto_msgTypes[121]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5966,7 +6556,7 @@ func (x *ReadDataSource_Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ReadDataSource_Response.ProtoReflect.Descriptor instead.
 func (*ReadDataSource_Response) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{30, 1}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{31, 1}
 }
 
 func (x *ReadDataSource_Response) GetState() *DynamicValue {
@@ -6001,7 +6591,7 @@ type OpenEphemeralResource_Request struct {
 
 func (x *OpenEphemeralResource_Request) Reset() {
 	*x = OpenEphemeralResource_Request{}
-	mi := &file_tfplugin6_proto_msgTypes[114]
+	mi := &file_tfplugin6_proto_msgTypes[122]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -6013,7 +6603,7 @@ func (x *OpenEphemeralResource_Request) String() string {
 func (*OpenEphemeralResource_Request) ProtoMessage() {}
 
 func (x *OpenEphemeralResource_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[114]
+	mi := &file_tfplugin6_proto_msgTypes[122]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6026,7 +6616,7 @@ func (x *OpenEphemeralResource_Request) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use OpenEphemeralResource_Request.ProtoReflect.Descriptor instead.
 func (*OpenEphemeralResource_Request) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{31, 0}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{32, 0}
 }
 
 func (x *OpenEphemeralResource_Request) GetTypeName() string {
@@ -6063,7 +6653,7 @@ type OpenEphemeralResource_Response struct {
 
 func (x *OpenEphemeralResource_Response) Reset() {
 	*x = OpenEphemeralResource_Response{}
-	mi := &file_tfplugin6_proto_msgTypes[115]
+	mi := &file_tfplugin6_proto_msgTypes[123]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -6075,7 +6665,7 @@ func (x *OpenEphemeralResource_Response) String() string {
 func (*OpenEphemeralResource_Response) ProtoMessage() {}
 
 func (x *OpenEphemeralResource_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[115]
+	mi := &file_tfplugin6_proto_msgTypes[123]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6088,7 +6678,7 @@ func (x *OpenEphemeralResource_Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use OpenEphemeralResource_Response.ProtoReflect.Descriptor instead.
 func (*OpenEphemeralResource_Response) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{31, 1}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{32, 1}
 }
 
 func (x *OpenEphemeralResource_Response) GetDiagnostics() []*Diagnostic {
@@ -6136,7 +6726,7 @@ type RenewEphemeralResource_Request struct {
 
 func (x *RenewEphemeralResource_Request) Reset() {
 	*x = RenewEphemeralResource_Request{}
-	mi := &file_tfplugin6_proto_msgTypes[116]
+	mi := &file_tfplugin6_proto_msgTypes[124]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -6148,7 +6738,7 @@ func (x *RenewEphemeralResource_Request) String() string {
 func (*RenewEphemeralResource_Request) ProtoMessage() {}
 
 func (x *RenewEphemeralResource_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[116]
+	mi := &file_tfplugin6_proto_msgTypes[124]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6161,7 +6751,7 @@ func (x *RenewEphemeralResource_Request) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RenewEphemeralResource_Request.ProtoReflect.Descriptor instead.
 func (*RenewEphemeralResource_Request) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{32, 0}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{33, 0}
 }
 
 func (x *RenewEphemeralResource_Request) GetTypeName() string {
@@ -6189,7 +6779,7 @@ type RenewEphemeralResource_Response struct {
 
 func (x *RenewEphemeralResource_Response) Reset() {
 	*x = RenewEphemeralResource_Response{}
-	mi := &file_tfplugin6_proto_msgTypes[117]
+	mi := &file_tfplugin6_proto_msgTypes[125]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -6201,7 +6791,7 @@ func (x *RenewEphemeralResource_Response) String() string {
 func (*RenewEphemeralResource_Response) ProtoMessage() {}
 
 func (x *RenewEphemeralResource_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[117]
+	mi := &file_tfplugin6_proto_msgTypes[125]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6214,7 +6804,7 @@ func (x *RenewEphemeralResource_Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RenewEphemeralResource_Response.ProtoReflect.Descriptor instead.
 func (*RenewEphemeralResource_Response) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{32, 1}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{33, 1}
 }
 
 func (x *RenewEphemeralResource_Response) GetDiagnostics() []*Diagnostic {
@@ -6248,7 +6838,7 @@ type CloseEphemeralResource_Request struct {
 
 func (x *CloseEphemeralResource_Request) Reset() {
 	*x = CloseEphemeralResource_Request{}
-	mi := &file_tfplugin6_proto_msgTypes[118]
+	mi := &file_tfplugin6_proto_msgTypes[126]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -6260,7 +6850,7 @@ func (x *CloseEphemeralResource_Request) String() string {
 func (*CloseEphemeralResource_Request) ProtoMessage() {}
 
 func (x *CloseEphemeralResource_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[118]
+	mi := &file_tfplugin6_proto_msgTypes[126]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6273,7 +6863,7 @@ func (x *CloseEphemeralResource_Request) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CloseEphemeralResource_Request.ProtoReflect.Descriptor instead.
 func (*CloseEphemeralResource_Request) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{33, 0}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{34, 0}
 }
 
 func (x *CloseEphemeralResource_Request) GetTypeName() string {
@@ -6299,7 +6889,7 @@ type CloseEphemeralResource_Response struct {
 
 func (x *CloseEphemeralResource_Response) Reset() {
 	*x = CloseEphemeralResource_Response{}
-	mi := &file_tfplugin6_proto_msgTypes[119]
+	mi := &file_tfplugin6_proto_msgTypes[127]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -6311,7 +6901,7 @@ func (x *CloseEphemeralResource_Response) String() string {
 func (*CloseEphemeralResource_Response) ProtoMessage() {}
 
 func (x *CloseEphemeralResource_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[119]
+	mi := &file_tfplugin6_proto_msgTypes[127]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6324,7 +6914,7 @@ func (x *CloseEphemeralResource_Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CloseEphemeralResource_Response.ProtoReflect.Descriptor instead.
 func (*CloseEphemeralResource_Response) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{33, 1}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{34, 1}
 }
 
 func (x *CloseEphemeralResource_Response) GetDiagnostics() []*Diagnostic {
@@ -6342,7 +6932,7 @@ type GetFunctions_Request struct {
 
 func (x *GetFunctions_Request) Reset() {
 	*x = GetFunctions_Request{}
-	mi := &file_tfplugin6_proto_msgTypes[120]
+	mi := &file_tfplugin6_proto_msgTypes[128]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -6354,7 +6944,7 @@ func (x *GetFunctions_Request) String() string {
 func (*GetFunctions_Request) ProtoMessage() {}
 
 func (x *GetFunctions_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[120]
+	mi := &file_tfplugin6_proto_msgTypes[128]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6367,7 +6957,7 @@ func (x *GetFunctions_Request) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetFunctions_Request.ProtoReflect.Descriptor instead.
 func (*GetFunctions_Request) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{34, 0}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{35, 0}
 }
 
 type GetFunctions_Response struct {
@@ -6382,7 +6972,7 @@ type GetFunctions_Response struct {
 
 func (x *GetFunctions_Response) Reset() {
 	*x = GetFunctions_Response{}
-	mi := &file_tfplugin6_proto_msgTypes[121]
+	mi := &file_tfplugin6_proto_msgTypes[129]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -6394,7 +6984,7 @@ func (x *GetFunctions_Response) String() string {
 func (*GetFunctions_Response) ProtoMessage() {}
 
 func (x *GetFunctions_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[121]
+	mi := &file_tfplugin6_proto_msgTypes[129]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6407,7 +6997,7 @@ func (x *GetFunctions_Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetFunctions_Response.ProtoReflect.Descriptor instead.
 func (*GetFunctions_Response) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{34, 1}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{35, 1}
 }
 
 func (x *GetFunctions_Response) GetFunctions() map[string]*Function {
@@ -6434,7 +7024,7 @@ type CallFunction_Request struct {
 
 func (x *CallFunction_Request) Reset() {
 	*x = CallFunction_Request{}
-	mi := &file_tfplugin6_proto_msgTypes[123]
+	mi := &file_tfplugin6_proto_msgTypes[131]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -6446,7 +7036,7 @@ func (x *CallFunction_Request) String() string {
 func (*CallFunction_Request) ProtoMessage() {}
 
 func (x *CallFunction_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[123]
+	mi := &file_tfplugin6_proto_msgTypes[131]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6459,7 +7049,7 @@ func (x *CallFunction_Request) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CallFunction_Request.ProtoReflect.Descriptor instead.
 func (*CallFunction_Request) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{35, 0}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{36, 0}
 }
 
 func (x *CallFunction_Request) GetName() string {
@@ -6486,7 +7076,7 @@ type CallFunction_Response struct {
 
 func (x *CallFunction_Response) Reset() {
 	*x = CallFunction_Response{}
-	mi := &file_tfplugin6_proto_msgTypes[124]
+	mi := &file_tfplugin6_proto_msgTypes[132]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -6498,7 +7088,7 @@ func (x *CallFunction_Response) String() string {
 func (*CallFunction_Response) ProtoMessage() {}
 
 func (x *CallFunction_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[124]
+	mi := &file_tfplugin6_proto_msgTypes[132]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6511,7 +7101,7 @@ func (x *CallFunction_Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CallFunction_Response.ProtoReflect.Descriptor instead.
 func (*CallFunction_Response) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{35, 1}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{36, 1}
 }
 
 func (x *CallFunction_Response) GetResult() *DynamicValue {
@@ -6546,7 +7136,7 @@ type ListResource_Request struct {
 
 func (x *ListResource_Request) Reset() {
 	*x = ListResource_Request{}
-	mi := &file_tfplugin6_proto_msgTypes[125]
+	mi := &file_tfplugin6_proto_msgTypes[133]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -6558,7 +7148,7 @@ func (x *ListResource_Request) String() string {
 func (*ListResource_Request) ProtoMessage() {}
 
 func (x *ListResource_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[125]
+	mi := &file_tfplugin6_proto_msgTypes[133]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6571,7 +7161,7 @@ func (x *ListResource_Request) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ListResource_Request.ProtoReflect.Descriptor instead.
 func (*ListResource_Request) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{36, 0}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{37, 0}
 }
 
 func (x *ListResource_Request) GetTypeName() string {
@@ -6618,7 +7208,7 @@ type ListResource_Event struct {
 
 func (x *ListResource_Event) Reset() {
 	*x = ListResource_Event{}
-	mi := &file_tfplugin6_proto_msgTypes[126]
+	mi := &file_tfplugin6_proto_msgTypes[134]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -6630,7 +7220,7 @@ func (x *ListResource_Event) String() string {
 func (*ListResource_Event) ProtoMessage() {}
 
 func (x *ListResource_Event) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[126]
+	mi := &file_tfplugin6_proto_msgTypes[134]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6643,7 +7233,7 @@ func (x *ListResource_Event) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ListResource_Event.ProtoReflect.Descriptor instead.
 func (*ListResource_Event) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{36, 1}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{37, 1}
 }
 
 func (x *ListResource_Event) GetIdentity() *ResourceIdentityData {
@@ -6686,7 +7276,7 @@ type ValidateListResourceConfig_Request struct {
 
 func (x *ValidateListResourceConfig_Request) Reset() {
 	*x = ValidateListResourceConfig_Request{}
-	mi := &file_tfplugin6_proto_msgTypes[127]
+	mi := &file_tfplugin6_proto_msgTypes[135]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -6698,7 +7288,7 @@ func (x *ValidateListResourceConfig_Request) String() string {
 func (*ValidateListResourceConfig_Request) ProtoMessage() {}
 
 func (x *ValidateListResourceConfig_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[127]
+	mi := &file_tfplugin6_proto_msgTypes[135]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6711,7 +7301,7 @@ func (x *ValidateListResourceConfig_Request) ProtoReflect() protoreflect.Message
 
 // Deprecated: Use ValidateListResourceConfig_Request.ProtoReflect.Descriptor instead.
 func (*ValidateListResourceConfig_Request) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{37, 0}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{38, 0}
 }
 
 func (x *ValidateListResourceConfig_Request) GetTypeName() string {
@@ -6751,7 +7341,7 @@ type ValidateListResourceConfig_Response struct {
 
 func (x *ValidateListResourceConfig_Response) Reset() {
 	*x = ValidateListResourceConfig_Response{}
-	mi := &file_tfplugin6_proto_msgTypes[128]
+	mi := &file_tfplugin6_proto_msgTypes[136]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -6763,7 +7353,7 @@ func (x *ValidateListResourceConfig_Response) String() string {
 func (*ValidateListResourceConfig_Response) ProtoMessage() {}
 
 func (x *ValidateListResourceConfig_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[128]
+	mi := &file_tfplugin6_proto_msgTypes[136]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6776,7 +7366,7 @@ func (x *ValidateListResourceConfig_Response) ProtoReflect() protoreflect.Messag
 
 // Deprecated: Use ValidateListResourceConfig_Response.ProtoReflect.Descriptor instead.
 func (*ValidateListResourceConfig_Response) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{37, 1}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{38, 1}
 }
 
 func (x *ValidateListResourceConfig_Response) GetDiagnostics() []*Diagnostic {
@@ -6796,7 +7386,7 @@ type ValidateStateStore_Request struct {
 
 func (x *ValidateStateStore_Request) Reset() {
 	*x = ValidateStateStore_Request{}
-	mi := &file_tfplugin6_proto_msgTypes[129]
+	mi := &file_tfplugin6_proto_msgTypes[137]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -6808,7 +7398,7 @@ func (x *ValidateStateStore_Request) String() string {
 func (*ValidateStateStore_Request) ProtoMessage() {}
 
 func (x *ValidateStateStore_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[129]
+	mi := &file_tfplugin6_proto_msgTypes[137]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6821,7 +7411,7 @@ func (x *ValidateStateStore_Request) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ValidateStateStore_Request.ProtoReflect.Descriptor instead.
 func (*ValidateStateStore_Request) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{38, 0}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{39, 0}
 }
 
 func (x *ValidateStateStore_Request) GetTypeName() string {
@@ -6847,7 +7437,7 @@ type ValidateStateStore_Response struct {
 
 func (x *ValidateStateStore_Response) Reset() {
 	*x = ValidateStateStore_Response{}
-	mi := &file_tfplugin6_proto_msgTypes[130]
+	mi := &file_tfplugin6_proto_msgTypes[138]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -6859,7 +7449,7 @@ func (x *ValidateStateStore_Response) String() string {
 func (*ValidateStateStore_Response) ProtoMessage() {}
 
 func (x *ValidateStateStore_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[130]
+	mi := &file_tfplugin6_proto_msgTypes[138]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6872,7 +7462,7 @@ func (x *ValidateStateStore_Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ValidateStateStore_Response.ProtoReflect.Descriptor instead.
 func (*ValidateStateStore_Response) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{38, 1}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{39, 1}
 }
 
 func (x *ValidateStateStore_Response) GetDiagnostics() []*Diagnostic {
@@ -6893,7 +7483,7 @@ type ConfigureStateStore_Request struct {
 
 func (x *ConfigureStateStore_Request) Reset() {
 	*x = ConfigureStateStore_Request{}
-	mi := &file_tfplugin6_proto_msgTypes[131]
+	mi := &file_tfplugin6_proto_msgTypes[139]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -6905,7 +7495,7 @@ func (x *ConfigureStateStore_Request) String() string {
 func (*ConfigureStateStore_Request) ProtoMessage() {}
 
 func (x *ConfigureStateStore_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[131]
+	mi := &file_tfplugin6_proto_msgTypes[139]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6918,7 +7508,7 @@ func (x *ConfigureStateStore_Request) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ConfigureStateStore_Request.ProtoReflect.Descriptor instead.
 func (*ConfigureStateStore_Request) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{39, 0}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{40, 0}
 }
 
 func (x *ConfigureStateStore_Request) GetTypeName() string {
@@ -6952,7 +7542,7 @@ type ConfigureStateStore_Response struct {
 
 func (x *ConfigureStateStore_Response) Reset() {
 	*x = ConfigureStateStore_Response{}
-	mi := &file_tfplugin6_proto_msgTypes[132]
+	mi := &file_tfplugin6_proto_msgTypes[140]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -6964,7 +7554,7 @@ func (x *ConfigureStateStore_Response) String() string {
 func (*ConfigureStateStore_Response) ProtoMessage() {}
 
 func (x *ConfigureStateStore_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[132]
+	mi := &file_tfplugin6_proto_msgTypes[140]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6977,7 +7567,7 @@ func (x *ConfigureStateStore_Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ConfigureStateStore_Response.ProtoReflect.Descriptor instead.
 func (*ConfigureStateStore_Response) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{39, 1}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{40, 1}
 }
 
 func (x *ConfigureStateStore_Response) GetDiagnostics() []*Diagnostic {
@@ -7004,7 +7594,7 @@ type ReadStateBytes_Request struct {
 
 func (x *ReadStateBytes_Request) Reset() {
 	*x = ReadStateBytes_Request{}
-	mi := &file_tfplugin6_proto_msgTypes[133]
+	mi := &file_tfplugin6_proto_msgTypes[141]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -7016,7 +7606,7 @@ func (x *ReadStateBytes_Request) String() string {
 func (*ReadStateBytes_Request) ProtoMessage() {}
 
 func (x *ReadStateBytes_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[133]
+	mi := &file_tfplugin6_proto_msgTypes[141]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7029,7 +7619,7 @@ func (x *ReadStateBytes_Request) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ReadStateBytes_Request.ProtoReflect.Descriptor instead.
 func (*ReadStateBytes_Request) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{42, 0}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{43, 0}
 }
 
 func (x *ReadStateBytes_Request) GetTypeName() string {
@@ -7059,7 +7649,7 @@ type ReadStateBytes_Response struct {
 
 func (x *ReadStateBytes_Response) Reset() {
 	*x = ReadStateBytes_Response{}
-	mi := &file_tfplugin6_proto_msgTypes[134]
+	mi := &file_tfplugin6_proto_msgTypes[142]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -7071,7 +7661,7 @@ func (x *ReadStateBytes_Response) String() string {
 func (*ReadStateBytes_Response) ProtoMessage() {}
 
 func (x *ReadStateBytes_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[134]
+	mi := &file_tfplugin6_proto_msgTypes[142]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7084,7 +7674,7 @@ func (x *ReadStateBytes_Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ReadStateBytes_Response.ProtoReflect.Descriptor instead.
 func (*ReadStateBytes_Response) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{42, 1}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{43, 1}
 }
 
 func (x *ReadStateBytes_Response) GetBytes() []byte {
@@ -7129,7 +7719,7 @@ type WriteStateBytes_RequestChunk struct {
 
 func (x *WriteStateBytes_RequestChunk) Reset() {
 	*x = WriteStateBytes_RequestChunk{}
-	mi := &file_tfplugin6_proto_msgTypes[135]
+	mi := &file_tfplugin6_proto_msgTypes[143]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -7141,7 +7731,7 @@ func (x *WriteStateBytes_RequestChunk) String() string {
 func (*WriteStateBytes_RequestChunk) ProtoMessage() {}
 
 func (x *WriteStateBytes_RequestChunk) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[135]
+	mi := &file_tfplugin6_proto_msgTypes[143]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7154,7 +7744,7 @@ func (x *WriteStateBytes_RequestChunk) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use WriteStateBytes_RequestChunk.ProtoReflect.Descriptor instead.
 func (*WriteStateBytes_RequestChunk) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{43, 0}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{44, 0}
 }
 
 func (x *WriteStateBytes_RequestChunk) GetMeta() *RequestChunkMeta {
@@ -7194,7 +7784,7 @@ type WriteStateBytes_Response struct {
 
 func (x *WriteStateBytes_Response) Reset() {
 	*x = WriteStateBytes_Response{}
-	mi := &file_tfplugin6_proto_msgTypes[136]
+	mi := &file_tfplugin6_proto_msgTypes[144]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -7206,7 +7796,7 @@ func (x *WriteStateBytes_Response) String() string {
 func (*WriteStateBytes_Response) ProtoMessage() {}
 
 func (x *WriteStateBytes_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[136]
+	mi := &file_tfplugin6_proto_msgTypes[144]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7219,7 +7809,7 @@ func (x *WriteStateBytes_Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use WriteStateBytes_Response.ProtoReflect.Descriptor instead.
 func (*WriteStateBytes_Response) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{43, 1}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{44, 1}
 }
 
 func (x *WriteStateBytes_Response) GetDiagnostics() []*Diagnostic {
@@ -7241,7 +7831,7 @@ type LockState_Request struct {
 
 func (x *LockState_Request) Reset() {
 	*x = LockState_Request{}
-	mi := &file_tfplugin6_proto_msgTypes[137]
+	mi := &file_tfplugin6_proto_msgTypes[145]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -7253,7 +7843,7 @@ func (x *LockState_Request) String() string {
 func (*LockState_Request) ProtoMessage() {}
 
 func (x *LockState_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[137]
+	mi := &file_tfplugin6_proto_msgTypes[145]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7266,7 +7856,7 @@ func (x *LockState_Request) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use LockState_Request.ProtoReflect.Descriptor instead.
 func (*LockState_Request) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{46, 0}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{47, 0}
 }
 
 func (x *LockState_Request) GetTypeName() string {
@@ -7300,7 +7890,7 @@ type LockState_Response struct {
 
 func (x *LockState_Response) Reset() {
 	*x = LockState_Response{}
-	mi := &file_tfplugin6_proto_msgTypes[138]
+	mi := &file_tfplugin6_proto_msgTypes[146]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -7312,7 +7902,7 @@ func (x *LockState_Response) String() string {
 func (*LockState_Response) ProtoMessage() {}
 
 func (x *LockState_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[138]
+	mi := &file_tfplugin6_proto_msgTypes[146]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7325,7 +7915,7 @@ func (x *LockState_Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use LockState_Response.ProtoReflect.Descriptor instead.
 func (*LockState_Response) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{46, 1}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{47, 1}
 }
 
 func (x *LockState_Response) GetLockId() string {
@@ -7353,7 +7943,7 @@ type UnlockState_Request struct {
 
 func (x *UnlockState_Request) Reset() {
 	*x = UnlockState_Request{}
-	mi := &file_tfplugin6_proto_msgTypes[139]
+	mi := &file_tfplugin6_proto_msgTypes[147]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -7365,7 +7955,7 @@ func (x *UnlockState_Request) String() string {
 func (*UnlockState_Request) ProtoMessage() {}
 
 func (x *UnlockState_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[139]
+	mi := &file_tfplugin6_proto_msgTypes[147]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7378,7 +7968,7 @@ func (x *UnlockState_Request) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UnlockState_Request.ProtoReflect.Descriptor instead.
 func (*UnlockState_Request) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{47, 0}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{48, 0}
 }
 
 func (x *UnlockState_Request) GetTypeName() string {
@@ -7411,7 +8001,7 @@ type UnlockState_Response struct {
 
 func (x *UnlockState_Response) Reset() {
 	*x = UnlockState_Response{}
-	mi := &file_tfplugin6_proto_msgTypes[140]
+	mi := &file_tfplugin6_proto_msgTypes[148]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -7423,7 +8013,7 @@ func (x *UnlockState_Response) String() string {
 func (*UnlockState_Response) ProtoMessage() {}
 
 func (x *UnlockState_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[140]
+	mi := &file_tfplugin6_proto_msgTypes[148]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7436,7 +8026,7 @@ func (x *UnlockState_Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UnlockState_Response.ProtoReflect.Descriptor instead.
 func (*UnlockState_Response) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{47, 1}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{48, 1}
 }
 
 func (x *UnlockState_Response) GetDiagnostics() []*Diagnostic {
@@ -7455,7 +8045,7 @@ type GetStates_Request struct {
 
 func (x *GetStates_Request) Reset() {
 	*x = GetStates_Request{}
-	mi := &file_tfplugin6_proto_msgTypes[141]
+	mi := &file_tfplugin6_proto_msgTypes[149]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -7467,7 +8057,7 @@ func (x *GetStates_Request) String() string {
 func (*GetStates_Request) ProtoMessage() {}
 
 func (x *GetStates_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[141]
+	mi := &file_tfplugin6_proto_msgTypes[149]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7480,7 +8070,7 @@ func (x *GetStates_Request) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetStates_Request.ProtoReflect.Descriptor instead.
 func (*GetStates_Request) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{48, 0}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{49, 0}
 }
 
 func (x *GetStates_Request) GetTypeName() string {
@@ -7500,7 +8090,7 @@ type GetStates_Response struct {
 
 func (x *GetStates_Response) Reset() {
 	*x = GetStates_Response{}
-	mi := &file_tfplugin6_proto_msgTypes[142]
+	mi := &file_tfplugin6_proto_msgTypes[150]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -7512,7 +8102,7 @@ func (x *GetStates_Response) String() string {
 func (*GetStates_Response) ProtoMessage() {}
 
 func (x *GetStates_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[142]
+	mi := &file_tfplugin6_proto_msgTypes[150]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7525,7 +8115,7 @@ func (x *GetStates_Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetStates_Response.ProtoReflect.Descriptor instead.
 func (*GetStates_Response) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{48, 1}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{49, 1}
 }
 
 func (x *GetStates_Response) GetStateId() []string {
@@ -7552,7 +8142,7 @@ type DeleteState_Request struct {
 
 func (x *DeleteState_Request) Reset() {
 	*x = DeleteState_Request{}
-	mi := &file_tfplugin6_proto_msgTypes[143]
+	mi := &file_tfplugin6_proto_msgTypes[151]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -7564,7 +8154,7 @@ func (x *DeleteState_Request) String() string {
 func (*DeleteState_Request) ProtoMessage() {}
 
 func (x *DeleteState_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[143]
+	mi := &file_tfplugin6_proto_msgTypes[151]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7577,7 +8167,7 @@ func (x *DeleteState_Request) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use DeleteState_Request.ProtoReflect.Descriptor instead.
 func (*DeleteState_Request) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{49, 0}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{50, 0}
 }
 
 func (x *DeleteState_Request) GetTypeName() string {
@@ -7603,7 +8193,7 @@ type DeleteState_Response struct {
 
 func (x *DeleteState_Response) Reset() {
 	*x = DeleteState_Response{}
-	mi := &file_tfplugin6_proto_msgTypes[144]
+	mi := &file_tfplugin6_proto_msgTypes[152]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -7615,7 +8205,7 @@ func (x *DeleteState_Response) String() string {
 func (*DeleteState_Response) ProtoMessage() {}
 
 func (x *DeleteState_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[144]
+	mi := &file_tfplugin6_proto_msgTypes[152]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7628,7 +8218,7 @@ func (x *DeleteState_Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use DeleteState_Response.ProtoReflect.Descriptor instead.
 func (*DeleteState_Response) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{49, 1}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{50, 1}
 }
 
 func (x *DeleteState_Response) GetDiagnostics() []*Diagnostic {
@@ -7651,7 +8241,7 @@ type PlanAction_Request struct {
 
 func (x *PlanAction_Request) Reset() {
 	*x = PlanAction_Request{}
-	mi := &file_tfplugin6_proto_msgTypes[145]
+	mi := &file_tfplugin6_proto_msgTypes[153]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -7663,7 +8253,7 @@ func (x *PlanAction_Request) String() string {
 func (*PlanAction_Request) ProtoMessage() {}
 
 func (x *PlanAction_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[145]
+	mi := &file_tfplugin6_proto_msgTypes[153]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7676,7 +8266,7 @@ func (x *PlanAction_Request) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use PlanAction_Request.ProtoReflect.Descriptor instead.
 func (*PlanAction_Request) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{50, 0}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{51, 0}
 }
 
 func (x *PlanAction_Request) GetActionType() string {
@@ -7711,7 +8301,7 @@ type PlanAction_Response struct {
 
 func (x *PlanAction_Response) Reset() {
 	*x = PlanAction_Response{}
-	mi := &file_tfplugin6_proto_msgTypes[146]
+	mi := &file_tfplugin6_proto_msgTypes[154]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -7723,7 +8313,7 @@ func (x *PlanAction_Response) String() string {
 func (*PlanAction_Response) ProtoMessage() {}
 
 func (x *PlanAction_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[146]
+	mi := &file_tfplugin6_proto_msgTypes[154]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7736,7 +8326,7 @@ func (x *PlanAction_Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use PlanAction_Response.ProtoReflect.Descriptor instead.
 func (*PlanAction_Response) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{50, 1}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{51, 1}
 }
 
 func (x *PlanAction_Response) GetDiagnostics() []*Diagnostic {
@@ -7766,7 +8356,7 @@ type InvokeAction_Request struct {
 
 func (x *InvokeAction_Request) Reset() {
 	*x = InvokeAction_Request{}
-	mi := &file_tfplugin6_proto_msgTypes[147]
+	mi := &file_tfplugin6_proto_msgTypes[155]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -7778,7 +8368,7 @@ func (x *InvokeAction_Request) String() string {
 func (*InvokeAction_Request) ProtoMessage() {}
 
 func (x *InvokeAction_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[147]
+	mi := &file_tfplugin6_proto_msgTypes[155]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7791,7 +8381,7 @@ func (x *InvokeAction_Request) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use InvokeAction_Request.ProtoReflect.Descriptor instead.
 func (*InvokeAction_Request) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{51, 0}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{52, 0}
 }
 
 func (x *InvokeAction_Request) GetActionType() string {
@@ -7828,7 +8418,7 @@ type InvokeAction_Event struct {
 
 func (x *InvokeAction_Event) Reset() {
 	*x = InvokeAction_Event{}
-	mi := &file_tfplugin6_proto_msgTypes[148]
+	mi := &file_tfplugin6_proto_msgTypes[156]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -7840,7 +8430,7 @@ func (x *InvokeAction_Event) String() string {
 func (*InvokeAction_Event) ProtoMessage() {}
 
 func (x *InvokeAction_Event) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[148]
+	mi := &file_tfplugin6_proto_msgTypes[156]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7853,7 +8443,7 @@ func (x *InvokeAction_Event) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use InvokeAction_Event.ProtoReflect.Descriptor instead.
 func (*InvokeAction_Event) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{51, 1}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{52, 1}
 }
 
 func (x *InvokeAction_Event) GetType() isInvokeAction_Event_Type {
@@ -7907,7 +8497,7 @@ type InvokeAction_Event_Progress struct {
 
 func (x *InvokeAction_Event_Progress) Reset() {
 	*x = InvokeAction_Event_Progress{}
-	mi := &file_tfplugin6_proto_msgTypes[149]
+	mi := &file_tfplugin6_proto_msgTypes[157]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -7919,7 +8509,7 @@ func (x *InvokeAction_Event_Progress) String() string {
 func (*InvokeAction_Event_Progress) ProtoMessage() {}
 
 func (x *InvokeAction_Event_Progress) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[149]
+	mi := &file_tfplugin6_proto_msgTypes[157]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7932,7 +8522,7 @@ func (x *InvokeAction_Event_Progress) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use InvokeAction_Event_Progress.ProtoReflect.Descriptor instead.
 func (*InvokeAction_Event_Progress) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{51, 1, 0}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{52, 1, 0}
 }
 
 func (x *InvokeAction_Event_Progress) GetMessage() string {
@@ -7951,7 +8541,7 @@ type InvokeAction_Event_Completed struct {
 
 func (x *InvokeAction_Event_Completed) Reset() {
 	*x = InvokeAction_Event_Completed{}
-	mi := &file_tfplugin6_proto_msgTypes[150]
+	mi := &file_tfplugin6_proto_msgTypes[158]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -7963,7 +8553,7 @@ func (x *InvokeAction_Event_Completed) String() string {
 func (*InvokeAction_Event_Completed) ProtoMessage() {}
 
 func (x *InvokeAction_Event_Completed) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[150]
+	mi := &file_tfplugin6_proto_msgTypes[158]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7976,7 +8566,7 @@ func (x *InvokeAction_Event_Completed) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use InvokeAction_Event_Completed.ProtoReflect.Descriptor instead.
 func (*InvokeAction_Event_Completed) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{51, 1, 1}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{52, 1, 1}
 }
 
 func (x *InvokeAction_Event_Completed) GetDiagnostics() []*Diagnostic {
@@ -7996,7 +8586,7 @@ type ValidateActionConfig_Request struct {
 
 func (x *ValidateActionConfig_Request) Reset() {
 	*x = ValidateActionConfig_Request{}
-	mi := &file_tfplugin6_proto_msgTypes[151]
+	mi := &file_tfplugin6_proto_msgTypes[159]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -8008,7 +8598,7 @@ func (x *ValidateActionConfig_Request) String() string {
 func (*ValidateActionConfig_Request) ProtoMessage() {}
 
 func (x *ValidateActionConfig_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[151]
+	mi := &file_tfplugin6_proto_msgTypes[159]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -8021,7 +8611,7 @@ func (x *ValidateActionConfig_Request) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ValidateActionConfig_Request.ProtoReflect.Descriptor instead.
 func (*ValidateActionConfig_Request) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{52, 0}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{53, 0}
 }
 
 func (x *ValidateActionConfig_Request) GetTypeName() string {
@@ -8047,7 +8637,7 @@ type ValidateActionConfig_Response struct {
 
 func (x *ValidateActionConfig_Response) Reset() {
 	*x = ValidateActionConfig_Response{}
-	mi := &file_tfplugin6_proto_msgTypes[152]
+	mi := &file_tfplugin6_proto_msgTypes[160]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -8059,7 +8649,7 @@ func (x *ValidateActionConfig_Response) String() string {
 func (*ValidateActionConfig_Response) ProtoMessage() {}
 
 func (x *ValidateActionConfig_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_tfplugin6_proto_msgTypes[152]
+	mi := &file_tfplugin6_proto_msgTypes[160]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -8072,7 +8662,7 @@ func (x *ValidateActionConfig_Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ValidateActionConfig_Response.ProtoReflect.Descriptor instead.
 func (*ValidateActionConfig_Response) Descriptor() ([]byte, []int) {
-	return file_tfplugin6_proto_rawDescGZIP(), []int{52, 1}
+	return file_tfplugin6_proto_rawDescGZIP(), []int{53, 1}
 }
 
 func (x *ValidateActionConfig_Response) GetDiagnostics() []*Diagnostic {
@@ -8230,7 +8820,35 @@ const file_tfplugin6_proto_rawDesc = "" +
 	"\aUNKNOWN\x10\x00\x12\x1b\n" +
 	"\x17RESOURCE_CONFIG_UNKNOWN\x10\x01\x12\x1b\n" +
 	"\x17PROVIDER_CONFIG_UNKNOWN\x10\x02\x12\x11\n" +
-	"\rABSENT_PREREQ\x10\x03\"\x9d\b\n" +
+	"\rABSENT_PREREQ\x10\x03\"\xc0\t\n" +
+	"\x11GetCodeMigrations\x1a\t\n" +
+	"\aRequest\x1a\x98\x01\n" +
+	"\bResponse\x12S\n" +
+	"\x0fcode_migrations\x18\x01 \x03(\v2*.tfplugin6.GetCodeMigrations.CodeMigrationR\x0ecodeMigrations\x127\n" +
+	"\vdiagnostics\x18\x02 \x03(\v2\x15.tfplugin6.DiagnosticR\vdiagnostics\x1a\x84\b\n" +
+	"\rCodeMigration\x12\x1b\n" +
+	"\ttype_name\x18\x01 \x01(\tR\btypeName\x12\x12\n" +
+	"\x04name\x18\x02 \x01(\tR\x04name\x12\x82\x01\n" +
+	"\x1bnested_block_to_nested_attr\x18\x03 \x01(\v2B.tfplugin6.GetCodeMigrations.CodeMigration.NestedBlockToNestedAttrH\x00R\x17nestedBlockToNestedAttr\x12a\n" +
+	"\x0etransform_attr\x18\x04 \x01(\v28.tfplugin6.GetCodeMigrations.CodeMigration.TransformAttrH\x00R\rtransformAttr\x12X\n" +
+	"\vrename_attr\x18\x05 \x01(\v25.tfplugin6.GetCodeMigrations.CodeMigration.RenameAttrH\x00R\n" +
+	"renameAttr\x12X\n" +
+	"\vremove_attr\x18\x06 \x01(\v25.tfplugin6.GetCodeMigrations.CodeMigration.RemoveAttrH\x00R\n" +
+	"removeAttr\x1a_\n" +
+	"\x17NestedBlockToNestedAttr\x12D\n" +
+	"\x11nested_block_path\x18\x01 \x01(\v2\x18.tfplugin6.AttributePathR\x0fnestedBlockPath\x1a\xc4\x01\n" +
+	"\rTransformAttr\x12B\n" +
+	"\x10target_attr_path\x18\x01 \x01(\v2\x18.tfplugin6.AttributePathR\x0etargetAttrPath\x12#\n" +
+	"\rfunction_name\x18\x02 \x01(\tR\ffunctionName\x12J\n" +
+	"\x14additional_arguments\x18\x03 \x03(\v2\x17.tfplugin6.DynamicValueR\x13additionalArguments\x1a\x9e\x01\n" +
+	"\n" +
+	"RenameAttr\x12B\n" +
+	"\x10target_attr_path\x18\x01 \x01(\v2\x18.tfplugin6.AttributePathR\x0etargetAttrPath\x12L\n" +
+	"\x15destination_attr_path\x18\x02 \x01(\v2\x18.tfplugin6.AttributePathR\x13destinationAttrPath\x1aP\n" +
+	"\n" +
+	"RemoveAttr\x12B\n" +
+	"\x10target_attr_path\x18\x01 \x01(\v2\x18.tfplugin6.AttributePathR\x0etargetAttrPathB\v\n" +
+	"\tmigration\"\x9d\b\n" +
 	"\vGetMetadata\x1a\t\n" +
 	"\aRequest\x1a\xad\x05\n" +
 	"\bResponse\x12N\n" +
@@ -8621,7 +9239,7 @@ const file_tfplugin6_proto_rawDesc = "" +
 	"\n" +
 	"StringKind\x12\t\n" +
 	"\x05PLAIN\x10\x00\x12\f\n" +
-	"\bMARKDOWN\x10\x012\x81\x1c\n" +
+	"\bMARKDOWN\x10\x012\xe3\x1c\n" +
 	"\bProvider\x12N\n" +
 	"\vGetMetadata\x12\x1e.tfplugin6.GetMetadata.Request\x1a\x1f.tfplugin6.GetMetadata.Response\x12`\n" +
 	"\x11GetProviderSchema\x12$.tfplugin6.GetProviderSchema.Request\x1a%.tfplugin6.GetProviderSchema.Response\x12o\n" +
@@ -8659,7 +9277,8 @@ const file_tfplugin6_proto_rawDesc = "" +
 	"PlanAction\x12\x1d.tfplugin6.PlanAction.Request\x1a\x1e.tfplugin6.PlanAction.Response\x12P\n" +
 	"\fInvokeAction\x12\x1f.tfplugin6.InvokeAction.Request\x1a\x1d.tfplugin6.InvokeAction.Event0\x01\x12i\n" +
 	"\x14ValidateActionConfig\x12'.tfplugin6.ValidateActionConfig.Request\x1a(.tfplugin6.ValidateActionConfig.Response\x12Q\n" +
-	"\fStopProvider\x12\x1f.tfplugin6.StopProvider.Request\x1a .tfplugin6.StopProvider.ResponseB3Z1github.com/hashicorp/terraform/internal/tfplugin6b\x06proto3"
+	"\fStopProvider\x12\x1f.tfplugin6.StopProvider.Request\x1a .tfplugin6.StopProvider.Response\x12`\n" +
+	"\x11GetCodeMigrations\x12$.tfplugin6.GetCodeMigrations.Request\x1a%.tfplugin6.GetCodeMigrations.ResponseB3Z1github.com/hashicorp/terraform/internal/tfplugin6b\x06proto3"
 
 var (
 	file_tfplugin6_proto_rawDescOnce sync.Once
@@ -8674,7 +9293,7 @@ func file_tfplugin6_proto_rawDescGZIP() []byte {
 }
 
 var file_tfplugin6_proto_enumTypes = make([]protoimpl.EnumInfo, 5)
-var file_tfplugin6_proto_msgTypes = make([]protoimpl.MessageInfo, 153)
+var file_tfplugin6_proto_msgTypes = make([]protoimpl.MessageInfo, 161)
 var file_tfplugin6_proto_goTypes = []any{
 	(StringKind)(0),                                  // 0: tfplugin6.StringKind
 	(Diagnostic_Severity)(0),                         // 1: tfplugin6.Diagnostic.Severity
@@ -8695,393 +9314,415 @@ var file_tfplugin6_proto_goTypes = []any{
 	(*ServerCapabilities)(nil),                       // 16: tfplugin6.ServerCapabilities
 	(*ClientCapabilities)(nil),                       // 17: tfplugin6.ClientCapabilities
 	(*Deferred)(nil),                                 // 18: tfplugin6.Deferred
-	(*GetMetadata)(nil),                              // 19: tfplugin6.GetMetadata
-	(*GetProviderSchema)(nil),                        // 20: tfplugin6.GetProviderSchema
-	(*ValidateProviderConfig)(nil),                   // 21: tfplugin6.ValidateProviderConfig
-	(*UpgradeResourceState)(nil),                     // 22: tfplugin6.UpgradeResourceState
-	(*GetResourceIdentitySchemas)(nil),               // 23: tfplugin6.GetResourceIdentitySchemas
-	(*UpgradeResourceIdentity)(nil),                  // 24: tfplugin6.UpgradeResourceIdentity
-	(*ValidateResourceConfig)(nil),                   // 25: tfplugin6.ValidateResourceConfig
-	(*ValidateDataResourceConfig)(nil),               // 26: tfplugin6.ValidateDataResourceConfig
-	(*ValidateEphemeralResourceConfig)(nil),          // 27: tfplugin6.ValidateEphemeralResourceConfig
-	(*ConfigureProvider)(nil),                        // 28: tfplugin6.ConfigureProvider
-	(*ReadResource)(nil),                             // 29: tfplugin6.ReadResource
-	(*PlanResourceChange)(nil),                       // 30: tfplugin6.PlanResourceChange
-	(*ApplyResourceChange)(nil),                      // 31: tfplugin6.ApplyResourceChange
-	(*ImportResourceState)(nil),                      // 32: tfplugin6.ImportResourceState
-	(*GenerateResourceConfig)(nil),                   // 33: tfplugin6.GenerateResourceConfig
-	(*MoveResourceState)(nil),                        // 34: tfplugin6.MoveResourceState
-	(*ReadDataSource)(nil),                           // 35: tfplugin6.ReadDataSource
-	(*OpenEphemeralResource)(nil),                    // 36: tfplugin6.OpenEphemeralResource
-	(*RenewEphemeralResource)(nil),                   // 37: tfplugin6.RenewEphemeralResource
-	(*CloseEphemeralResource)(nil),                   // 38: tfplugin6.CloseEphemeralResource
-	(*GetFunctions)(nil),                             // 39: tfplugin6.GetFunctions
-	(*CallFunction)(nil),                             // 40: tfplugin6.CallFunction
-	(*ListResource)(nil),                             // 41: tfplugin6.ListResource
-	(*ValidateListResourceConfig)(nil),               // 42: tfplugin6.ValidateListResourceConfig
-	(*ValidateStateStore)(nil),                       // 43: tfplugin6.ValidateStateStore
-	(*ConfigureStateStore)(nil),                      // 44: tfplugin6.ConfigureStateStore
-	(*StateStoreClientCapabilities)(nil),             // 45: tfplugin6.StateStoreClientCapabilities
-	(*StateStoreServerCapabilities)(nil),             // 46: tfplugin6.StateStoreServerCapabilities
-	(*ReadStateBytes)(nil),                           // 47: tfplugin6.ReadStateBytes
-	(*WriteStateBytes)(nil),                          // 48: tfplugin6.WriteStateBytes
-	(*RequestChunkMeta)(nil),                         // 49: tfplugin6.RequestChunkMeta
-	(*StateRange)(nil),                               // 50: tfplugin6.StateRange
-	(*LockState)(nil),                                // 51: tfplugin6.LockState
-	(*UnlockState)(nil),                              // 52: tfplugin6.UnlockState
-	(*GetStates)(nil),                                // 53: tfplugin6.GetStates
-	(*DeleteState)(nil),                              // 54: tfplugin6.DeleteState
-	(*PlanAction)(nil),                               // 55: tfplugin6.PlanAction
-	(*InvokeAction)(nil),                             // 56: tfplugin6.InvokeAction
-	(*ValidateActionConfig)(nil),                     // 57: tfplugin6.ValidateActionConfig
-	(*AttributePath_Step)(nil),                       // 58: tfplugin6.AttributePath.Step
-	(*StopProvider_Request)(nil),                     // 59: tfplugin6.StopProvider.Request
-	(*StopProvider_Response)(nil),                    // 60: tfplugin6.StopProvider.Response
-	nil,                                              // 61: tfplugin6.RawState.FlatmapEntry
-	(*ResourceIdentitySchema_IdentityAttribute)(nil), // 62: tfplugin6.ResourceIdentitySchema.IdentityAttribute
-	(*Schema_Block)(nil),                             // 63: tfplugin6.Schema.Block
-	(*Schema_Attribute)(nil),                         // 64: tfplugin6.Schema.Attribute
-	(*Schema_NestedBlock)(nil),                       // 65: tfplugin6.Schema.NestedBlock
-	(*Schema_Object)(nil),                            // 66: tfplugin6.Schema.Object
-	(*Function_Parameter)(nil),                       // 67: tfplugin6.Function.Parameter
-	(*Function_Return)(nil),                          // 68: tfplugin6.Function.Return
-	(*GetMetadata_Request)(nil),                      // 69: tfplugin6.GetMetadata.Request
-	(*GetMetadata_Response)(nil),                     // 70: tfplugin6.GetMetadata.Response
-	(*GetMetadata_EphemeralMetadata)(nil),            // 71: tfplugin6.GetMetadata.EphemeralMetadata
-	(*GetMetadata_FunctionMetadata)(nil),             // 72: tfplugin6.GetMetadata.FunctionMetadata
-	(*GetMetadata_DataSourceMetadata)(nil),           // 73: tfplugin6.GetMetadata.DataSourceMetadata
-	(*GetMetadata_ResourceMetadata)(nil),             // 74: tfplugin6.GetMetadata.ResourceMetadata
-	(*GetMetadata_ListResourceMetadata)(nil),         // 75: tfplugin6.GetMetadata.ListResourceMetadata
-	(*GetMetadata_StateStoreMetadata)(nil),           // 76: tfplugin6.GetMetadata.StateStoreMetadata
-	(*GetMetadata_ActionMetadata)(nil),               // 77: tfplugin6.GetMetadata.ActionMetadata
-	(*GetProviderSchema_Request)(nil),                // 78: tfplugin6.GetProviderSchema.Request
-	(*GetProviderSchema_Response)(nil),               // 79: tfplugin6.GetProviderSchema.Response
-	nil,                                              // 80: tfplugin6.GetProviderSchema.Response.ResourceSchemasEntry
-	nil,                                              // 81: tfplugin6.GetProviderSchema.Response.DataSourceSchemasEntry
-	nil,                                              // 82: tfplugin6.GetProviderSchema.Response.FunctionsEntry
-	nil,                                              // 83: tfplugin6.GetProviderSchema.Response.EphemeralResourceSchemasEntry
-	nil,                                              // 84: tfplugin6.GetProviderSchema.Response.ListResourceSchemasEntry
-	nil,                                              // 85: tfplugin6.GetProviderSchema.Response.StateStoreSchemasEntry
-	nil,                                              // 86: tfplugin6.GetProviderSchema.Response.ActionSchemasEntry
-	(*ValidateProviderConfig_Request)(nil),           // 87: tfplugin6.ValidateProviderConfig.Request
-	(*ValidateProviderConfig_Response)(nil),          // 88: tfplugin6.ValidateProviderConfig.Response
-	(*UpgradeResourceState_Request)(nil),             // 89: tfplugin6.UpgradeResourceState.Request
-	(*UpgradeResourceState_Response)(nil),            // 90: tfplugin6.UpgradeResourceState.Response
-	(*GetResourceIdentitySchemas_Request)(nil),       // 91: tfplugin6.GetResourceIdentitySchemas.Request
-	(*GetResourceIdentitySchemas_Response)(nil),      // 92: tfplugin6.GetResourceIdentitySchemas.Response
-	nil,                                              // 93: tfplugin6.GetResourceIdentitySchemas.Response.IdentitySchemasEntry
-	(*UpgradeResourceIdentity_Request)(nil),          // 94: tfplugin6.UpgradeResourceIdentity.Request
-	(*UpgradeResourceIdentity_Response)(nil),         // 95: tfplugin6.UpgradeResourceIdentity.Response
-	(*ValidateResourceConfig_Request)(nil),           // 96: tfplugin6.ValidateResourceConfig.Request
-	(*ValidateResourceConfig_Response)(nil),          // 97: tfplugin6.ValidateResourceConfig.Response
-	(*ValidateDataResourceConfig_Request)(nil),       // 98: tfplugin6.ValidateDataResourceConfig.Request
-	(*ValidateDataResourceConfig_Response)(nil),      // 99: tfplugin6.ValidateDataResourceConfig.Response
-	(*ValidateEphemeralResourceConfig_Request)(nil),  // 100: tfplugin6.ValidateEphemeralResourceConfig.Request
-	(*ValidateEphemeralResourceConfig_Response)(nil), // 101: tfplugin6.ValidateEphemeralResourceConfig.Response
-	(*ConfigureProvider_Request)(nil),                // 102: tfplugin6.ConfigureProvider.Request
-	(*ConfigureProvider_Response)(nil),               // 103: tfplugin6.ConfigureProvider.Response
-	(*ReadResource_Request)(nil),                     // 104: tfplugin6.ReadResource.Request
-	(*ReadResource_Response)(nil),                    // 105: tfplugin6.ReadResource.Response
-	(*PlanResourceChange_Request)(nil),               // 106: tfplugin6.PlanResourceChange.Request
-	(*PlanResourceChange_Response)(nil),              // 107: tfplugin6.PlanResourceChange.Response
-	(*ApplyResourceChange_Request)(nil),              // 108: tfplugin6.ApplyResourceChange.Request
-	(*ApplyResourceChange_Response)(nil),             // 109: tfplugin6.ApplyResourceChange.Response
-	(*ImportResourceState_Request)(nil),              // 110: tfplugin6.ImportResourceState.Request
-	(*ImportResourceState_ImportedResource)(nil),     // 111: tfplugin6.ImportResourceState.ImportedResource
-	(*ImportResourceState_Response)(nil),             // 112: tfplugin6.ImportResourceState.Response
-	(*GenerateResourceConfig_Request)(nil),           // 113: tfplugin6.GenerateResourceConfig.Request
-	(*GenerateResourceConfig_Response)(nil),          // 114: tfplugin6.GenerateResourceConfig.Response
-	(*MoveResourceState_Request)(nil),                // 115: tfplugin6.MoveResourceState.Request
-	(*MoveResourceState_Response)(nil),               // 116: tfplugin6.MoveResourceState.Response
-	(*ReadDataSource_Request)(nil),                   // 117: tfplugin6.ReadDataSource.Request
-	(*ReadDataSource_Response)(nil),                  // 118: tfplugin6.ReadDataSource.Response
-	(*OpenEphemeralResource_Request)(nil),            // 119: tfplugin6.OpenEphemeralResource.Request
-	(*OpenEphemeralResource_Response)(nil),           // 120: tfplugin6.OpenEphemeralResource.Response
-	(*RenewEphemeralResource_Request)(nil),           // 121: tfplugin6.RenewEphemeralResource.Request
-	(*RenewEphemeralResource_Response)(nil),          // 122: tfplugin6.RenewEphemeralResource.Response
-	(*CloseEphemeralResource_Request)(nil),           // 123: tfplugin6.CloseEphemeralResource.Request
-	(*CloseEphemeralResource_Response)(nil),          // 124: tfplugin6.CloseEphemeralResource.Response
-	(*GetFunctions_Request)(nil),                     // 125: tfplugin6.GetFunctions.Request
-	(*GetFunctions_Response)(nil),                    // 126: tfplugin6.GetFunctions.Response
-	nil,                                              // 127: tfplugin6.GetFunctions.Response.FunctionsEntry
-	(*CallFunction_Request)(nil),                     // 128: tfplugin6.CallFunction.Request
-	(*CallFunction_Response)(nil),                    // 129: tfplugin6.CallFunction.Response
-	(*ListResource_Request)(nil),                     // 130: tfplugin6.ListResource.Request
-	(*ListResource_Event)(nil),                       // 131: tfplugin6.ListResource.Event
-	(*ValidateListResourceConfig_Request)(nil),       // 132: tfplugin6.ValidateListResourceConfig.Request
-	(*ValidateListResourceConfig_Response)(nil),      // 133: tfplugin6.ValidateListResourceConfig.Response
-	(*ValidateStateStore_Request)(nil),               // 134: tfplugin6.ValidateStateStore.Request
-	(*ValidateStateStore_Response)(nil),              // 135: tfplugin6.ValidateStateStore.Response
-	(*ConfigureStateStore_Request)(nil),              // 136: tfplugin6.ConfigureStateStore.Request
-	(*ConfigureStateStore_Response)(nil),             // 137: tfplugin6.ConfigureStateStore.Response
-	(*ReadStateBytes_Request)(nil),                   // 138: tfplugin6.ReadStateBytes.Request
-	(*ReadStateBytes_Response)(nil),                  // 139: tfplugin6.ReadStateBytes.Response
-	(*WriteStateBytes_RequestChunk)(nil),             // 140: tfplugin6.WriteStateBytes.RequestChunk
-	(*WriteStateBytes_Response)(nil),                 // 141: tfplugin6.WriteStateBytes.Response
-	(*LockState_Request)(nil),                        // 142: tfplugin6.LockState.Request
-	(*LockState_Response)(nil),                       // 143: tfplugin6.LockState.Response
-	(*UnlockState_Request)(nil),                      // 144: tfplugin6.UnlockState.Request
-	(*UnlockState_Response)(nil),                     // 145: tfplugin6.UnlockState.Response
-	(*GetStates_Request)(nil),                        // 146: tfplugin6.GetStates.Request
-	(*GetStates_Response)(nil),                       // 147: tfplugin6.GetStates.Response
-	(*DeleteState_Request)(nil),                      // 148: tfplugin6.DeleteState.Request
-	(*DeleteState_Response)(nil),                     // 149: tfplugin6.DeleteState.Response
-	(*PlanAction_Request)(nil),                       // 150: tfplugin6.PlanAction.Request
-	(*PlanAction_Response)(nil),                      // 151: tfplugin6.PlanAction.Response
-	(*InvokeAction_Request)(nil),                     // 152: tfplugin6.InvokeAction.Request
-	(*InvokeAction_Event)(nil),                       // 153: tfplugin6.InvokeAction.Event
-	(*InvokeAction_Event_Progress)(nil),              // 154: tfplugin6.InvokeAction.Event.Progress
-	(*InvokeAction_Event_Completed)(nil),             // 155: tfplugin6.InvokeAction.Event.Completed
-	(*ValidateActionConfig_Request)(nil),             // 156: tfplugin6.ValidateActionConfig.Request
-	(*ValidateActionConfig_Response)(nil),            // 157: tfplugin6.ValidateActionConfig.Response
-	(*timestamppb.Timestamp)(nil),                    // 158: google.protobuf.Timestamp
+	(*GetCodeMigrations)(nil),                        // 19: tfplugin6.GetCodeMigrations
+	(*GetMetadata)(nil),                              // 20: tfplugin6.GetMetadata
+	(*GetProviderSchema)(nil),                        // 21: tfplugin6.GetProviderSchema
+	(*ValidateProviderConfig)(nil),                   // 22: tfplugin6.ValidateProviderConfig
+	(*UpgradeResourceState)(nil),                     // 23: tfplugin6.UpgradeResourceState
+	(*GetResourceIdentitySchemas)(nil),               // 24: tfplugin6.GetResourceIdentitySchemas
+	(*UpgradeResourceIdentity)(nil),                  // 25: tfplugin6.UpgradeResourceIdentity
+	(*ValidateResourceConfig)(nil),                   // 26: tfplugin6.ValidateResourceConfig
+	(*ValidateDataResourceConfig)(nil),               // 27: tfplugin6.ValidateDataResourceConfig
+	(*ValidateEphemeralResourceConfig)(nil),          // 28: tfplugin6.ValidateEphemeralResourceConfig
+	(*ConfigureProvider)(nil),                        // 29: tfplugin6.ConfigureProvider
+	(*ReadResource)(nil),                             // 30: tfplugin6.ReadResource
+	(*PlanResourceChange)(nil),                       // 31: tfplugin6.PlanResourceChange
+	(*ApplyResourceChange)(nil),                      // 32: tfplugin6.ApplyResourceChange
+	(*ImportResourceState)(nil),                      // 33: tfplugin6.ImportResourceState
+	(*GenerateResourceConfig)(nil),                   // 34: tfplugin6.GenerateResourceConfig
+	(*MoveResourceState)(nil),                        // 35: tfplugin6.MoveResourceState
+	(*ReadDataSource)(nil),                           // 36: tfplugin6.ReadDataSource
+	(*OpenEphemeralResource)(nil),                    // 37: tfplugin6.OpenEphemeralResource
+	(*RenewEphemeralResource)(nil),                   // 38: tfplugin6.RenewEphemeralResource
+	(*CloseEphemeralResource)(nil),                   // 39: tfplugin6.CloseEphemeralResource
+	(*GetFunctions)(nil),                             // 40: tfplugin6.GetFunctions
+	(*CallFunction)(nil),                             // 41: tfplugin6.CallFunction
+	(*ListResource)(nil),                             // 42: tfplugin6.ListResource
+	(*ValidateListResourceConfig)(nil),               // 43: tfplugin6.ValidateListResourceConfig
+	(*ValidateStateStore)(nil),                       // 44: tfplugin6.ValidateStateStore
+	(*ConfigureStateStore)(nil),                      // 45: tfplugin6.ConfigureStateStore
+	(*StateStoreClientCapabilities)(nil),             // 46: tfplugin6.StateStoreClientCapabilities
+	(*StateStoreServerCapabilities)(nil),             // 47: tfplugin6.StateStoreServerCapabilities
+	(*ReadStateBytes)(nil),                           // 48: tfplugin6.ReadStateBytes
+	(*WriteStateBytes)(nil),                          // 49: tfplugin6.WriteStateBytes
+	(*RequestChunkMeta)(nil),                         // 50: tfplugin6.RequestChunkMeta
+	(*StateRange)(nil),                               // 51: tfplugin6.StateRange
+	(*LockState)(nil),                                // 52: tfplugin6.LockState
+	(*UnlockState)(nil),                              // 53: tfplugin6.UnlockState
+	(*GetStates)(nil),                                // 54: tfplugin6.GetStates
+	(*DeleteState)(nil),                              // 55: tfplugin6.DeleteState
+	(*PlanAction)(nil),                               // 56: tfplugin6.PlanAction
+	(*InvokeAction)(nil),                             // 57: tfplugin6.InvokeAction
+	(*ValidateActionConfig)(nil),                     // 58: tfplugin6.ValidateActionConfig
+	(*AttributePath_Step)(nil),                       // 59: tfplugin6.AttributePath.Step
+	(*StopProvider_Request)(nil),                     // 60: tfplugin6.StopProvider.Request
+	(*StopProvider_Response)(nil),                    // 61: tfplugin6.StopProvider.Response
+	nil,                                              // 62: tfplugin6.RawState.FlatmapEntry
+	(*ResourceIdentitySchema_IdentityAttribute)(nil), // 63: tfplugin6.ResourceIdentitySchema.IdentityAttribute
+	(*Schema_Block)(nil),                             // 64: tfplugin6.Schema.Block
+	(*Schema_Attribute)(nil),                         // 65: tfplugin6.Schema.Attribute
+	(*Schema_NestedBlock)(nil),                       // 66: tfplugin6.Schema.NestedBlock
+	(*Schema_Object)(nil),                            // 67: tfplugin6.Schema.Object
+	(*Function_Parameter)(nil),                       // 68: tfplugin6.Function.Parameter
+	(*Function_Return)(nil),                          // 69: tfplugin6.Function.Return
+	(*GetCodeMigrations_Request)(nil),                // 70: tfplugin6.GetCodeMigrations.Request
+	(*GetCodeMigrations_Response)(nil),               // 71: tfplugin6.GetCodeMigrations.Response
+	(*GetCodeMigrations_CodeMigration)(nil),          // 72: tfplugin6.GetCodeMigrations.CodeMigration
+	(*GetCodeMigrations_CodeMigration_NestedBlockToNestedAttr)(nil), // 73: tfplugin6.GetCodeMigrations.CodeMigration.NestedBlockToNestedAttr
+	(*GetCodeMigrations_CodeMigration_TransformAttr)(nil),           // 74: tfplugin6.GetCodeMigrations.CodeMigration.TransformAttr
+	(*GetCodeMigrations_CodeMigration_RenameAttr)(nil),              // 75: tfplugin6.GetCodeMigrations.CodeMigration.RenameAttr
+	(*GetCodeMigrations_CodeMigration_RemoveAttr)(nil),              // 76: tfplugin6.GetCodeMigrations.CodeMigration.RemoveAttr
+	(*GetMetadata_Request)(nil),                                     // 77: tfplugin6.GetMetadata.Request
+	(*GetMetadata_Response)(nil),                                    // 78: tfplugin6.GetMetadata.Response
+	(*GetMetadata_EphemeralMetadata)(nil),                           // 79: tfplugin6.GetMetadata.EphemeralMetadata
+	(*GetMetadata_FunctionMetadata)(nil),                            // 80: tfplugin6.GetMetadata.FunctionMetadata
+	(*GetMetadata_DataSourceMetadata)(nil),                          // 81: tfplugin6.GetMetadata.DataSourceMetadata
+	(*GetMetadata_ResourceMetadata)(nil),                            // 82: tfplugin6.GetMetadata.ResourceMetadata
+	(*GetMetadata_ListResourceMetadata)(nil),                        // 83: tfplugin6.GetMetadata.ListResourceMetadata
+	(*GetMetadata_StateStoreMetadata)(nil),                          // 84: tfplugin6.GetMetadata.StateStoreMetadata
+	(*GetMetadata_ActionMetadata)(nil),                              // 85: tfplugin6.GetMetadata.ActionMetadata
+	(*GetProviderSchema_Request)(nil),                               // 86: tfplugin6.GetProviderSchema.Request
+	(*GetProviderSchema_Response)(nil),                              // 87: tfplugin6.GetProviderSchema.Response
+	nil,                                                             // 88: tfplugin6.GetProviderSchema.Response.ResourceSchemasEntry
+	nil,                                                             // 89: tfplugin6.GetProviderSchema.Response.DataSourceSchemasEntry
+	nil,                                                             // 90: tfplugin6.GetProviderSchema.Response.FunctionsEntry
+	nil,                                                             // 91: tfplugin6.GetProviderSchema.Response.EphemeralResourceSchemasEntry
+	nil,                                                             // 92: tfplugin6.GetProviderSchema.Response.ListResourceSchemasEntry
+	nil,                                                             // 93: tfplugin6.GetProviderSchema.Response.StateStoreSchemasEntry
+	nil,                                                             // 94: tfplugin6.GetProviderSchema.Response.ActionSchemasEntry
+	(*ValidateProviderConfig_Request)(nil),                          // 95: tfplugin6.ValidateProviderConfig.Request
+	(*ValidateProviderConfig_Response)(nil),                         // 96: tfplugin6.ValidateProviderConfig.Response
+	(*UpgradeResourceState_Request)(nil),                            // 97: tfplugin6.UpgradeResourceState.Request
+	(*UpgradeResourceState_Response)(nil),                           // 98: tfplugin6.UpgradeResourceState.Response
+	(*GetResourceIdentitySchemas_Request)(nil),                      // 99: tfplugin6.GetResourceIdentitySchemas.Request
+	(*GetResourceIdentitySchemas_Response)(nil),                     // 100: tfplugin6.GetResourceIdentitySchemas.Response
+	nil,                                              // 101: tfplugin6.GetResourceIdentitySchemas.Response.IdentitySchemasEntry
+	(*UpgradeResourceIdentity_Request)(nil),          // 102: tfplugin6.UpgradeResourceIdentity.Request
+	(*UpgradeResourceIdentity_Response)(nil),         // 103: tfplugin6.UpgradeResourceIdentity.Response
+	(*ValidateResourceConfig_Request)(nil),           // 104: tfplugin6.ValidateResourceConfig.Request
+	(*ValidateResourceConfig_Response)(nil),          // 105: tfplugin6.ValidateResourceConfig.Response
+	(*ValidateDataResourceConfig_Request)(nil),       // 106: tfplugin6.ValidateDataResourceConfig.Request
+	(*ValidateDataResourceConfig_Response)(nil),      // 107: tfplugin6.ValidateDataResourceConfig.Response
+	(*ValidateEphemeralResourceConfig_Request)(nil),  // 108: tfplugin6.ValidateEphemeralResourceConfig.Request
+	(*ValidateEphemeralResourceConfig_Response)(nil), // 109: tfplugin6.ValidateEphemeralResourceConfig.Response
+	(*ConfigureProvider_Request)(nil),                // 110: tfplugin6.ConfigureProvider.Request
+	(*ConfigureProvider_Response)(nil),               // 111: tfplugin6.ConfigureProvider.Response
+	(*ReadResource_Request)(nil),                     // 112: tfplugin6.ReadResource.Request
+	(*ReadResource_Response)(nil),                    // 113: tfplugin6.ReadResource.Response
+	(*PlanResourceChange_Request)(nil),               // 114: tfplugin6.PlanResourceChange.Request
+	(*PlanResourceChange_Response)(nil),              // 115: tfplugin6.PlanResourceChange.Response
+	(*ApplyResourceChange_Request)(nil),              // 116: tfplugin6.ApplyResourceChange.Request
+	(*ApplyResourceChange_Response)(nil),             // 117: tfplugin6.ApplyResourceChange.Response
+	(*ImportResourceState_Request)(nil),              // 118: tfplugin6.ImportResourceState.Request
+	(*ImportResourceState_ImportedResource)(nil),     // 119: tfplugin6.ImportResourceState.ImportedResource
+	(*ImportResourceState_Response)(nil),             // 120: tfplugin6.ImportResourceState.Response
+	(*GenerateResourceConfig_Request)(nil),           // 121: tfplugin6.GenerateResourceConfig.Request
+	(*GenerateResourceConfig_Response)(nil),          // 122: tfplugin6.GenerateResourceConfig.Response
+	(*MoveResourceState_Request)(nil),                // 123: tfplugin6.MoveResourceState.Request
+	(*MoveResourceState_Response)(nil),               // 124: tfplugin6.MoveResourceState.Response
+	(*ReadDataSource_Request)(nil),                   // 125: tfplugin6.ReadDataSource.Request
+	(*ReadDataSource_Response)(nil),                  // 126: tfplugin6.ReadDataSource.Response
+	(*OpenEphemeralResource_Request)(nil),            // 127: tfplugin6.OpenEphemeralResource.Request
+	(*OpenEphemeralResource_Response)(nil),           // 128: tfplugin6.OpenEphemeralResource.Response
+	(*RenewEphemeralResource_Request)(nil),           // 129: tfplugin6.RenewEphemeralResource.Request
+	(*RenewEphemeralResource_Response)(nil),          // 130: tfplugin6.RenewEphemeralResource.Response
+	(*CloseEphemeralResource_Request)(nil),           // 131: tfplugin6.CloseEphemeralResource.Request
+	(*CloseEphemeralResource_Response)(nil),          // 132: tfplugin6.CloseEphemeralResource.Response
+	(*GetFunctions_Request)(nil),                     // 133: tfplugin6.GetFunctions.Request
+	(*GetFunctions_Response)(nil),                    // 134: tfplugin6.GetFunctions.Response
+	nil,                                              // 135: tfplugin6.GetFunctions.Response.FunctionsEntry
+	(*CallFunction_Request)(nil),                     // 136: tfplugin6.CallFunction.Request
+	(*CallFunction_Response)(nil),                    // 137: tfplugin6.CallFunction.Response
+	(*ListResource_Request)(nil),                     // 138: tfplugin6.ListResource.Request
+	(*ListResource_Event)(nil),                       // 139: tfplugin6.ListResource.Event
+	(*ValidateListResourceConfig_Request)(nil),       // 140: tfplugin6.ValidateListResourceConfig.Request
+	(*ValidateListResourceConfig_Response)(nil),      // 141: tfplugin6.ValidateListResourceConfig.Response
+	(*ValidateStateStore_Request)(nil),               // 142: tfplugin6.ValidateStateStore.Request
+	(*ValidateStateStore_Response)(nil),              // 143: tfplugin6.ValidateStateStore.Response
+	(*ConfigureStateStore_Request)(nil),              // 144: tfplugin6.ConfigureStateStore.Request
+	(*ConfigureStateStore_Response)(nil),             // 145: tfplugin6.ConfigureStateStore.Response
+	(*ReadStateBytes_Request)(nil),                   // 146: tfplugin6.ReadStateBytes.Request
+	(*ReadStateBytes_Response)(nil),                  // 147: tfplugin6.ReadStateBytes.Response
+	(*WriteStateBytes_RequestChunk)(nil),             // 148: tfplugin6.WriteStateBytes.RequestChunk
+	(*WriteStateBytes_Response)(nil),                 // 149: tfplugin6.WriteStateBytes.Response
+	(*LockState_Request)(nil),                        // 150: tfplugin6.LockState.Request
+	(*LockState_Response)(nil),                       // 151: tfplugin6.LockState.Response
+	(*UnlockState_Request)(nil),                      // 152: tfplugin6.UnlockState.Request
+	(*UnlockState_Response)(nil),                     // 153: tfplugin6.UnlockState.Response
+	(*GetStates_Request)(nil),                        // 154: tfplugin6.GetStates.Request
+	(*GetStates_Response)(nil),                       // 155: tfplugin6.GetStates.Response
+	(*DeleteState_Request)(nil),                      // 156: tfplugin6.DeleteState.Request
+	(*DeleteState_Response)(nil),                     // 157: tfplugin6.DeleteState.Response
+	(*PlanAction_Request)(nil),                       // 158: tfplugin6.PlanAction.Request
+	(*PlanAction_Response)(nil),                      // 159: tfplugin6.PlanAction.Response
+	(*InvokeAction_Request)(nil),                     // 160: tfplugin6.InvokeAction.Request
+	(*InvokeAction_Event)(nil),                       // 161: tfplugin6.InvokeAction.Event
+	(*InvokeAction_Event_Progress)(nil),              // 162: tfplugin6.InvokeAction.Event.Progress
+	(*InvokeAction_Event_Completed)(nil),             // 163: tfplugin6.InvokeAction.Event.Completed
+	(*ValidateActionConfig_Request)(nil),             // 164: tfplugin6.ValidateActionConfig.Request
+	(*ValidateActionConfig_Response)(nil),            // 165: tfplugin6.ValidateActionConfig.Response
+	(*timestamppb.Timestamp)(nil),                    // 166: google.protobuf.Timestamp
 }
 var file_tfplugin6_proto_depIdxs = []int32{
 	1,   // 0: tfplugin6.Diagnostic.severity:type_name -> tfplugin6.Diagnostic.Severity
 	8,   // 1: tfplugin6.Diagnostic.attribute:type_name -> tfplugin6.AttributePath
-	58,  // 2: tfplugin6.AttributePath.steps:type_name -> tfplugin6.AttributePath.Step
-	61,  // 3: tfplugin6.RawState.flatmap:type_name -> tfplugin6.RawState.FlatmapEntry
-	62,  // 4: tfplugin6.ResourceIdentitySchema.identity_attributes:type_name -> tfplugin6.ResourceIdentitySchema.IdentityAttribute
+	59,  // 2: tfplugin6.AttributePath.steps:type_name -> tfplugin6.AttributePath.Step
+	62,  // 3: tfplugin6.RawState.flatmap:type_name -> tfplugin6.RawState.FlatmapEntry
+	63,  // 4: tfplugin6.ResourceIdentitySchema.identity_attributes:type_name -> tfplugin6.ResourceIdentitySchema.IdentityAttribute
 	5,   // 5: tfplugin6.ResourceIdentityData.identity_data:type_name -> tfplugin6.DynamicValue
 	14,  // 6: tfplugin6.ActionSchema.schema:type_name -> tfplugin6.Schema
-	63,  // 7: tfplugin6.Schema.block:type_name -> tfplugin6.Schema.Block
-	67,  // 8: tfplugin6.Function.parameters:type_name -> tfplugin6.Function.Parameter
-	67,  // 9: tfplugin6.Function.variadic_parameter:type_name -> tfplugin6.Function.Parameter
-	68,  // 10: tfplugin6.Function.return:type_name -> tfplugin6.Function.Return
+	64,  // 7: tfplugin6.Schema.block:type_name -> tfplugin6.Schema.Block
+	68,  // 8: tfplugin6.Function.parameters:type_name -> tfplugin6.Function.Parameter
+	68,  // 9: tfplugin6.Function.variadic_parameter:type_name -> tfplugin6.Function.Parameter
+	69,  // 10: tfplugin6.Function.return:type_name -> tfplugin6.Function.Return
 	0,   // 11: tfplugin6.Function.description_kind:type_name -> tfplugin6.StringKind
 	4,   // 12: tfplugin6.Deferred.reason:type_name -> tfplugin6.Deferred.Reason
-	64,  // 13: tfplugin6.Schema.Block.attributes:type_name -> tfplugin6.Schema.Attribute
-	65,  // 14: tfplugin6.Schema.Block.block_types:type_name -> tfplugin6.Schema.NestedBlock
+	65,  // 13: tfplugin6.Schema.Block.attributes:type_name -> tfplugin6.Schema.Attribute
+	66,  // 14: tfplugin6.Schema.Block.block_types:type_name -> tfplugin6.Schema.NestedBlock
 	0,   // 15: tfplugin6.Schema.Block.description_kind:type_name -> tfplugin6.StringKind
-	66,  // 16: tfplugin6.Schema.Attribute.nested_type:type_name -> tfplugin6.Schema.Object
+	67,  // 16: tfplugin6.Schema.Attribute.nested_type:type_name -> tfplugin6.Schema.Object
 	0,   // 17: tfplugin6.Schema.Attribute.description_kind:type_name -> tfplugin6.StringKind
-	63,  // 18: tfplugin6.Schema.NestedBlock.block:type_name -> tfplugin6.Schema.Block
+	64,  // 18: tfplugin6.Schema.NestedBlock.block:type_name -> tfplugin6.Schema.Block
 	2,   // 19: tfplugin6.Schema.NestedBlock.nesting:type_name -> tfplugin6.Schema.NestedBlock.NestingMode
-	64,  // 20: tfplugin6.Schema.Object.attributes:type_name -> tfplugin6.Schema.Attribute
+	65,  // 20: tfplugin6.Schema.Object.attributes:type_name -> tfplugin6.Schema.Attribute
 	3,   // 21: tfplugin6.Schema.Object.nesting:type_name -> tfplugin6.Schema.Object.NestingMode
 	0,   // 22: tfplugin6.Function.Parameter.description_kind:type_name -> tfplugin6.StringKind
-	16,  // 23: tfplugin6.GetMetadata.Response.server_capabilities:type_name -> tfplugin6.ServerCapabilities
-	6,   // 24: tfplugin6.GetMetadata.Response.diagnostics:type_name -> tfplugin6.Diagnostic
-	73,  // 25: tfplugin6.GetMetadata.Response.data_sources:type_name -> tfplugin6.GetMetadata.DataSourceMetadata
-	74,  // 26: tfplugin6.GetMetadata.Response.resources:type_name -> tfplugin6.GetMetadata.ResourceMetadata
-	72,  // 27: tfplugin6.GetMetadata.Response.functions:type_name -> tfplugin6.GetMetadata.FunctionMetadata
-	71,  // 28: tfplugin6.GetMetadata.Response.ephemeral_resources:type_name -> tfplugin6.GetMetadata.EphemeralMetadata
-	75,  // 29: tfplugin6.GetMetadata.Response.list_resources:type_name -> tfplugin6.GetMetadata.ListResourceMetadata
-	76,  // 30: tfplugin6.GetMetadata.Response.state_stores:type_name -> tfplugin6.GetMetadata.StateStoreMetadata
-	77,  // 31: tfplugin6.GetMetadata.Response.actions:type_name -> tfplugin6.GetMetadata.ActionMetadata
-	14,  // 32: tfplugin6.GetProviderSchema.Response.provider:type_name -> tfplugin6.Schema
-	80,  // 33: tfplugin6.GetProviderSchema.Response.resource_schemas:type_name -> tfplugin6.GetProviderSchema.Response.ResourceSchemasEntry
-	81,  // 34: tfplugin6.GetProviderSchema.Response.data_source_schemas:type_name -> tfplugin6.GetProviderSchema.Response.DataSourceSchemasEntry
-	82,  // 35: tfplugin6.GetProviderSchema.Response.functions:type_name -> tfplugin6.GetProviderSchema.Response.FunctionsEntry
-	83,  // 36: tfplugin6.GetProviderSchema.Response.ephemeral_resource_schemas:type_name -> tfplugin6.GetProviderSchema.Response.EphemeralResourceSchemasEntry
-	84,  // 37: tfplugin6.GetProviderSchema.Response.list_resource_schemas:type_name -> tfplugin6.GetProviderSchema.Response.ListResourceSchemasEntry
-	85,  // 38: tfplugin6.GetProviderSchema.Response.state_store_schemas:type_name -> tfplugin6.GetProviderSchema.Response.StateStoreSchemasEntry
-	86,  // 39: tfplugin6.GetProviderSchema.Response.action_schemas:type_name -> tfplugin6.GetProviderSchema.Response.ActionSchemasEntry
-	6,   // 40: tfplugin6.GetProviderSchema.Response.diagnostics:type_name -> tfplugin6.Diagnostic
-	14,  // 41: tfplugin6.GetProviderSchema.Response.provider_meta:type_name -> tfplugin6.Schema
-	16,  // 42: tfplugin6.GetProviderSchema.Response.server_capabilities:type_name -> tfplugin6.ServerCapabilities
-	14,  // 43: tfplugin6.GetProviderSchema.Response.ResourceSchemasEntry.value:type_name -> tfplugin6.Schema
-	14,  // 44: tfplugin6.GetProviderSchema.Response.DataSourceSchemasEntry.value:type_name -> tfplugin6.Schema
-	15,  // 45: tfplugin6.GetProviderSchema.Response.FunctionsEntry.value:type_name -> tfplugin6.Function
-	14,  // 46: tfplugin6.GetProviderSchema.Response.EphemeralResourceSchemasEntry.value:type_name -> tfplugin6.Schema
-	14,  // 47: tfplugin6.GetProviderSchema.Response.ListResourceSchemasEntry.value:type_name -> tfplugin6.Schema
-	14,  // 48: tfplugin6.GetProviderSchema.Response.StateStoreSchemasEntry.value:type_name -> tfplugin6.Schema
-	13,  // 49: tfplugin6.GetProviderSchema.Response.ActionSchemasEntry.value:type_name -> tfplugin6.ActionSchema
-	5,   // 50: tfplugin6.ValidateProviderConfig.Request.config:type_name -> tfplugin6.DynamicValue
-	6,   // 51: tfplugin6.ValidateProviderConfig.Response.diagnostics:type_name -> tfplugin6.Diagnostic
-	10,  // 52: tfplugin6.UpgradeResourceState.Request.raw_state:type_name -> tfplugin6.RawState
-	5,   // 53: tfplugin6.UpgradeResourceState.Response.upgraded_state:type_name -> tfplugin6.DynamicValue
-	6,   // 54: tfplugin6.UpgradeResourceState.Response.diagnostics:type_name -> tfplugin6.Diagnostic
-	93,  // 55: tfplugin6.GetResourceIdentitySchemas.Response.identity_schemas:type_name -> tfplugin6.GetResourceIdentitySchemas.Response.IdentitySchemasEntry
-	6,   // 56: tfplugin6.GetResourceIdentitySchemas.Response.diagnostics:type_name -> tfplugin6.Diagnostic
-	11,  // 57: tfplugin6.GetResourceIdentitySchemas.Response.IdentitySchemasEntry.value:type_name -> tfplugin6.ResourceIdentitySchema
-	10,  // 58: tfplugin6.UpgradeResourceIdentity.Request.raw_identity:type_name -> tfplugin6.RawState
-	12,  // 59: tfplugin6.UpgradeResourceIdentity.Response.upgraded_identity:type_name -> tfplugin6.ResourceIdentityData
-	6,   // 60: tfplugin6.UpgradeResourceIdentity.Response.diagnostics:type_name -> tfplugin6.Diagnostic
-	5,   // 61: tfplugin6.ValidateResourceConfig.Request.config:type_name -> tfplugin6.DynamicValue
-	17,  // 62: tfplugin6.ValidateResourceConfig.Request.client_capabilities:type_name -> tfplugin6.ClientCapabilities
-	6,   // 63: tfplugin6.ValidateResourceConfig.Response.diagnostics:type_name -> tfplugin6.Diagnostic
-	5,   // 64: tfplugin6.ValidateDataResourceConfig.Request.config:type_name -> tfplugin6.DynamicValue
-	6,   // 65: tfplugin6.ValidateDataResourceConfig.Response.diagnostics:type_name -> tfplugin6.Diagnostic
-	5,   // 66: tfplugin6.ValidateEphemeralResourceConfig.Request.config:type_name -> tfplugin6.DynamicValue
-	6,   // 67: tfplugin6.ValidateEphemeralResourceConfig.Response.diagnostics:type_name -> tfplugin6.Diagnostic
-	5,   // 68: tfplugin6.ConfigureProvider.Request.config:type_name -> tfplugin6.DynamicValue
-	17,  // 69: tfplugin6.ConfigureProvider.Request.client_capabilities:type_name -> tfplugin6.ClientCapabilities
-	6,   // 70: tfplugin6.ConfigureProvider.Response.diagnostics:type_name -> tfplugin6.Diagnostic
-	5,   // 71: tfplugin6.ReadResource.Request.current_state:type_name -> tfplugin6.DynamicValue
-	5,   // 72: tfplugin6.ReadResource.Request.provider_meta:type_name -> tfplugin6.DynamicValue
-	17,  // 73: tfplugin6.ReadResource.Request.client_capabilities:type_name -> tfplugin6.ClientCapabilities
-	12,  // 74: tfplugin6.ReadResource.Request.current_identity:type_name -> tfplugin6.ResourceIdentityData
-	5,   // 75: tfplugin6.ReadResource.Response.new_state:type_name -> tfplugin6.DynamicValue
-	6,   // 76: tfplugin6.ReadResource.Response.diagnostics:type_name -> tfplugin6.Diagnostic
-	18,  // 77: tfplugin6.ReadResource.Response.deferred:type_name -> tfplugin6.Deferred
-	12,  // 78: tfplugin6.ReadResource.Response.new_identity:type_name -> tfplugin6.ResourceIdentityData
-	5,   // 79: tfplugin6.PlanResourceChange.Request.prior_state:type_name -> tfplugin6.DynamicValue
-	5,   // 80: tfplugin6.PlanResourceChange.Request.proposed_new_state:type_name -> tfplugin6.DynamicValue
-	5,   // 81: tfplugin6.PlanResourceChange.Request.config:type_name -> tfplugin6.DynamicValue
-	5,   // 82: tfplugin6.PlanResourceChange.Request.provider_meta:type_name -> tfplugin6.DynamicValue
-	17,  // 83: tfplugin6.PlanResourceChange.Request.client_capabilities:type_name -> tfplugin6.ClientCapabilities
-	12,  // 84: tfplugin6.PlanResourceChange.Request.prior_identity:type_name -> tfplugin6.ResourceIdentityData
-	5,   // 85: tfplugin6.PlanResourceChange.Response.planned_state:type_name -> tfplugin6.DynamicValue
-	8,   // 86: tfplugin6.PlanResourceChange.Response.requires_replace:type_name -> tfplugin6.AttributePath
-	6,   // 87: tfplugin6.PlanResourceChange.Response.diagnostics:type_name -> tfplugin6.Diagnostic
-	18,  // 88: tfplugin6.PlanResourceChange.Response.deferred:type_name -> tfplugin6.Deferred
-	12,  // 89: tfplugin6.PlanResourceChange.Response.planned_identity:type_name -> tfplugin6.ResourceIdentityData
-	5,   // 90: tfplugin6.ApplyResourceChange.Request.prior_state:type_name -> tfplugin6.DynamicValue
-	5,   // 91: tfplugin6.ApplyResourceChange.Request.planned_state:type_name -> tfplugin6.DynamicValue
-	5,   // 92: tfplugin6.ApplyResourceChange.Request.config:type_name -> tfplugin6.DynamicValue
-	5,   // 93: tfplugin6.ApplyResourceChange.Request.provider_meta:type_name -> tfplugin6.DynamicValue
-	12,  // 94: tfplugin6.ApplyResourceChange.Request.planned_identity:type_name -> tfplugin6.ResourceIdentityData
-	5,   // 95: tfplugin6.ApplyResourceChange.Response.new_state:type_name -> tfplugin6.DynamicValue
-	6,   // 96: tfplugin6.ApplyResourceChange.Response.diagnostics:type_name -> tfplugin6.Diagnostic
-	12,  // 97: tfplugin6.ApplyResourceChange.Response.new_identity:type_name -> tfplugin6.ResourceIdentityData
-	17,  // 98: tfplugin6.ImportResourceState.Request.client_capabilities:type_name -> tfplugin6.ClientCapabilities
-	12,  // 99: tfplugin6.ImportResourceState.Request.identity:type_name -> tfplugin6.ResourceIdentityData
-	5,   // 100: tfplugin6.ImportResourceState.ImportedResource.state:type_name -> tfplugin6.DynamicValue
-	12,  // 101: tfplugin6.ImportResourceState.ImportedResource.identity:type_name -> tfplugin6.ResourceIdentityData
-	111, // 102: tfplugin6.ImportResourceState.Response.imported_resources:type_name -> tfplugin6.ImportResourceState.ImportedResource
-	6,   // 103: tfplugin6.ImportResourceState.Response.diagnostics:type_name -> tfplugin6.Diagnostic
-	18,  // 104: tfplugin6.ImportResourceState.Response.deferred:type_name -> tfplugin6.Deferred
-	5,   // 105: tfplugin6.GenerateResourceConfig.Request.state:type_name -> tfplugin6.DynamicValue
-	5,   // 106: tfplugin6.GenerateResourceConfig.Response.config:type_name -> tfplugin6.DynamicValue
-	6,   // 107: tfplugin6.GenerateResourceConfig.Response.diagnostics:type_name -> tfplugin6.Diagnostic
-	10,  // 108: tfplugin6.MoveResourceState.Request.source_state:type_name -> tfplugin6.RawState
-	10,  // 109: tfplugin6.MoveResourceState.Request.source_identity:type_name -> tfplugin6.RawState
-	5,   // 110: tfplugin6.MoveResourceState.Response.target_state:type_name -> tfplugin6.DynamicValue
-	6,   // 111: tfplugin6.MoveResourceState.Response.diagnostics:type_name -> tfplugin6.Diagnostic
-	12,  // 112: tfplugin6.MoveResourceState.Response.target_identity:type_name -> tfplugin6.ResourceIdentityData
-	5,   // 113: tfplugin6.ReadDataSource.Request.config:type_name -> tfplugin6.DynamicValue
-	5,   // 114: tfplugin6.ReadDataSource.Request.provider_meta:type_name -> tfplugin6.DynamicValue
-	17,  // 115: tfplugin6.ReadDataSource.Request.client_capabilities:type_name -> tfplugin6.ClientCapabilities
-	5,   // 116: tfplugin6.ReadDataSource.Response.state:type_name -> tfplugin6.DynamicValue
-	6,   // 117: tfplugin6.ReadDataSource.Response.diagnostics:type_name -> tfplugin6.Diagnostic
-	18,  // 118: tfplugin6.ReadDataSource.Response.deferred:type_name -> tfplugin6.Deferred
-	5,   // 119: tfplugin6.OpenEphemeralResource.Request.config:type_name -> tfplugin6.DynamicValue
-	17,  // 120: tfplugin6.OpenEphemeralResource.Request.client_capabilities:type_name -> tfplugin6.ClientCapabilities
-	6,   // 121: tfplugin6.OpenEphemeralResource.Response.diagnostics:type_name -> tfplugin6.Diagnostic
-	158, // 122: tfplugin6.OpenEphemeralResource.Response.renew_at:type_name -> google.protobuf.Timestamp
-	5,   // 123: tfplugin6.OpenEphemeralResource.Response.result:type_name -> tfplugin6.DynamicValue
-	18,  // 124: tfplugin6.OpenEphemeralResource.Response.deferred:type_name -> tfplugin6.Deferred
-	6,   // 125: tfplugin6.RenewEphemeralResource.Response.diagnostics:type_name -> tfplugin6.Diagnostic
-	158, // 126: tfplugin6.RenewEphemeralResource.Response.renew_at:type_name -> google.protobuf.Timestamp
-	6,   // 127: tfplugin6.CloseEphemeralResource.Response.diagnostics:type_name -> tfplugin6.Diagnostic
-	127, // 128: tfplugin6.GetFunctions.Response.functions:type_name -> tfplugin6.GetFunctions.Response.FunctionsEntry
-	6,   // 129: tfplugin6.GetFunctions.Response.diagnostics:type_name -> tfplugin6.Diagnostic
-	15,  // 130: tfplugin6.GetFunctions.Response.FunctionsEntry.value:type_name -> tfplugin6.Function
-	5,   // 131: tfplugin6.CallFunction.Request.arguments:type_name -> tfplugin6.DynamicValue
-	5,   // 132: tfplugin6.CallFunction.Response.result:type_name -> tfplugin6.DynamicValue
-	7,   // 133: tfplugin6.CallFunction.Response.error:type_name -> tfplugin6.FunctionError
-	5,   // 134: tfplugin6.ListResource.Request.config:type_name -> tfplugin6.DynamicValue
-	12,  // 135: tfplugin6.ListResource.Event.identity:type_name -> tfplugin6.ResourceIdentityData
-	5,   // 136: tfplugin6.ListResource.Event.resource_object:type_name -> tfplugin6.DynamicValue
-	6,   // 137: tfplugin6.ListResource.Event.diagnostic:type_name -> tfplugin6.Diagnostic
-	5,   // 138: tfplugin6.ValidateListResourceConfig.Request.config:type_name -> tfplugin6.DynamicValue
-	5,   // 139: tfplugin6.ValidateListResourceConfig.Request.include_resource_object:type_name -> tfplugin6.DynamicValue
-	5,   // 140: tfplugin6.ValidateListResourceConfig.Request.limit:type_name -> tfplugin6.DynamicValue
-	6,   // 141: tfplugin6.ValidateListResourceConfig.Response.diagnostics:type_name -> tfplugin6.Diagnostic
-	5,   // 142: tfplugin6.ValidateStateStore.Request.config:type_name -> tfplugin6.DynamicValue
-	6,   // 143: tfplugin6.ValidateStateStore.Response.diagnostics:type_name -> tfplugin6.Diagnostic
-	5,   // 144: tfplugin6.ConfigureStateStore.Request.config:type_name -> tfplugin6.DynamicValue
-	45,  // 145: tfplugin6.ConfigureStateStore.Request.capabilities:type_name -> tfplugin6.StateStoreClientCapabilities
-	6,   // 146: tfplugin6.ConfigureStateStore.Response.diagnostics:type_name -> tfplugin6.Diagnostic
-	46,  // 147: tfplugin6.ConfigureStateStore.Response.capabilities:type_name -> tfplugin6.StateStoreServerCapabilities
-	50,  // 148: tfplugin6.ReadStateBytes.Response.range:type_name -> tfplugin6.StateRange
-	6,   // 149: tfplugin6.ReadStateBytes.Response.diagnostics:type_name -> tfplugin6.Diagnostic
-	49,  // 150: tfplugin6.WriteStateBytes.RequestChunk.meta:type_name -> tfplugin6.RequestChunkMeta
-	50,  // 151: tfplugin6.WriteStateBytes.RequestChunk.range:type_name -> tfplugin6.StateRange
-	6,   // 152: tfplugin6.WriteStateBytes.Response.diagnostics:type_name -> tfplugin6.Diagnostic
-	6,   // 153: tfplugin6.LockState.Response.diagnostics:type_name -> tfplugin6.Diagnostic
-	6,   // 154: tfplugin6.UnlockState.Response.diagnostics:type_name -> tfplugin6.Diagnostic
-	6,   // 155: tfplugin6.GetStates.Response.diagnostics:type_name -> tfplugin6.Diagnostic
-	6,   // 156: tfplugin6.DeleteState.Response.diagnostics:type_name -> tfplugin6.Diagnostic
-	5,   // 157: tfplugin6.PlanAction.Request.config:type_name -> tfplugin6.DynamicValue
-	17,  // 158: tfplugin6.PlanAction.Request.client_capabilities:type_name -> tfplugin6.ClientCapabilities
-	6,   // 159: tfplugin6.PlanAction.Response.diagnostics:type_name -> tfplugin6.Diagnostic
-	18,  // 160: tfplugin6.PlanAction.Response.deferred:type_name -> tfplugin6.Deferred
-	5,   // 161: tfplugin6.InvokeAction.Request.config:type_name -> tfplugin6.DynamicValue
-	17,  // 162: tfplugin6.InvokeAction.Request.client_capabilities:type_name -> tfplugin6.ClientCapabilities
-	154, // 163: tfplugin6.InvokeAction.Event.progress:type_name -> tfplugin6.InvokeAction.Event.Progress
-	155, // 164: tfplugin6.InvokeAction.Event.completed:type_name -> tfplugin6.InvokeAction.Event.Completed
-	6,   // 165: tfplugin6.InvokeAction.Event.Completed.diagnostics:type_name -> tfplugin6.Diagnostic
-	5,   // 166: tfplugin6.ValidateActionConfig.Request.config:type_name -> tfplugin6.DynamicValue
-	6,   // 167: tfplugin6.ValidateActionConfig.Response.diagnostics:type_name -> tfplugin6.Diagnostic
-	69,  // 168: tfplugin6.Provider.GetMetadata:input_type -> tfplugin6.GetMetadata.Request
-	78,  // 169: tfplugin6.Provider.GetProviderSchema:input_type -> tfplugin6.GetProviderSchema.Request
-	87,  // 170: tfplugin6.Provider.ValidateProviderConfig:input_type -> tfplugin6.ValidateProviderConfig.Request
-	96,  // 171: tfplugin6.Provider.ValidateResourceConfig:input_type -> tfplugin6.ValidateResourceConfig.Request
-	98,  // 172: tfplugin6.Provider.ValidateDataResourceConfig:input_type -> tfplugin6.ValidateDataResourceConfig.Request
-	89,  // 173: tfplugin6.Provider.UpgradeResourceState:input_type -> tfplugin6.UpgradeResourceState.Request
-	91,  // 174: tfplugin6.Provider.GetResourceIdentitySchemas:input_type -> tfplugin6.GetResourceIdentitySchemas.Request
-	94,  // 175: tfplugin6.Provider.UpgradeResourceIdentity:input_type -> tfplugin6.UpgradeResourceIdentity.Request
-	102, // 176: tfplugin6.Provider.ConfigureProvider:input_type -> tfplugin6.ConfigureProvider.Request
-	104, // 177: tfplugin6.Provider.ReadResource:input_type -> tfplugin6.ReadResource.Request
-	106, // 178: tfplugin6.Provider.PlanResourceChange:input_type -> tfplugin6.PlanResourceChange.Request
-	108, // 179: tfplugin6.Provider.ApplyResourceChange:input_type -> tfplugin6.ApplyResourceChange.Request
-	110, // 180: tfplugin6.Provider.ImportResourceState:input_type -> tfplugin6.ImportResourceState.Request
-	115, // 181: tfplugin6.Provider.MoveResourceState:input_type -> tfplugin6.MoveResourceState.Request
-	117, // 182: tfplugin6.Provider.ReadDataSource:input_type -> tfplugin6.ReadDataSource.Request
-	113, // 183: tfplugin6.Provider.GenerateResourceConfig:input_type -> tfplugin6.GenerateResourceConfig.Request
-	100, // 184: tfplugin6.Provider.ValidateEphemeralResourceConfig:input_type -> tfplugin6.ValidateEphemeralResourceConfig.Request
-	119, // 185: tfplugin6.Provider.OpenEphemeralResource:input_type -> tfplugin6.OpenEphemeralResource.Request
-	121, // 186: tfplugin6.Provider.RenewEphemeralResource:input_type -> tfplugin6.RenewEphemeralResource.Request
-	123, // 187: tfplugin6.Provider.CloseEphemeralResource:input_type -> tfplugin6.CloseEphemeralResource.Request
-	130, // 188: tfplugin6.Provider.ListResource:input_type -> tfplugin6.ListResource.Request
-	132, // 189: tfplugin6.Provider.ValidateListResourceConfig:input_type -> tfplugin6.ValidateListResourceConfig.Request
-	125, // 190: tfplugin6.Provider.GetFunctions:input_type -> tfplugin6.GetFunctions.Request
-	128, // 191: tfplugin6.Provider.CallFunction:input_type -> tfplugin6.CallFunction.Request
-	134, // 192: tfplugin6.Provider.ValidateStateStoreConfig:input_type -> tfplugin6.ValidateStateStore.Request
-	136, // 193: tfplugin6.Provider.ConfigureStateStore:input_type -> tfplugin6.ConfigureStateStore.Request
-	138, // 194: tfplugin6.Provider.ReadStateBytes:input_type -> tfplugin6.ReadStateBytes.Request
-	140, // 195: tfplugin6.Provider.WriteStateBytes:input_type -> tfplugin6.WriteStateBytes.RequestChunk
-	142, // 196: tfplugin6.Provider.LockState:input_type -> tfplugin6.LockState.Request
-	144, // 197: tfplugin6.Provider.UnlockState:input_type -> tfplugin6.UnlockState.Request
-	146, // 198: tfplugin6.Provider.GetStates:input_type -> tfplugin6.GetStates.Request
-	148, // 199: tfplugin6.Provider.DeleteState:input_type -> tfplugin6.DeleteState.Request
-	150, // 200: tfplugin6.Provider.PlanAction:input_type -> tfplugin6.PlanAction.Request
-	152, // 201: tfplugin6.Provider.InvokeAction:input_type -> tfplugin6.InvokeAction.Request
-	156, // 202: tfplugin6.Provider.ValidateActionConfig:input_type -> tfplugin6.ValidateActionConfig.Request
-	59,  // 203: tfplugin6.Provider.StopProvider:input_type -> tfplugin6.StopProvider.Request
-	70,  // 204: tfplugin6.Provider.GetMetadata:output_type -> tfplugin6.GetMetadata.Response
-	79,  // 205: tfplugin6.Provider.GetProviderSchema:output_type -> tfplugin6.GetProviderSchema.Response
-	88,  // 206: tfplugin6.Provider.ValidateProviderConfig:output_type -> tfplugin6.ValidateProviderConfig.Response
-	97,  // 207: tfplugin6.Provider.ValidateResourceConfig:output_type -> tfplugin6.ValidateResourceConfig.Response
-	99,  // 208: tfplugin6.Provider.ValidateDataResourceConfig:output_type -> tfplugin6.ValidateDataResourceConfig.Response
-	90,  // 209: tfplugin6.Provider.UpgradeResourceState:output_type -> tfplugin6.UpgradeResourceState.Response
-	92,  // 210: tfplugin6.Provider.GetResourceIdentitySchemas:output_type -> tfplugin6.GetResourceIdentitySchemas.Response
-	95,  // 211: tfplugin6.Provider.UpgradeResourceIdentity:output_type -> tfplugin6.UpgradeResourceIdentity.Response
-	103, // 212: tfplugin6.Provider.ConfigureProvider:output_type -> tfplugin6.ConfigureProvider.Response
-	105, // 213: tfplugin6.Provider.ReadResource:output_type -> tfplugin6.ReadResource.Response
-	107, // 214: tfplugin6.Provider.PlanResourceChange:output_type -> tfplugin6.PlanResourceChange.Response
-	109, // 215: tfplugin6.Provider.ApplyResourceChange:output_type -> tfplugin6.ApplyResourceChange.Response
-	112, // 216: tfplugin6.Provider.ImportResourceState:output_type -> tfplugin6.ImportResourceState.Response
-	116, // 217: tfplugin6.Provider.MoveResourceState:output_type -> tfplugin6.MoveResourceState.Response
-	118, // 218: tfplugin6.Provider.ReadDataSource:output_type -> tfplugin6.ReadDataSource.Response
-	114, // 219: tfplugin6.Provider.GenerateResourceConfig:output_type -> tfplugin6.GenerateResourceConfig.Response
-	101, // 220: tfplugin6.Provider.ValidateEphemeralResourceConfig:output_type -> tfplugin6.ValidateEphemeralResourceConfig.Response
-	120, // 221: tfplugin6.Provider.OpenEphemeralResource:output_type -> tfplugin6.OpenEphemeralResource.Response
-	122, // 222: tfplugin6.Provider.RenewEphemeralResource:output_type -> tfplugin6.RenewEphemeralResource.Response
-	124, // 223: tfplugin6.Provider.CloseEphemeralResource:output_type -> tfplugin6.CloseEphemeralResource.Response
-	131, // 224: tfplugin6.Provider.ListResource:output_type -> tfplugin6.ListResource.Event
-	133, // 225: tfplugin6.Provider.ValidateListResourceConfig:output_type -> tfplugin6.ValidateListResourceConfig.Response
-	126, // 226: tfplugin6.Provider.GetFunctions:output_type -> tfplugin6.GetFunctions.Response
-	129, // 227: tfplugin6.Provider.CallFunction:output_type -> tfplugin6.CallFunction.Response
-	135, // 228: tfplugin6.Provider.ValidateStateStoreConfig:output_type -> tfplugin6.ValidateStateStore.Response
-	137, // 229: tfplugin6.Provider.ConfigureStateStore:output_type -> tfplugin6.ConfigureStateStore.Response
-	139, // 230: tfplugin6.Provider.ReadStateBytes:output_type -> tfplugin6.ReadStateBytes.Response
-	141, // 231: tfplugin6.Provider.WriteStateBytes:output_type -> tfplugin6.WriteStateBytes.Response
-	143, // 232: tfplugin6.Provider.LockState:output_type -> tfplugin6.LockState.Response
-	145, // 233: tfplugin6.Provider.UnlockState:output_type -> tfplugin6.UnlockState.Response
-	147, // 234: tfplugin6.Provider.GetStates:output_type -> tfplugin6.GetStates.Response
-	149, // 235: tfplugin6.Provider.DeleteState:output_type -> tfplugin6.DeleteState.Response
-	151, // 236: tfplugin6.Provider.PlanAction:output_type -> tfplugin6.PlanAction.Response
-	153, // 237: tfplugin6.Provider.InvokeAction:output_type -> tfplugin6.InvokeAction.Event
-	157, // 238: tfplugin6.Provider.ValidateActionConfig:output_type -> tfplugin6.ValidateActionConfig.Response
-	60,  // 239: tfplugin6.Provider.StopProvider:output_type -> tfplugin6.StopProvider.Response
-	204, // [204:240] is the sub-list for method output_type
-	168, // [168:204] is the sub-list for method input_type
-	168, // [168:168] is the sub-list for extension type_name
-	168, // [168:168] is the sub-list for extension extendee
-	0,   // [0:168] is the sub-list for field type_name
+	72,  // 23: tfplugin6.GetCodeMigrations.Response.code_migrations:type_name -> tfplugin6.GetCodeMigrations.CodeMigration
+	6,   // 24: tfplugin6.GetCodeMigrations.Response.diagnostics:type_name -> tfplugin6.Diagnostic
+	73,  // 25: tfplugin6.GetCodeMigrations.CodeMigration.nested_block_to_nested_attr:type_name -> tfplugin6.GetCodeMigrations.CodeMigration.NestedBlockToNestedAttr
+	74,  // 26: tfplugin6.GetCodeMigrations.CodeMigration.transform_attr:type_name -> tfplugin6.GetCodeMigrations.CodeMigration.TransformAttr
+	75,  // 27: tfplugin6.GetCodeMigrations.CodeMigration.rename_attr:type_name -> tfplugin6.GetCodeMigrations.CodeMigration.RenameAttr
+	76,  // 28: tfplugin6.GetCodeMigrations.CodeMigration.remove_attr:type_name -> tfplugin6.GetCodeMigrations.CodeMigration.RemoveAttr
+	8,   // 29: tfplugin6.GetCodeMigrations.CodeMigration.NestedBlockToNestedAttr.nested_block_path:type_name -> tfplugin6.AttributePath
+	8,   // 30: tfplugin6.GetCodeMigrations.CodeMigration.TransformAttr.target_attr_path:type_name -> tfplugin6.AttributePath
+	5,   // 31: tfplugin6.GetCodeMigrations.CodeMigration.TransformAttr.additional_arguments:type_name -> tfplugin6.DynamicValue
+	8,   // 32: tfplugin6.GetCodeMigrations.CodeMigration.RenameAttr.target_attr_path:type_name -> tfplugin6.AttributePath
+	8,   // 33: tfplugin6.GetCodeMigrations.CodeMigration.RenameAttr.destination_attr_path:type_name -> tfplugin6.AttributePath
+	8,   // 34: tfplugin6.GetCodeMigrations.CodeMigration.RemoveAttr.target_attr_path:type_name -> tfplugin6.AttributePath
+	16,  // 35: tfplugin6.GetMetadata.Response.server_capabilities:type_name -> tfplugin6.ServerCapabilities
+	6,   // 36: tfplugin6.GetMetadata.Response.diagnostics:type_name -> tfplugin6.Diagnostic
+	81,  // 37: tfplugin6.GetMetadata.Response.data_sources:type_name -> tfplugin6.GetMetadata.DataSourceMetadata
+	82,  // 38: tfplugin6.GetMetadata.Response.resources:type_name -> tfplugin6.GetMetadata.ResourceMetadata
+	80,  // 39: tfplugin6.GetMetadata.Response.functions:type_name -> tfplugin6.GetMetadata.FunctionMetadata
+	79,  // 40: tfplugin6.GetMetadata.Response.ephemeral_resources:type_name -> tfplugin6.GetMetadata.EphemeralMetadata
+	83,  // 41: tfplugin6.GetMetadata.Response.list_resources:type_name -> tfplugin6.GetMetadata.ListResourceMetadata
+	84,  // 42: tfplugin6.GetMetadata.Response.state_stores:type_name -> tfplugin6.GetMetadata.StateStoreMetadata
+	85,  // 43: tfplugin6.GetMetadata.Response.actions:type_name -> tfplugin6.GetMetadata.ActionMetadata
+	14,  // 44: tfplugin6.GetProviderSchema.Response.provider:type_name -> tfplugin6.Schema
+	88,  // 45: tfplugin6.GetProviderSchema.Response.resource_schemas:type_name -> tfplugin6.GetProviderSchema.Response.ResourceSchemasEntry
+	89,  // 46: tfplugin6.GetProviderSchema.Response.data_source_schemas:type_name -> tfplugin6.GetProviderSchema.Response.DataSourceSchemasEntry
+	90,  // 47: tfplugin6.GetProviderSchema.Response.functions:type_name -> tfplugin6.GetProviderSchema.Response.FunctionsEntry
+	91,  // 48: tfplugin6.GetProviderSchema.Response.ephemeral_resource_schemas:type_name -> tfplugin6.GetProviderSchema.Response.EphemeralResourceSchemasEntry
+	92,  // 49: tfplugin6.GetProviderSchema.Response.list_resource_schemas:type_name -> tfplugin6.GetProviderSchema.Response.ListResourceSchemasEntry
+	93,  // 50: tfplugin6.GetProviderSchema.Response.state_store_schemas:type_name -> tfplugin6.GetProviderSchema.Response.StateStoreSchemasEntry
+	94,  // 51: tfplugin6.GetProviderSchema.Response.action_schemas:type_name -> tfplugin6.GetProviderSchema.Response.ActionSchemasEntry
+	6,   // 52: tfplugin6.GetProviderSchema.Response.diagnostics:type_name -> tfplugin6.Diagnostic
+	14,  // 53: tfplugin6.GetProviderSchema.Response.provider_meta:type_name -> tfplugin6.Schema
+	16,  // 54: tfplugin6.GetProviderSchema.Response.server_capabilities:type_name -> tfplugin6.ServerCapabilities
+	14,  // 55: tfplugin6.GetProviderSchema.Response.ResourceSchemasEntry.value:type_name -> tfplugin6.Schema
+	14,  // 56: tfplugin6.GetProviderSchema.Response.DataSourceSchemasEntry.value:type_name -> tfplugin6.Schema
+	15,  // 57: tfplugin6.GetProviderSchema.Response.FunctionsEntry.value:type_name -> tfplugin6.Function
+	14,  // 58: tfplugin6.GetProviderSchema.Response.EphemeralResourceSchemasEntry.value:type_name -> tfplugin6.Schema
+	14,  // 59: tfplugin6.GetProviderSchema.Response.ListResourceSchemasEntry.value:type_name -> tfplugin6.Schema
+	14,  // 60: tfplugin6.GetProviderSchema.Response.StateStoreSchemasEntry.value:type_name -> tfplugin6.Schema
+	13,  // 61: tfplugin6.GetProviderSchema.Response.ActionSchemasEntry.value:type_name -> tfplugin6.ActionSchema
+	5,   // 62: tfplugin6.ValidateProviderConfig.Request.config:type_name -> tfplugin6.DynamicValue
+	6,   // 63: tfplugin6.ValidateProviderConfig.Response.diagnostics:type_name -> tfplugin6.Diagnostic
+	10,  // 64: tfplugin6.UpgradeResourceState.Request.raw_state:type_name -> tfplugin6.RawState
+	5,   // 65: tfplugin6.UpgradeResourceState.Response.upgraded_state:type_name -> tfplugin6.DynamicValue
+	6,   // 66: tfplugin6.UpgradeResourceState.Response.diagnostics:type_name -> tfplugin6.Diagnostic
+	101, // 67: tfplugin6.GetResourceIdentitySchemas.Response.identity_schemas:type_name -> tfplugin6.GetResourceIdentitySchemas.Response.IdentitySchemasEntry
+	6,   // 68: tfplugin6.GetResourceIdentitySchemas.Response.diagnostics:type_name -> tfplugin6.Diagnostic
+	11,  // 69: tfplugin6.GetResourceIdentitySchemas.Response.IdentitySchemasEntry.value:type_name -> tfplugin6.ResourceIdentitySchema
+	10,  // 70: tfplugin6.UpgradeResourceIdentity.Request.raw_identity:type_name -> tfplugin6.RawState
+	12,  // 71: tfplugin6.UpgradeResourceIdentity.Response.upgraded_identity:type_name -> tfplugin6.ResourceIdentityData
+	6,   // 72: tfplugin6.UpgradeResourceIdentity.Response.diagnostics:type_name -> tfplugin6.Diagnostic
+	5,   // 73: tfplugin6.ValidateResourceConfig.Request.config:type_name -> tfplugin6.DynamicValue
+	17,  // 74: tfplugin6.ValidateResourceConfig.Request.client_capabilities:type_name -> tfplugin6.ClientCapabilities
+	6,   // 75: tfplugin6.ValidateResourceConfig.Response.diagnostics:type_name -> tfplugin6.Diagnostic
+	5,   // 76: tfplugin6.ValidateDataResourceConfig.Request.config:type_name -> tfplugin6.DynamicValue
+	6,   // 77: tfplugin6.ValidateDataResourceConfig.Response.diagnostics:type_name -> tfplugin6.Diagnostic
+	5,   // 78: tfplugin6.ValidateEphemeralResourceConfig.Request.config:type_name -> tfplugin6.DynamicValue
+	6,   // 79: tfplugin6.ValidateEphemeralResourceConfig.Response.diagnostics:type_name -> tfplugin6.Diagnostic
+	5,   // 80: tfplugin6.ConfigureProvider.Request.config:type_name -> tfplugin6.DynamicValue
+	17,  // 81: tfplugin6.ConfigureProvider.Request.client_capabilities:type_name -> tfplugin6.ClientCapabilities
+	6,   // 82: tfplugin6.ConfigureProvider.Response.diagnostics:type_name -> tfplugin6.Diagnostic
+	5,   // 83: tfplugin6.ReadResource.Request.current_state:type_name -> tfplugin6.DynamicValue
+	5,   // 84: tfplugin6.ReadResource.Request.provider_meta:type_name -> tfplugin6.DynamicValue
+	17,  // 85: tfplugin6.ReadResource.Request.client_capabilities:type_name -> tfplugin6.ClientCapabilities
+	12,  // 86: tfplugin6.ReadResource.Request.current_identity:type_name -> tfplugin6.ResourceIdentityData
+	5,   // 87: tfplugin6.ReadResource.Response.new_state:type_name -> tfplugin6.DynamicValue
+	6,   // 88: tfplugin6.ReadResource.Response.diagnostics:type_name -> tfplugin6.Diagnostic
+	18,  // 89: tfplugin6.ReadResource.Response.deferred:type_name -> tfplugin6.Deferred
+	12,  // 90: tfplugin6.ReadResource.Response.new_identity:type_name -> tfplugin6.ResourceIdentityData
+	5,   // 91: tfplugin6.PlanResourceChange.Request.prior_state:type_name -> tfplugin6.DynamicValue
+	5,   // 92: tfplugin6.PlanResourceChange.Request.proposed_new_state:type_name -> tfplugin6.DynamicValue
+	5,   // 93: tfplugin6.PlanResourceChange.Request.config:type_name -> tfplugin6.DynamicValue
+	5,   // 94: tfplugin6.PlanResourceChange.Request.provider_meta:type_name -> tfplugin6.DynamicValue
+	17,  // 95: tfplugin6.PlanResourceChange.Request.client_capabilities:type_name -> tfplugin6.ClientCapabilities
+	12,  // 96: tfplugin6.PlanResourceChange.Request.prior_identity:type_name -> tfplugin6.ResourceIdentityData
+	5,   // 97: tfplugin6.PlanResourceChange.Response.planned_state:type_name -> tfplugin6.DynamicValue
+	8,   // 98: tfplugin6.PlanResourceChange.Response.requires_replace:type_name -> tfplugin6.AttributePath
+	6,   // 99: tfplugin6.PlanResourceChange.Response.diagnostics:type_name -> tfplugin6.Diagnostic
+	18,  // 100: tfplugin6.PlanResourceChange.Response.deferred:type_name -> tfplugin6.Deferred
+	12,  // 101: tfplugin6.PlanResourceChange.Response.planned_identity:type_name -> tfplugin6.ResourceIdentityData
+	5,   // 102: tfplugin6.ApplyResourceChange.Request.prior_state:type_name -> tfplugin6.DynamicValue
+	5,   // 103: tfplugin6.ApplyResourceChange.Request.planned_state:type_name -> tfplugin6.DynamicValue
+	5,   // 104: tfplugin6.ApplyResourceChange.Request.config:type_name -> tfplugin6.DynamicValue
+	5,   // 105: tfplugin6.ApplyResourceChange.Request.provider_meta:type_name -> tfplugin6.DynamicValue
+	12,  // 106: tfplugin6.ApplyResourceChange.Request.planned_identity:type_name -> tfplugin6.ResourceIdentityData
+	5,   // 107: tfplugin6.ApplyResourceChange.Response.new_state:type_name -> tfplugin6.DynamicValue
+	6,   // 108: tfplugin6.ApplyResourceChange.Response.diagnostics:type_name -> tfplugin6.Diagnostic
+	12,  // 109: tfplugin6.ApplyResourceChange.Response.new_identity:type_name -> tfplugin6.ResourceIdentityData
+	17,  // 110: tfplugin6.ImportResourceState.Request.client_capabilities:type_name -> tfplugin6.ClientCapabilities
+	12,  // 111: tfplugin6.ImportResourceState.Request.identity:type_name -> tfplugin6.ResourceIdentityData
+	5,   // 112: tfplugin6.ImportResourceState.ImportedResource.state:type_name -> tfplugin6.DynamicValue
+	12,  // 113: tfplugin6.ImportResourceState.ImportedResource.identity:type_name -> tfplugin6.ResourceIdentityData
+	119, // 114: tfplugin6.ImportResourceState.Response.imported_resources:type_name -> tfplugin6.ImportResourceState.ImportedResource
+	6,   // 115: tfplugin6.ImportResourceState.Response.diagnostics:type_name -> tfplugin6.Diagnostic
+	18,  // 116: tfplugin6.ImportResourceState.Response.deferred:type_name -> tfplugin6.Deferred
+	5,   // 117: tfplugin6.GenerateResourceConfig.Request.state:type_name -> tfplugin6.DynamicValue
+	5,   // 118: tfplugin6.GenerateResourceConfig.Response.config:type_name -> tfplugin6.DynamicValue
+	6,   // 119: tfplugin6.GenerateResourceConfig.Response.diagnostics:type_name -> tfplugin6.Diagnostic
+	10,  // 120: tfplugin6.MoveResourceState.Request.source_state:type_name -> tfplugin6.RawState
+	10,  // 121: tfplugin6.MoveResourceState.Request.source_identity:type_name -> tfplugin6.RawState
+	5,   // 122: tfplugin6.MoveResourceState.Response.target_state:type_name -> tfplugin6.DynamicValue
+	6,   // 123: tfplugin6.MoveResourceState.Response.diagnostics:type_name -> tfplugin6.Diagnostic
+	12,  // 124: tfplugin6.MoveResourceState.Response.target_identity:type_name -> tfplugin6.ResourceIdentityData
+	5,   // 125: tfplugin6.ReadDataSource.Request.config:type_name -> tfplugin6.DynamicValue
+	5,   // 126: tfplugin6.ReadDataSource.Request.provider_meta:type_name -> tfplugin6.DynamicValue
+	17,  // 127: tfplugin6.ReadDataSource.Request.client_capabilities:type_name -> tfplugin6.ClientCapabilities
+	5,   // 128: tfplugin6.ReadDataSource.Response.state:type_name -> tfplugin6.DynamicValue
+	6,   // 129: tfplugin6.ReadDataSource.Response.diagnostics:type_name -> tfplugin6.Diagnostic
+	18,  // 130: tfplugin6.ReadDataSource.Response.deferred:type_name -> tfplugin6.Deferred
+	5,   // 131: tfplugin6.OpenEphemeralResource.Request.config:type_name -> tfplugin6.DynamicValue
+	17,  // 132: tfplugin6.OpenEphemeralResource.Request.client_capabilities:type_name -> tfplugin6.ClientCapabilities
+	6,   // 133: tfplugin6.OpenEphemeralResource.Response.diagnostics:type_name -> tfplugin6.Diagnostic
+	166, // 134: tfplugin6.OpenEphemeralResource.Response.renew_at:type_name -> google.protobuf.Timestamp
+	5,   // 135: tfplugin6.OpenEphemeralResource.Response.result:type_name -> tfplugin6.DynamicValue
+	18,  // 136: tfplugin6.OpenEphemeralResource.Response.deferred:type_name -> tfplugin6.Deferred
+	6,   // 137: tfplugin6.RenewEphemeralResource.Response.diagnostics:type_name -> tfplugin6.Diagnostic
+	166, // 138: tfplugin6.RenewEphemeralResource.Response.renew_at:type_name -> google.protobuf.Timestamp
+	6,   // 139: tfplugin6.CloseEphemeralResource.Response.diagnostics:type_name -> tfplugin6.Diagnostic
+	135, // 140: tfplugin6.GetFunctions.Response.functions:type_name -> tfplugin6.GetFunctions.Response.FunctionsEntry
+	6,   // 141: tfplugin6.GetFunctions.Response.diagnostics:type_name -> tfplugin6.Diagnostic
+	15,  // 142: tfplugin6.GetFunctions.Response.FunctionsEntry.value:type_name -> tfplugin6.Function
+	5,   // 143: tfplugin6.CallFunction.Request.arguments:type_name -> tfplugin6.DynamicValue
+	5,   // 144: tfplugin6.CallFunction.Response.result:type_name -> tfplugin6.DynamicValue
+	7,   // 145: tfplugin6.CallFunction.Response.error:type_name -> tfplugin6.FunctionError
+	5,   // 146: tfplugin6.ListResource.Request.config:type_name -> tfplugin6.DynamicValue
+	12,  // 147: tfplugin6.ListResource.Event.identity:type_name -> tfplugin6.ResourceIdentityData
+	5,   // 148: tfplugin6.ListResource.Event.resource_object:type_name -> tfplugin6.DynamicValue
+	6,   // 149: tfplugin6.ListResource.Event.diagnostic:type_name -> tfplugin6.Diagnostic
+	5,   // 150: tfplugin6.ValidateListResourceConfig.Request.config:type_name -> tfplugin6.DynamicValue
+	5,   // 151: tfplugin6.ValidateListResourceConfig.Request.include_resource_object:type_name -> tfplugin6.DynamicValue
+	5,   // 152: tfplugin6.ValidateListResourceConfig.Request.limit:type_name -> tfplugin6.DynamicValue
+	6,   // 153: tfplugin6.ValidateListResourceConfig.Response.diagnostics:type_name -> tfplugin6.Diagnostic
+	5,   // 154: tfplugin6.ValidateStateStore.Request.config:type_name -> tfplugin6.DynamicValue
+	6,   // 155: tfplugin6.ValidateStateStore.Response.diagnostics:type_name -> tfplugin6.Diagnostic
+	5,   // 156: tfplugin6.ConfigureStateStore.Request.config:type_name -> tfplugin6.DynamicValue
+	46,  // 157: tfplugin6.ConfigureStateStore.Request.capabilities:type_name -> tfplugin6.StateStoreClientCapabilities
+	6,   // 158: tfplugin6.ConfigureStateStore.Response.diagnostics:type_name -> tfplugin6.Diagnostic
+	47,  // 159: tfplugin6.ConfigureStateStore.Response.capabilities:type_name -> tfplugin6.StateStoreServerCapabilities
+	51,  // 160: tfplugin6.ReadStateBytes.Response.range:type_name -> tfplugin6.StateRange
+	6,   // 161: tfplugin6.ReadStateBytes.Response.diagnostics:type_name -> tfplugin6.Diagnostic
+	50,  // 162: tfplugin6.WriteStateBytes.RequestChunk.meta:type_name -> tfplugin6.RequestChunkMeta
+	51,  // 163: tfplugin6.WriteStateBytes.RequestChunk.range:type_name -> tfplugin6.StateRange
+	6,   // 164: tfplugin6.WriteStateBytes.Response.diagnostics:type_name -> tfplugin6.Diagnostic
+	6,   // 165: tfplugin6.LockState.Response.diagnostics:type_name -> tfplugin6.Diagnostic
+	6,   // 166: tfplugin6.UnlockState.Response.diagnostics:type_name -> tfplugin6.Diagnostic
+	6,   // 167: tfplugin6.GetStates.Response.diagnostics:type_name -> tfplugin6.Diagnostic
+	6,   // 168: tfplugin6.DeleteState.Response.diagnostics:type_name -> tfplugin6.Diagnostic
+	5,   // 169: tfplugin6.PlanAction.Request.config:type_name -> tfplugin6.DynamicValue
+	17,  // 170: tfplugin6.PlanAction.Request.client_capabilities:type_name -> tfplugin6.ClientCapabilities
+	6,   // 171: tfplugin6.PlanAction.Response.diagnostics:type_name -> tfplugin6.Diagnostic
+	18,  // 172: tfplugin6.PlanAction.Response.deferred:type_name -> tfplugin6.Deferred
+	5,   // 173: tfplugin6.InvokeAction.Request.config:type_name -> tfplugin6.DynamicValue
+	17,  // 174: tfplugin6.InvokeAction.Request.client_capabilities:type_name -> tfplugin6.ClientCapabilities
+	162, // 175: tfplugin6.InvokeAction.Event.progress:type_name -> tfplugin6.InvokeAction.Event.Progress
+	163, // 176: tfplugin6.InvokeAction.Event.completed:type_name -> tfplugin6.InvokeAction.Event.Completed
+	6,   // 177: tfplugin6.InvokeAction.Event.Completed.diagnostics:type_name -> tfplugin6.Diagnostic
+	5,   // 178: tfplugin6.ValidateActionConfig.Request.config:type_name -> tfplugin6.DynamicValue
+	6,   // 179: tfplugin6.ValidateActionConfig.Response.diagnostics:type_name -> tfplugin6.Diagnostic
+	77,  // 180: tfplugin6.Provider.GetMetadata:input_type -> tfplugin6.GetMetadata.Request
+	86,  // 181: tfplugin6.Provider.GetProviderSchema:input_type -> tfplugin6.GetProviderSchema.Request
+	95,  // 182: tfplugin6.Provider.ValidateProviderConfig:input_type -> tfplugin6.ValidateProviderConfig.Request
+	104, // 183: tfplugin6.Provider.ValidateResourceConfig:input_type -> tfplugin6.ValidateResourceConfig.Request
+	106, // 184: tfplugin6.Provider.ValidateDataResourceConfig:input_type -> tfplugin6.ValidateDataResourceConfig.Request
+	97,  // 185: tfplugin6.Provider.UpgradeResourceState:input_type -> tfplugin6.UpgradeResourceState.Request
+	99,  // 186: tfplugin6.Provider.GetResourceIdentitySchemas:input_type -> tfplugin6.GetResourceIdentitySchemas.Request
+	102, // 187: tfplugin6.Provider.UpgradeResourceIdentity:input_type -> tfplugin6.UpgradeResourceIdentity.Request
+	110, // 188: tfplugin6.Provider.ConfigureProvider:input_type -> tfplugin6.ConfigureProvider.Request
+	112, // 189: tfplugin6.Provider.ReadResource:input_type -> tfplugin6.ReadResource.Request
+	114, // 190: tfplugin6.Provider.PlanResourceChange:input_type -> tfplugin6.PlanResourceChange.Request
+	116, // 191: tfplugin6.Provider.ApplyResourceChange:input_type -> tfplugin6.ApplyResourceChange.Request
+	118, // 192: tfplugin6.Provider.ImportResourceState:input_type -> tfplugin6.ImportResourceState.Request
+	123, // 193: tfplugin6.Provider.MoveResourceState:input_type -> tfplugin6.MoveResourceState.Request
+	125, // 194: tfplugin6.Provider.ReadDataSource:input_type -> tfplugin6.ReadDataSource.Request
+	121, // 195: tfplugin6.Provider.GenerateResourceConfig:input_type -> tfplugin6.GenerateResourceConfig.Request
+	108, // 196: tfplugin6.Provider.ValidateEphemeralResourceConfig:input_type -> tfplugin6.ValidateEphemeralResourceConfig.Request
+	127, // 197: tfplugin6.Provider.OpenEphemeralResource:input_type -> tfplugin6.OpenEphemeralResource.Request
+	129, // 198: tfplugin6.Provider.RenewEphemeralResource:input_type -> tfplugin6.RenewEphemeralResource.Request
+	131, // 199: tfplugin6.Provider.CloseEphemeralResource:input_type -> tfplugin6.CloseEphemeralResource.Request
+	138, // 200: tfplugin6.Provider.ListResource:input_type -> tfplugin6.ListResource.Request
+	140, // 201: tfplugin6.Provider.ValidateListResourceConfig:input_type -> tfplugin6.ValidateListResourceConfig.Request
+	133, // 202: tfplugin6.Provider.GetFunctions:input_type -> tfplugin6.GetFunctions.Request
+	136, // 203: tfplugin6.Provider.CallFunction:input_type -> tfplugin6.CallFunction.Request
+	142, // 204: tfplugin6.Provider.ValidateStateStoreConfig:input_type -> tfplugin6.ValidateStateStore.Request
+	144, // 205: tfplugin6.Provider.ConfigureStateStore:input_type -> tfplugin6.ConfigureStateStore.Request
+	146, // 206: tfplugin6.Provider.ReadStateBytes:input_type -> tfplugin6.ReadStateBytes.Request
+	148, // 207: tfplugin6.Provider.WriteStateBytes:input_type -> tfplugin6.WriteStateBytes.RequestChunk
+	150, // 208: tfplugin6.Provider.LockState:input_type -> tfplugin6.LockState.Request
+	152, // 209: tfplugin6.Provider.UnlockState:input_type -> tfplugin6.UnlockState.Request
+	154, // 210: tfplugin6.Provider.GetStates:input_type -> tfplugin6.GetStates.Request
+	156, // 211: tfplugin6.Provider.DeleteState:input_type -> tfplugin6.DeleteState.Request
+	158, // 212: tfplugin6.Provider.PlanAction:input_type -> tfplugin6.PlanAction.Request
+	160, // 213: tfplugin6.Provider.InvokeAction:input_type -> tfplugin6.InvokeAction.Request
+	164, // 214: tfplugin6.Provider.ValidateActionConfig:input_type -> tfplugin6.ValidateActionConfig.Request
+	60,  // 215: tfplugin6.Provider.StopProvider:input_type -> tfplugin6.StopProvider.Request
+	70,  // 216: tfplugin6.Provider.GetCodeMigrations:input_type -> tfplugin6.GetCodeMigrations.Request
+	78,  // 217: tfplugin6.Provider.GetMetadata:output_type -> tfplugin6.GetMetadata.Response
+	87,  // 218: tfplugin6.Provider.GetProviderSchema:output_type -> tfplugin6.GetProviderSchema.Response
+	96,  // 219: tfplugin6.Provider.ValidateProviderConfig:output_type -> tfplugin6.ValidateProviderConfig.Response
+	105, // 220: tfplugin6.Provider.ValidateResourceConfig:output_type -> tfplugin6.ValidateResourceConfig.Response
+	107, // 221: tfplugin6.Provider.ValidateDataResourceConfig:output_type -> tfplugin6.ValidateDataResourceConfig.Response
+	98,  // 222: tfplugin6.Provider.UpgradeResourceState:output_type -> tfplugin6.UpgradeResourceState.Response
+	100, // 223: tfplugin6.Provider.GetResourceIdentitySchemas:output_type -> tfplugin6.GetResourceIdentitySchemas.Response
+	103, // 224: tfplugin6.Provider.UpgradeResourceIdentity:output_type -> tfplugin6.UpgradeResourceIdentity.Response
+	111, // 225: tfplugin6.Provider.ConfigureProvider:output_type -> tfplugin6.ConfigureProvider.Response
+	113, // 226: tfplugin6.Provider.ReadResource:output_type -> tfplugin6.ReadResource.Response
+	115, // 227: tfplugin6.Provider.PlanResourceChange:output_type -> tfplugin6.PlanResourceChange.Response
+	117, // 228: tfplugin6.Provider.ApplyResourceChange:output_type -> tfplugin6.ApplyResourceChange.Response
+	120, // 229: tfplugin6.Provider.ImportResourceState:output_type -> tfplugin6.ImportResourceState.Response
+	124, // 230: tfplugin6.Provider.MoveResourceState:output_type -> tfplugin6.MoveResourceState.Response
+	126, // 231: tfplugin6.Provider.ReadDataSource:output_type -> tfplugin6.ReadDataSource.Response
+	122, // 232: tfplugin6.Provider.GenerateResourceConfig:output_type -> tfplugin6.GenerateResourceConfig.Response
+	109, // 233: tfplugin6.Provider.ValidateEphemeralResourceConfig:output_type -> tfplugin6.ValidateEphemeralResourceConfig.Response
+	128, // 234: tfplugin6.Provider.OpenEphemeralResource:output_type -> tfplugin6.OpenEphemeralResource.Response
+	130, // 235: tfplugin6.Provider.RenewEphemeralResource:output_type -> tfplugin6.RenewEphemeralResource.Response
+	132, // 236: tfplugin6.Provider.CloseEphemeralResource:output_type -> tfplugin6.CloseEphemeralResource.Response
+	139, // 237: tfplugin6.Provider.ListResource:output_type -> tfplugin6.ListResource.Event
+	141, // 238: tfplugin6.Provider.ValidateListResourceConfig:output_type -> tfplugin6.ValidateListResourceConfig.Response
+	134, // 239: tfplugin6.Provider.GetFunctions:output_type -> tfplugin6.GetFunctions.Response
+	137, // 240: tfplugin6.Provider.CallFunction:output_type -> tfplugin6.CallFunction.Response
+	143, // 241: tfplugin6.Provider.ValidateStateStoreConfig:output_type -> tfplugin6.ValidateStateStore.Response
+	145, // 242: tfplugin6.Provider.ConfigureStateStore:output_type -> tfplugin6.ConfigureStateStore.Response
+	147, // 243: tfplugin6.Provider.ReadStateBytes:output_type -> tfplugin6.ReadStateBytes.Response
+	149, // 244: tfplugin6.Provider.WriteStateBytes:output_type -> tfplugin6.WriteStateBytes.Response
+	151, // 245: tfplugin6.Provider.LockState:output_type -> tfplugin6.LockState.Response
+	153, // 246: tfplugin6.Provider.UnlockState:output_type -> tfplugin6.UnlockState.Response
+	155, // 247: tfplugin6.Provider.GetStates:output_type -> tfplugin6.GetStates.Response
+	157, // 248: tfplugin6.Provider.DeleteState:output_type -> tfplugin6.DeleteState.Response
+	159, // 249: tfplugin6.Provider.PlanAction:output_type -> tfplugin6.PlanAction.Response
+	161, // 250: tfplugin6.Provider.InvokeAction:output_type -> tfplugin6.InvokeAction.Event
+	165, // 251: tfplugin6.Provider.ValidateActionConfig:output_type -> tfplugin6.ValidateActionConfig.Response
+	61,  // 252: tfplugin6.Provider.StopProvider:output_type -> tfplugin6.StopProvider.Response
+	71,  // 253: tfplugin6.Provider.GetCodeMigrations:output_type -> tfplugin6.GetCodeMigrations.Response
+	217, // [217:254] is the sub-list for method output_type
+	180, // [180:217] is the sub-list for method input_type
+	180, // [180:180] is the sub-list for extension type_name
+	180, // [180:180] is the sub-list for extension extendee
+	0,   // [0:180] is the sub-list for field type_name
 }
 
 func init() { file_tfplugin6_proto_init() }
@@ -9090,18 +9731,24 @@ func file_tfplugin6_proto_init() {
 		return
 	}
 	file_tfplugin6_proto_msgTypes[2].OneofWrappers = []any{}
-	file_tfplugin6_proto_msgTypes[53].OneofWrappers = []any{
+	file_tfplugin6_proto_msgTypes[54].OneofWrappers = []any{
 		(*AttributePath_Step_AttributeName)(nil),
 		(*AttributePath_Step_ElementKeyString)(nil),
 		(*AttributePath_Step_ElementKeyInt)(nil),
 	}
-	file_tfplugin6_proto_msgTypes[115].OneofWrappers = []any{}
-	file_tfplugin6_proto_msgTypes[116].OneofWrappers = []any{}
-	file_tfplugin6_proto_msgTypes[117].OneofWrappers = []any{}
-	file_tfplugin6_proto_msgTypes[118].OneofWrappers = []any{}
+	file_tfplugin6_proto_msgTypes[67].OneofWrappers = []any{
+		(*GetCodeMigrations_CodeMigration_NestedBlockToNestedAttr_)(nil),
+		(*GetCodeMigrations_CodeMigration_TransformAttr_)(nil),
+		(*GetCodeMigrations_CodeMigration_RenameAttr_)(nil),
+		(*GetCodeMigrations_CodeMigration_RemoveAttr_)(nil),
+	}
+	file_tfplugin6_proto_msgTypes[123].OneofWrappers = []any{}
+	file_tfplugin6_proto_msgTypes[124].OneofWrappers = []any{}
+	file_tfplugin6_proto_msgTypes[125].OneofWrappers = []any{}
 	file_tfplugin6_proto_msgTypes[126].OneofWrappers = []any{}
-	file_tfplugin6_proto_msgTypes[135].OneofWrappers = []any{}
-	file_tfplugin6_proto_msgTypes[148].OneofWrappers = []any{
+	file_tfplugin6_proto_msgTypes[134].OneofWrappers = []any{}
+	file_tfplugin6_proto_msgTypes[143].OneofWrappers = []any{}
+	file_tfplugin6_proto_msgTypes[156].OneofWrappers = []any{
 		(*InvokeAction_Event_Progress_)(nil),
 		(*InvokeAction_Event_Completed_)(nil),
 	}
@@ -9111,7 +9758,7 @@ func file_tfplugin6_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_tfplugin6_proto_rawDesc), len(file_tfplugin6_proto_rawDesc)),
 			NumEnums:      5,
-			NumMessages:   153,
+			NumMessages:   161,
 			NumExtensions: 0,
 			NumServices:   1,
 		},

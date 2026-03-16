@@ -170,6 +170,10 @@ func (provider *mockProvider) ValidateActionConfig(_ providers.ValidateActionCon
 	panic("not implemented in mock")
 }
 
+func (provider *mockProvider) GetCodeMigrations(_ providers.GetCodeMigrationsRequest) providers.GetCodeMigrationsResponse {
+	panic("not implemented in mock")
+}
+
 func (provider *mockProvider) Close() error {
 	return nil // do nothing
 }
