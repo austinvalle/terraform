@@ -228,6 +228,24 @@ func initCommands(
 			}, nil
 		},
 
+		"migrate": func() (cli.Command, error) {
+			return &command.MigrateCommand{
+				Meta: meta,
+			}, nil
+		},
+
+		"migrate list": func() (cli.Command, error) {
+			return &command.MigrateListCommand{
+				Meta: meta,
+			}, nil
+		},
+
+		"migrate run": func() (cli.Command, error) {
+			return &command.MigrateRunCommand{
+				Meta: meta,
+			}, nil
+		},
+
 		"modules": func() (cli.Command, error) {
 			return &command.ModulesCommand{
 				Meta: meta,
