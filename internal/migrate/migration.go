@@ -45,6 +45,7 @@ type Action struct {
 	BlockName     string `json:"block_name,omitempty"`
 	WireAttribute string `json:"wire_attribute,omitempty"`
 	WireTraversal string `json:"wire_traversal,omitempty"`
+	// TODO: add new transform action data
 }
 
 // ParseMigration parses a JSON migration file.
@@ -78,17 +79,17 @@ func (m *Migration) validate() error {
 }
 
 var validActions = map[string]bool{
-	"rename_attribute":       true,
-	"remove_attribute":       true,
-	"rename_resource":        true,
-	"add_comment":            true,
-	"set_attribute_value":    true,
-	"add_attribute":          true,
-	"replace_value":          true,
-	"extract_to_resource":    true,
+	"rename_attribute":        true,
+	"remove_attribute":        true,
+	"rename_resource":         true,
+	"add_comment":             true,
+	"set_attribute_value":     true,
+	"add_attribute":           true,
+	"replace_value":           true,
+	"extract_to_resource":     true,
 	"move_attribute_to_block": true,
-	"flatten_block":          true,
-	"remove_resource":        true,
+	"flatten_block":           true,
+	"remove_resource":         true,
 }
 
 func (a *Action) validate() error {

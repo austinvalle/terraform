@@ -15,6 +15,7 @@ import (
 	"github.com/hashicorp/terraform/internal/addrs"
 	"github.com/hashicorp/terraform/internal/configs"
 	"github.com/hashicorp/terraform/internal/logging"
+	"github.com/hashicorp/terraform/internal/migrate"
 	"github.com/hashicorp/terraform/internal/providers"
 	"github.com/hashicorp/terraform/internal/provisioners"
 	"github.com/hashicorp/terraform/internal/states"
@@ -183,6 +184,20 @@ func (c *Context) Schemas(config *configs.Config, state *states.State) (*Schemas
 		return nil, diags
 	}
 	return ret, diags
+}
+
+func (c *Context) CodeMigrations(config *configs.Config, state *states.State) ([]*migrate.Migration, tfdiags.Diagnostics) {
+	var diags tfdiags.Diagnostics
+
+	codeMigrations := make([]*migrate.Migration, 0)
+	for _, providerFactory := range c.plugins.ProviderFactories() {
+		provider, _ := providerFactory()
+		resp := provider.GetCodeMigrations(providers.GetCodeMigrationsRequest{})
+		fmt.Println(resp.CodeMigrations)
+		// TODO: next up is converting the provider migrations to TF core migrations/actions
+	}
+
+	return codeMigrations, diags
 }
 
 type ContextGraphOpts struct {

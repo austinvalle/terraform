@@ -1651,7 +1651,8 @@ func (p *GRPCProvider) Close() error {
 }
 
 func (p *GRPCProvider) GetCodeMigrations(r providers.GetCodeMigrationsRequest) providers.GetCodeMigrationsResponse {
-	panic("not implemented")
+	// Protocol v5 providers can't produce code migrations so we'll just return empty
+	return providers.GetCodeMigrationsResponse{}
 }
 
 // Decode a DynamicValue from either the JSON or MsgPack encoding.
