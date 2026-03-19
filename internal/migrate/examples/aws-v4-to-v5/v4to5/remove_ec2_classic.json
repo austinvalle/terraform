@@ -1,0 +1,13 @@
+{
+  "name": "v4to5/remove_ec2_classic",
+  "description": "Remove EC2-Classic attributes from aws_instance. See: https://github.com/hashicorp/terraform-provider-aws/blob/main/website/docs/guides/version-5-upgrade.html.markdown#ec2-classic-resource-and-data-source-removal",
+  "match": {
+    "block_type": "resource",
+    "label": "aws_instance"
+  },
+  "actions": [
+    {"action": "remove_attribute", "name": "security_groups"},
+    {"action": "remove_attribute", "name": "vpc_classic_link_id"},
+    {"action": "remove_attribute", "name": "vpc_classic_link_security_groups"}
+  ]
+}

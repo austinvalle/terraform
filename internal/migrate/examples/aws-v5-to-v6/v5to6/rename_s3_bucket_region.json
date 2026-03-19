@@ -1,0 +1,11 @@
+{
+  "name": "v5to6/rename_s3_bucket_region",
+  "description": "Rename region to bucket_region on aws_s3_bucket. See: https://github.com/hashicorp/terraform-provider-aws/blob/main/website/docs/guides/version-6-upgrade.html.markdown#resource-aws_s3_bucket",
+  "match": {
+    "block_type": "resource",
+    "label": "aws_s3_bucket"
+  },
+  "actions": [
+    {"action": "rename_attribute", "from": "region", "to": "bucket_region"}
+  ]
+}

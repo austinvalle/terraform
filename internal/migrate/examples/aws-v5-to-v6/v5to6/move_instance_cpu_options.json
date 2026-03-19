@@ -1,0 +1,12 @@
+{
+  "name": "v5to6/move_instance_cpu_core_count",
+  "description": "Move cpu_core_count into cpu_options block. See: https://github.com/hashicorp/terraform-provider-aws/blob/main/website/docs/guides/version-6-upgrade.html.markdown#resource-aws_instance",
+  "match": {
+    "block_type": "resource",
+    "label": "aws_instance"
+  },
+  "actions": [
+    {"action": "move_attribute_to_block", "name": "cpu_core_count", "block_name": "cpu_options", "to": "core_count"},
+    {"action": "move_attribute_to_block", "name": "cpu_threads_per_core", "block_name": "cpu_options", "to": "threads_per_core"}
+  ]
+}

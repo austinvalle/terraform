@@ -1,0 +1,11 @@
+{
+  "name": "v4to5/rename_autoscaling_attachment",
+  "description": "Rename alb_target_group_arn to lb_target_group_arn. See: https://github.com/hashicorp/terraform-provider-aws/blob/main/website/docs/guides/version-5-upgrade.html.markdown#resource-aws_autoscaling_attachment",
+  "match": {
+    "block_type": "resource",
+    "label": "aws_autoscaling_attachment"
+  },
+  "actions": [
+    {"action": "rename_attribute", "from": "alb_target_group_arn", "to": "lb_target_group_arn"}
+  ]
+}

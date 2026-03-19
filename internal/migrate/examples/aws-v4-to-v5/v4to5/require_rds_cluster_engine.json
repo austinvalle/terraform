@@ -1,0 +1,11 @@
+{
+  "name": "v4to5/require_rds_cluster_engine",
+  "description": "Add engine attribute to aws_rds_cluster (now required, no default). See: https://github.com/hashicorp/terraform-provider-aws/blob/main/website/docs/guides/version-5-upgrade.html.markdown#resource-aws_rds_cluster",
+  "match": {
+    "block_type": "resource",
+    "label": "aws_rds_cluster"
+  },
+  "actions": [
+    {"action": "add_attribute", "name": "engine", "value": "aurora"}
+  ]
+}

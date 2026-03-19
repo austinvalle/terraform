@@ -1,0 +1,17 @@
+{
+    "name": "v3to4/extract_s3_versioning",
+    "description": "Extract aws_s3_bucket.versioning into standalone aws_s3_bucket_versioning resource. See: https://github.com/hashicorp/terraform-provider-aws/blob/main/website/docs/guides/version-4-upgrade.html.markdown#s3-bucket-refactor",
+    "match": {
+        "block_type": "resource",
+        "label": "aws_s3_bucket"
+    },
+    "actions": [
+        {
+            "action": "extract_to_resource",
+            "name": "versioning",
+            "to": "aws_s3_bucket_versioning",
+            "wire_attribute": "bucket",
+            "wire_traversal": "id"
+        }
+    ]
+}

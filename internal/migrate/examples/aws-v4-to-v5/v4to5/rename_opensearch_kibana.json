@@ -1,0 +1,11 @@
+{
+  "name": "v4to5/rename_opensearch_kibana",
+  "description": "Rename kibana_endpoint to dashboard_endpoint on aws_opensearch_domain. See: https://github.com/hashicorp/terraform-provider-aws/blob/main/website/docs/guides/version-5-upgrade.html.markdown#resource-aws_opensearch_domain",
+  "match": {
+    "block_type": "resource",
+    "label": "aws_opensearch_domain"
+  },
+  "actions": [
+    {"action": "rename_attribute", "from": "kibana_endpoint", "to": "dashboard_endpoint"}
+  ]
+}

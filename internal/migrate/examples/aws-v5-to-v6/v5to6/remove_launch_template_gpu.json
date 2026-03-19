@@ -1,0 +1,11 @@
+{
+  "name": "v5to6/remove_launch_template_gpu",
+  "description": "Remove discontinued elastic_gpu_specifications and elastic_inference_accelerator from aws_launch_template. See: https://github.com/hashicorp/terraform-provider-aws/blob/main/website/docs/guides/version-6-upgrade.html.markdown#resource-aws_launch_template",
+  "match": {
+    "block_type": "resource",
+    "label": "aws_launch_template"
+  },
+  "actions": [
+    {"action": "add_comment", "text": "FIXME: elastic_gpu_specifications has been removed in v6 (service discontinued). Remove the block manually."}
+  ]
+}

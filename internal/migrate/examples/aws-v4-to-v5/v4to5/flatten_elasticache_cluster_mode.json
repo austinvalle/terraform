@@ -1,0 +1,11 @@
+{
+  "name": "v4to5/flatten_elasticache_cluster_mode",
+  "description": "Flatten cluster_mode block into top-level attributes. See: https://github.com/hashicorp/terraform-provider-aws/blob/main/website/docs/guides/version-5-upgrade.html.markdown#resource-aws_elasticache_replication_group",
+  "match": {
+    "block_type": "resource",
+    "label": "aws_elasticache_replication_group"
+  },
+  "actions": [
+    {"action": "flatten_block", "name": "cluster_mode"}
+  ]
+}

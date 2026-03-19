@@ -1,0 +1,11 @@
+{
+  "name": "v5to6/remove_opsworks_stack",
+  "description": "Remove aws_opsworks_stack (service discontinued). See: https://github.com/hashicorp/terraform-provider-aws/blob/main/website/docs/guides/version-6-upgrade.html.markdown#removal-of-aws_opsworks_-resources",
+  "match": {
+    "block_type": "resource",
+    "label": "aws_opsworks_stack"
+  },
+  "actions": [
+    {"action": "remove_resource", "text": "FIXME: aws_opsworks_stack has been removed in v6 (OpsWorks discontinued). Migrate to ECS, EKS, or another deployment service."}
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "v4to5/rename_db_instance_name",
+  "description": "Rename 'name' to 'db_name' on aws_db_instance. See: https://github.com/hashicorp/terraform-provider-aws/blob/main/website/docs/guides/version-5-upgrade.html.markdown#resource-aws_db_instance",
+  "match": {
+    "block_type": "resource",
+    "label": "aws_db_instance"
+  },
+  "actions": [
+    {"action": "rename_attribute", "from": "name", "to": "db_name"}
+  ]
+}

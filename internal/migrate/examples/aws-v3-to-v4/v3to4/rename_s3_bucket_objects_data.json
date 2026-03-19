@@ -1,0 +1,14 @@
+{
+    "name": "v3to4/rename_s3_bucket_objects_data",
+    "description": "Rename data.aws_s3_bucket_objects to data.aws_s3_objects. See: https://github.com/hashicorp/terraform-provider-aws/blob/main/website/docs/guides/version-4-upgrade.html.markdown#data-source-aws_s3_bucket_objects",
+    "match": {
+        "block_type": "data",
+        "label": "aws_s3_bucket_objects"
+    },
+    "actions": [
+        {
+            "action": "rename_resource",
+            "to": "aws_s3_objects"
+        }
+    ]
+}

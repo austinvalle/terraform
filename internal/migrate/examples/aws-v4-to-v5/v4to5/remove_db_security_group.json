@@ -1,0 +1,11 @@
+{
+  "name": "v4to5/remove_db_security_group",
+  "description": "Remove aws_db_security_group (EC2-Classic). See: https://github.com/hashicorp/terraform-provider-aws/blob/main/website/docs/guides/version-5-upgrade.html.markdown#ec2-classic-resource-and-data-source-removal",
+  "match": {
+    "block_type": "resource",
+    "label": "aws_db_security_group"
+  },
+  "actions": [
+    {"action": "remove_resource", "text": "FIXME: aws_db_security_group has been removed in v5 (EC2-Classic). Use aws_db_subnet_group with VPC security groups instead."}
+  ]
+}

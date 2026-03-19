@@ -1,0 +1,11 @@
+{
+  "name": "v5to6/rename_batch_compute_env",
+  "description": "Rename compute_environment_name to name. See: https://github.com/hashicorp/terraform-provider-aws/blob/main/website/docs/guides/version-6-upgrade.html.markdown#resource-aws_batch_compute_environment",
+  "match": {
+    "block_type": "resource",
+    "label": "aws_batch_compute_environment"
+  },
+  "actions": [
+    {"action": "rename_attribute", "from": "compute_environment_name", "to": "name"}
+  ]
+}
