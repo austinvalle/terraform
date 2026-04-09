@@ -16,6 +16,7 @@ import (
 	"github.com/hashicorp/hcl/v2/hclwrite"
 	"github.com/hashicorp/terraform/internal/ast"
 	"github.com/zclconf/go-cty/cty"
+	"github.com/zclconf/go-cty/cty/function"
 )
 
 // Migration represents a single JSON migration file.
@@ -46,6 +47,11 @@ type Action struct {
 	WireAttribute string `json:"wire_attribute,omitempty"`
 	WireTraversal string `json:"wire_traversal,omitempty"`
 	// TODO: add new transform action data
+
+	TargetPath              cty.Path
+	TransformFunctionName   string
+	TransformFunction       function.Function
+	AdditionalTransformArgs []cty.Value
 }
 
 // ParseMigration parses a JSON migration file.
@@ -90,6 +96,7 @@ var validActions = map[string]bool{
 	"move_attribute_to_block": true,
 	"flatten_block":           true,
 	"remove_resource":         true,
+	"transform_attribute":     true,
 }
 
 func (a *Action) validate() error {
@@ -141,6 +148,8 @@ func (a *Action) validate() error {
 		if a.Text == "" {
 			return fmt.Errorf("remove_resource requires \"text\" (FIXME comment)")
 		}
+	case "transform_attribute":
+		// TODO: validate relevant fields
 	}
 	return nil
 }
@@ -393,6 +402,19 @@ func executeAction(a Action, r *ast.BlockResult, mod *ast.Module) error {
 
 		// Remove the resource block
 		r.File.RemoveBlock(r.Block.Type(), labels)
+	case "transform_attribute":
+		attrStep := a.TargetPath[0].(cty.GetAttrStep)
+		attrExpr := r.Block.GetAttributeExpression(attrStep.Name) // TODO: just assumes root, seems reasonable to assume this method would eventually accept an expression
+		if attrExpr == nil {
+			return nil // attribute not in config, skip
+		}
+
+		attrTokens := attrExpr.BuildTokens(nil)
+		fmt.Println(len(attrExpr.Variables())) //    <------ does this mean it's a literal? i.e. we can execute the function?
+
+		// Wrap the attribute in the function call (which has already been validated to be available for this module)
+		wrappedFunctionCall := hclwrite.TokensForFunctionCall(a.TransformFunctionName, attrTokens) // TODO: ignore additional args for now
+		r.Block.SetAttributeRaw(attrStep.Name, wrappedFunctionCall)
 
 	default:
 		return fmt.Errorf("unknown action %q", a.Action)

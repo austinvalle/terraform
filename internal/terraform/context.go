@@ -188,13 +188,71 @@ func (c *Context) Schemas(config *configs.Config, state *states.State) (*Schemas
 
 func (c *Context) CodeMigrations(config *configs.Config, state *states.State) ([]*migrate.Migration, tfdiags.Diagnostics) {
 	var diags tfdiags.Diagnostics
-
 	codeMigrations := make([]*migrate.Migration, 0)
+
+	// TODO: I don't think we should do this here, but since this is a prototype just including it for validation
+	scope, scopeDiags := c.Eval(config, state, addrs.RootModuleInstance, &EvalOpts{})
+	diags = diags.Append(scopeDiags)
+
+	if diags.HasErrors() {
+		return nil, diags
+	}
+
 	for _, providerFactory := range c.plugins.ProviderFactories() {
 		provider, _ := providerFactory()
 		resp := provider.GetCodeMigrations(providers.GetCodeMigrationsRequest{})
-		fmt.Println(resp.CodeMigrations)
-		// TODO: next up is converting the provider migrations to TF core migrations/actions
+
+		availableFuncs := scope.Functions()
+
+		for _, providerCodeMigration := range resp.CodeMigrations {
+			migration := migrate.Migration{
+				Name: providerCodeMigration.Name,
+				Match: migrate.Match{
+					BlockType: "resource", // TODO: protocol hardcoded to managed resources ATM
+					Label:     providerCodeMigration.TypeName,
+				},
+				Actions: make([]migrate.Action, 0),
+			}
+			switch codeMigration := providerCodeMigration.Migration.(type) {
+			case providers.Migration_NestedBlockToNestedAttr:
+				continue // TODO: implement
+			case providers.Migration_TransformAttr:
+				transformFunction, ok := availableFuncs[codeMigration.FunctionName]
+				if !ok {
+					diags = diags.Append(tfdiags.Sourceless(
+						tfdiags.Error,
+						"Provider defined a code migration that we cannot run",
+						fmt.Sprintf("Function %q is not available to the current configuration", codeMigration.FunctionName),
+					))
+					return nil, diags
+				}
+
+				migration.Actions = append(migration.Actions, migrate.Action{
+					Action:                  "transform_attribute",
+					TargetPath:              codeMigration.TargetAttrPath,
+					TransformFunctionName:   codeMigration.FunctionName,
+					TransformFunction:       transformFunction, // TODO: certainly this is the incorrect way to execute a potential provider function like this :P
+					AdditionalTransformArgs: codeMigration.AdditionalArguments,
+				})
+			case providers.Migration_RenameAttr:
+				// TODO: implement
+				continue
+				// migration.Actions = append(migration.Actions, migrate.Action{
+				// 	Action: "rename_attribute",
+				// 	From:   codeMigration.TargetAttrPath,      // TODO: convert to string
+				// 	To:     codeMigration.DestinationAttrPath, // TODO: convert to string
+				// })
+			case providers.Migration_RemoveAttr:
+				// TODO: implement
+				continue
+				// migration.Actions = append(migration.Actions, migrate.Action{
+				// 	Action: "remove_attribute",
+				// 	Name:   codeMigration.TargetAttrPath, // TODO: convert to string
+				// })
+			}
+
+			codeMigrations = append(codeMigrations, &migration)
+		}
 	}
 
 	return codeMigrations, diags
